@@ -1208,7 +1208,7 @@ def get_thumbnail_api(filename):
         # Se non esiste, cerca ricorsivamente in uploaded_pdfs
         if not os.path.exists(pdf_path):
             # Cerca ricorsivamente il file in uploaded_pdfs
-            for root, dirs, files in os.walk('uploaded_pdfs'):
+            for root, dirs, files in os.walk(get_path('uploaded_pdfs')):
                 if filename in files:
                     pdf_path = os.path.join(root, filename)
                     break
@@ -1903,9 +1903,9 @@ def api_available_pdfs():
     r"""Restituisce la lista di tutti i PDF disponibili in uploaded_pdfs\GLOBALE"""
     # Prima scansiona la cartella GLOBALE
     pdfs = scan_global_pdfs()
-    
+
     # Poi scansiona altre cartelle per completezza
-    uploaded_dir = 'uploaded_pdfs'
+    uploaded_dir = get_path('uploaded_pdfs')
     if os.path.exists(uploaded_dir):
         for root, dirs, files in os.walk(uploaded_dir):
             # Salta la cartella GLOBALE perché già scansionata
@@ -1938,7 +1938,7 @@ def api_refresh_pdfs():
         pdfs = scan_global_pdfs()
         
         # Aggiungi altre cartelle se presenti
-        uploaded_dir = 'uploaded_pdfs'
+        uploaded_dir = get_path('uploaded_pdfs')
         if os.path.exists(uploaded_dir):
             for root, dirs, files in os.walk(uploaded_dir):
                 if 'GLOBALE' in root:
@@ -1974,15 +1974,15 @@ def api_refresh_pdfs():
 def api_check_responsabili_pdf():
     """Verifica se il PDF responsabili esiste"""
     try:
-        filepath = os.path.join('uploaded_pdfs', 'GLOBALE', 'RESP_MAN elenco responsabili manutenzione.pdf')
+        filepath = get_path('uploaded_pdfs', 'GLOBALE', 'RESP_MAN elenco responsabili manutenzione.pdf')
         exists = os.path.exists(filepath)
-        
+
         return jsonify({
-            'success': True, 
+            'success': True,
             'exists': exists,
             'path': 'GLOBALE/RESP_MAN elenco responsabili manutenzione.pdf' if exists else None
         })
-        
+
     except Exception as e:
         return jsonify({'success': False, 'error': f'Errore durante la verifica: {str(e)}'}), 500
 
@@ -1991,7 +1991,7 @@ def api_delete_responsabili_pdf():
     """Cancella il PDF responsabili manutenzione"""
     try:
         # Percorso del file
-        filepath = os.path.join('uploaded_pdfs', 'GLOBALE', 'RESP_MAN elenco responsabili manutenzione.pdf')
+        filepath = get_path('uploaded_pdfs', 'GLOBALE', 'RESP_MAN elenco responsabili manutenzione.pdf')
         
         # Rimuovi il file se esiste
         if os.path.exists(filepath):
@@ -2025,30 +2025,31 @@ def api_upload_responsabili_pdf():
             return jsonify({'success': False, 'error': 'Il file deve essere un PDF'}), 400
         
         # Crea la cartella GLOBALE se non esiste
-        global_dir = os.path.join('uploaded_pdfs', 'GLOBALE')
+        global_dir = get_path('uploaded_pdfs', 'GLOBALE')
         os.makedirs(global_dir, exist_ok=True)
-        
+
         # Salva con nome fisso
         filename = 'RESP_MAN elenco responsabili manutenzione.pdf'
         filepath = os.path.join(global_dir, filename)
-        
+
         # Rimuovi il file esistente se presente
         if os.path.exists(filepath):
             os.remove(filepath)
-        
+
         # Salva il nuovo file
         file.save(filepath)
-        
+
         # Aggiorna il config per indicare che il PDF esiste
         config = load_config()
         config['responsabili_pdf_exists'] = True
         save_config(config)
-        
+
+        uploaded_base = get_path('uploaded_pdfs')
         return jsonify({
-            'success': True, 
+            'success': True,
             'message': 'PDF responsabili caricato con successo',
             'filename': filename,
-            'path': os.path.relpath(filepath, 'uploaded_pdfs')
+            'path': os.path.relpath(filepath, uploaded_base)
         })
         
     except Exception as e:
@@ -2096,7 +2097,7 @@ def api_link_pdf(flotta_id, scadenza_id, documento_id):
         return jsonify({'success': False, 'error': 'Documento non trovato'}), 404
 
     # Verifica che il PDF esista
-    full_path = os.path.join('uploaded_pdfs', pdf_path)
+    full_path = get_path('uploaded_pdfs', pdf_path)
     if not os.path.exists(full_path):
         return jsonify({'success': False, 'error': 'PDF non trovato'}), 404
 
