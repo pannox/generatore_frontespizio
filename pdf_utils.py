@@ -1039,6 +1039,7 @@ def process_and_merge_pdfs(flotta_id, scadenze_data, config, sede_tecnica, numer
         
         # Processa i documenti della scadenza
         documenti = scadenza_info.get('documenti', [])
+        print(f"DEBUG: Scadenza '{scadenza_info.get('nome', 'N/D')}' ha {len(documenti)} documenti")
 
         for doc in documenti:
             # Salta i documenti senza PDF (solo voci elenco)
@@ -1054,15 +1055,21 @@ def process_and_merge_pdfs(flotta_id, scadenze_data, config, sede_tecnica, numer
             # - Lo strumento corrisponde a quello selezionato
             if not doc_strumento or doc_strumento == strumento:
                 doc_path = doc.get('pdf_path')
+                print(f"DEBUG: Documento '{doc.get('nome', 'N/D')}' - pdf_path originale: '{doc_path}'")
+
                 # Normalizza il percorso
                 if doc_path:
                     # Se il percorso non è assoluto, costruiscilo usando get_path
                     if not os.path.isabs(doc_path):
                         doc_path = get_path('uploaded_pdfs', doc_path)
                     doc_path = os.path.normpath(doc_path)
+                    print(f"DEBUG: Percorso finale calcolato: '{doc_path}'")
+                    print(f"DEBUG: File esiste? {os.path.exists(doc_path)}")
+                else:
+                    print(f"DEBUG: pdf_path è vuoto/None per documento '{doc.get('nome', 'N/D')}'")
 
                 if doc_path and os.path.exists(doc_path):
-                    print(f"Trovato documento: {doc.get('nome', 'N/D')}")
+                    print(f"✓ Trovato documento: {doc.get('nome', 'N/D')} al percorso {doc_path}")
                     # Gestisci la deduplicazione
                     if doc_path in documenti_unici:
                         # Documento già presente, aggiorna le informazioni
