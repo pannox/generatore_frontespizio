@@ -1032,14 +1032,19 @@ def process_and_merge_pdfs(flotta_id, scadenze_data, config, sede_tecnica, numer
                     break
         
         if not scadenza_info:
+            print(f"DEBUG: Scadenza {scadenza_id} NON TROVATA nel config!")
             continue
-            
+
+        print(f"DEBUG: ===== PROCESSANDO SCADENZA {scadenza_id} =====")
+        print(f"DEBUG: scadenza_info completa: {scadenza_info}")
+
         # Ottieni il numero di copie per questa scadenza
         copie_scadenza = scadenze_copie.get(scadenza_id, 1)
-        
+
         # Processa i documenti della scadenza
         documenti = scadenza_info.get('documenti', [])
-        print(f"DEBUG: Scadenza '{scadenza_info.get('nome', 'N/D')}' ha {len(documenti)} documenti")
+        print(f"DEBUG: Scadenza '{scadenza_info.get('nome', 'N/D')}' (ID: {scadenza_id}) ha {len(documenti)} documenti")
+        print(f"DEBUG: Documenti raw: {documenti}")
 
         for doc in documenti:
             # Salta i documenti senza PDF (solo voci elenco)
