@@ -939,7 +939,27 @@ def serve_temp_pdf(filename):
 def serve_pdf(filename):
     """Serve i file PDF dalla cartella uploaded_pdfs"""
     from flask import send_from_directory
-    return send_from_directory(get_path('uploaded_pdfs'), filename)
+    from urllib.parse import unquote
+
+    # Decodifica URL (es. %20 -> spazio)
+    filename = unquote(filename)
+
+    uploaded_dir = get_path('uploaded_pdfs')
+    full_path = os.path.join(uploaded_dir, filename)
+
+    # Se il file esiste direttamente, servilo
+    if os.path.exists(full_path):
+        return send_from_directory(uploaded_dir, filename)
+
+    # Altrimenti cerca ricorsivamente
+    search_name = os.path.basename(filename)
+    for root, dirs, files in os.walk(uploaded_dir):
+        if search_name in files:
+            relative_path = os.path.relpath(os.path.join(root, search_name), uploaded_dir)
+            return send_from_directory(uploaded_dir, relative_path)
+
+    # Non trovato
+    return f"File non trovato: {filename}", 404
 
 @app.route('/favicon.ico')
 def favicon():
@@ -951,7 +971,11 @@ def favicon():
 def serve_pdf_route(filename):
     """Route universale per servire i file PDF da qualsiasi sottocartella di uploaded_pdfs"""
     from flask import send_from_directory
+    from urllib.parse import unquote
     import os
+
+    # Decodifica URL
+    filename = unquote(filename)
 
     uploaded_pdfs_dir = get_path('uploaded_pdfs')
 
@@ -970,7 +994,7 @@ def serve_pdf_route(filename):
                 return send_from_directory(uploaded_pdfs_dir, relative_path)
 
     # Se non trovato, restituisci 404
-    return "File non trovato", 404
+    return f"File non trovato: {filename}", 404
 
 @app.route('/admin/login', methods=['POST'])
 def admin_login():
