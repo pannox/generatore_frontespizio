@@ -8,10 +8,6 @@ pip install --upgrade pip
 # Install dependencies
 pip install -r requirements.txt
 
-# Install poppler (necessario per pdf2image)
-apt-get update
-apt-get install -y poppler-utils
-
 # Crea directory necessarie
 mkdir -p uploaded_pdfs/GLOBALE
 mkdir -p thumbnails
