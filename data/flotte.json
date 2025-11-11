@@ -1,0 +1,3878 @@
+{
+  "flotte": [
+    {
+      "id": "1",
+      "nome": "E464",
+      "scadenze": [
+        {
+          "id": "ad219548",
+          "nome": "CO",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "77ba4805",
+          "nome": "2CO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "632d4134",
+          "nome": "RT",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "0e710607",
+              "nome": "Sale montate verifica scartamento interno e parallelismo E464_SCART",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Sale montate verifica scartamento interno e parallelismo E464_SCART.pdf"
+            },
+            {
+              "id": "b67523c1",
+              "nome": "Vomere Tubi sabbiera Cacciapietre Ungibordo verifica posizione E464_VOM_SAB_CAC_UNG_Rev2",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Vomere Tubi sabbiera Cacciapietre Ungibordo verifica posizione E464_VOM_SAB_CAC_UNG_Rev2.pdf"
+            },
+            {
+              "id": "c647e95b",
+              "nome": "Reostato di frenatura verifica isolamento E464_REOS",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Reostato di frenatura verifica isolamento E464_REOS.pdf"
+            },
+            {
+              "id": "a6cca9dd",
+              "nome": "Disinserzione lateralizzazione su condotta UIC 18 poli verifica E464_LAT",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Disinserzione lateralizzazione su condotta UIC 18 poli verifica E464_LAT.pdf"
+            },
+            {
+              "id": "a660517a",
+              "nome": "Gruppo sollevamento pantografi verifica funzionamento E464_PANT_PNEUM",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Gruppo sollevamento pantografi verifica funzionamento E464_PANT_PNEUM.pdf"
+            },
+            {
+              "id": "5a3edd18",
+              "nome": "Ruote verifica della geometria del profilo E464_RUOTE_M_Rev2",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Ruote verifica della geometria del profilo E464_RUOTE_M_Rev2.pdf"
+            },
+            {
+              "id": "97511cb0",
+              "nome": "Ruote verifica della geometria del profilo con WPMS E464_RUOTE_WPMS",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Ruote verifica della geometria del profilo con WPMS E464_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "4361dd6c",
+              "nome": "Ruote verifica della geometria del profilo con Calipri E464_RUOTE_C",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\E464\\RT\\E464_Ruote verifica della geometria del profilo con Calipri E464_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "c127f3a4",
+              "titolo": "PORTE BAGAGLIAIO",
+              "descrizione": "Prova Funzionale segnalazioni, controllo sigilli. \nMicro: pulizia, lubrificazione, controllo funzionalità e impegno a fine corsa\n",
+              "cdl": "S_000024"
+            },
+            {
+              "id": "5e293c50",
+              "titolo": "INFILTRAZIONI ACQUA",
+              "descrizione": "Verifica visiva infiltrazioni acqua da giunzione testata aerodinamica\n\n",
+              "cdl": "S_000001"
+            },
+            {
+              "id": "ff098958",
+              "titolo": "FAM",
+              "descrizione": "Verifica funzionalità delle segnalazioni, esclusioni e sblocco manuale \n",
+              "cdl": "S_000022"
+            },
+            {
+              "id": "3459beac",
+              "titolo": "PANTOGRAFI",
+              "descrizione": "Valvola scarico rapido pantografi, manutenzione",
+              "cdl": "S_000003",
+              "mesi_validi": [
+                9,
+                10,
+                11,
+                12
+              ]
+            }
+          ],
+          "rilevazione_quote": true
+        },
+        {
+          "id": "4a611079",
+          "nome": "160k km",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "dde7fc3e",
+              "nome": "Pantografo tempi e spinta E464_PANT_CHECK",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\E464\\160k_km\\E464_Pantografo tempi e spinta E464_PANT_CHECK.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "36482417",
+              "titolo": "TRASDUTTORI",
+              "descrizione": "Verifica coerenza trasduttori in telediagnostica: TVL, TVCSA, Azionamento TA-TV",
+              "cdl": "S_000003",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "2a736f03",
+          "nome": "240k km",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "12af0b15",
+              "nome": "Corone d'attrito verifica usura E464_UCA_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\E464_Corone d'attrito verifica usura E464_UCA_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "599511a0",
+          "nome": "320k km",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "b44e60db",
+              "nome": "Assile Albero cavo controllo coassialità E464_COASS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\E464_Assile Albero cavo controllo coassialità E464_COASS.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "cdf45d00",
+          "nome": "320k km US",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "07b2f5af",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8b55cc32",
+          "nome": "480k km",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8a341a96",
+          "nome": "640k km",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "5b4ae543",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "1387a14b",
+              "nome": "STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf"
+            },
+            {
+              "id": "67b174da",
+              "nome": "Dashboard impianto antincendio controllo E464_DASH.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\E464_Dashboard impianto antincendio controllo E464_DASH.pdf"
+            },
+            {
+              "id": "9b7ab575",
+              "nome": "STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "0d8c02af",
+              "titolo": "IMPIANTO ANTINCENDIO",
+              "descrizione": "Verifica temperatura di intervento sonde di temperatura antincendio secondo procedura IMC Ancona, registrazione del valore su file in rete",
+              "cdl": "S_000028",
+              "mesi_validi": []
+            },
+            {
+              "id": "f851a059",
+              "titolo": "PIASTRA PNEUMETICA ",
+              "descrizione": "Misurazione Resistenza Micro 1 Contatti 1-2 Registrare il valore su file in rete. Segnalare ad Ingegneria valori superiori 0,15 OHM (150 Milliohm)",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "5d908411",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf ",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "020fab0b",
+          "nome": "6 MESI RTMS",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "d8968d9e",
+              "titolo": "IMPIANTO ANTINCENDIO",
+              "descrizione": "Verifica temperatura di intervento sonde di temperatura antincendio secondo procedura IMC Ancona, registrazione del valore su file in rete",
+              "cdl": "S_000028",
+              "mesi_validi": []
+            },
+            {
+              "id": "d7c8ba85",
+              "titolo": "PIASTRA PNEUMETICA ",
+              "descrizione": "Misurazione Resistenza Micro 1 Contatti 1-2 Registrare il valore su file in rete. Segnalare ad Ingegneria valori superiori 0,15 OHM (150 Milliohm)",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "74093b1d",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf ",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "f71827f6",
+          "nome": "12 MESI",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "19c5db45",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "49a396d6",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "d2f03a99",
+          "nome": "16 MESI",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "040eb2d5",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "4213b645",
+              "titolo": "CONNETTORI PACKAGING FAM",
+              "descrizione": "Verifica pulizia connettori packaging pneumatico dx e sx del FAM.\nVerifica pulizia e sigillatura ermetica scatola microinterruttori unità frenante sottocassa ",
+              "cdl": "S_000022",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "a6c554af",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "97e19fa8",
+          "nome": "TORNIO",
+          "descrizione": "",
+          "documenti": [
+            {
+              "id": "9caf5540",
+              "nome": "STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf"
+            },
+            {
+              "id": "92f1e32b",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "ab2e6280",
+              "nome": "Vomere Tubi sabbiera Cacciapietre Ungibordo verifica posizione E464_VOM_SAB_CAC_UNG_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\E464_Vomere Tubi sabbiera Cacciapietre Ungibordo verifica posizione E464_VOM_SAB_CAC_UNG_Rev2.pdf"
+            },
+            {
+              "id": "e8eb20a9",
+              "nome": "Tornio verifica quote E464_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\E464_Tornio verifica quote E464_TORNIO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8acfc57e",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "df4d4b6b",
+              "titolo": "CONDENSATORI CSA-BUR",
+              "descrizione": "CSA - Verifica visiva e dei valori di targa Condensatori FILTRO OUT 3F, FILTRO EMI E CB 951096\nBUR - Verifica visiva e dei valori di targa Condensatori di snubber 951322 del modulo raddrizzatore 924635",
+              "cdl": "S_000025",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "bcce66c9",
+          "nome": "PRE_INVERNALE",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "eccf083c",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "cdd031b7",
+          "nome": "DDMS",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "b0c22227",
+          "nome": "N.A / RIENTRO DA CICLICA",
+          "descrizione": "",
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "99eb2c1d",
+              "titolo": "PORTE BAGAGLIAIO",
+              "descrizione": "Prova Funzionale segnalazioni, controllo sigilli. \nMicro: pulizia, lubrificazione, controllo funzionalità e impegno a fine corsa",
+              "cdl": "S_000024",
+              "mesi_validi": []
+            },
+            {
+              "id": "cc8f7fe0",
+              "titolo": "RADIATORI - MISURA ANEMOMETRO - Stagionale",
+              "descrizione": "Misurazione con anemometro della ventilazione, registrazione del valore su file in rete prima e dopo pulizia. Valutazione per lavaggio fuori opera del radiatore",
+              "cdl": "S_000003",
+              "mesi_validi": []
+            },
+            {
+              "id": "e14e1794",
+              "titolo": "FAM",
+              "descrizione": "Verifica funzionalità delle segnalazioni, esclusioni e sblocco manuale \n",
+              "cdl": "S_000022",
+              "mesi_validi": []
+            },
+            {
+              "id": "9f7abab5",
+              "titolo": "STB/TLD",
+              "descrizione": "Verifica storico diagnostica\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "356a4431",
+      "nome": "SWING",
+      "scadenze": [
+        {
+          "id": "5242d524",
+          "nome": "VI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "db5f058a",
+              "titolo": "LIVELLI ",
+              "descrizione": "Controllo livelli motore, cambio idraulico, raffreddamento\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "83797e49",
+              "titolo": "MANUTENZIONE TELEDIAGNOSTICA",
+              "descrizione": "Svuotare cartella SEND e TEMP su Centralina Telediagnostica come da Guida in Rete\n\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "c5310489",
+              "titolo": "CONDENSA  FILTRO OEF",
+              "descrizione": "Spurgo filtro condensa a valle dell'essiccatore (Microfiltro OEF)\n\n\n",
+              "cdl": "S_000022",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "f9e50fa3",
+          "nome": "VI2",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "65812c4b",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "eb362211",
+          "nome": "RT",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "531a7a03",
+              "nome": "Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf"
+            },
+            {
+              "id": "305aace6",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "8001d372",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "e3de2f19",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "93ad647b",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "72caac0c",
+          "nome": "R1",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "cca21bf9",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            },
+            {
+              "id": "57abc484",
+              "nome": "Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf"
+            },
+            {
+              "id": "b5dc63e5",
+              "nome": "Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf"
+            },
+            {
+              "id": "1cd5c286",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "28c7748d",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "8241c830",
+              "nome": "Ruote verifica della geometria del profilo Swing_RUOTE_M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo Swing_RUOTE_M_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "99e7bd06",
+          "nome": "R2D",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "7ed8e325",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            },
+            {
+              "id": "d1caa407",
+              "nome": "Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf"
+            },
+            {
+              "id": "40bb4f1a",
+              "nome": "Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf"
+            },
+            {
+              "id": "c4dfebb7",
+              "nome": "Corone di attrito verifica usura Swing_UCA_Rev_1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Corone di attrito verifica usura Swing_UCA_Rev_1.pdf"
+            },
+            {
+              "id": "ff290ba4",
+              "nome": "SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "6dbdcfa3",
+              "nome": "SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "19fc395a",
+              "nome": "SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "973d8a76",
+          "nome": "R2P",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "9ac61b00",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            },
+            {
+              "id": "a5d3e5ca",
+              "nome": "Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf"
+            },
+            {
+              "id": "255414fc",
+              "nome": "Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf"
+            },
+            {
+              "id": "ca0f4dd8",
+              "nome": "Corone di attrito verifica usura Swing_UCA_Rev_1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Corone di attrito verifica usura Swing_UCA_Rev_1.pdf"
+            },
+            {
+              "id": "aaa4feb7",
+              "nome": "Resistore di protezione sui carrelli misura della resistenza Swing_RES_PROT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Resistore di protezione sui carrelli misura della resistenza Swing_RES_PROT.pdf"
+            },
+            {
+              "id": "12aff1ec",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "807a9df5",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "9a106316",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "6c6da160",
+          "nome": "R4",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "2b8c8b62",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            },
+            {
+              "id": "bbafe33b",
+              "nome": "Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Carrelli misure dimensionali Swing_CAR_25K_Rev1.pdf"
+            },
+            {
+              "id": "7ea0d823",
+              "nome": "Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Trasformatore dei circuiti ausiliari misurazione di controllo Swing_MIS_AUX.pdf"
+            },
+            {
+              "id": "21f47c9a",
+              "nome": "Corone di attrito verifica usura Swing_UCA_Rev_1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Corone di attrito verifica usura Swing_UCA_Rev_1.pdf"
+            },
+            {
+              "id": "a65ce840",
+              "nome": "Resistore di protezione sui carrelli misura della resistenza Swing_RES_PROT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Resistore di protezione sui carrelli misura della resistenza Swing_RES_PROT.pdf"
+            },
+            {
+              "id": "dab98d05",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            },
+            {
+              "id": "5113b729",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con WPMS Swing_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "43ce9bf3",
+              "nome": "Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Ruote verifica della geometria del profilo con calipri Swing_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "77c30b45",
+          "nome": "300k km US",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "5acc03a9",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "3851f11c",
+          "nome": "1 MESE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "cc130983",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "807f0bb2",
+              "nome": "Impianto antincendio prove semestrali Swing_IA_6M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Impianto antincendio prove semestrali Swing_IA_6M_Rev2.pdf"
+            },
+            {
+              "id": "84981979",
+              "nome": "Imp Pneumatico misure semestrali Swing_PNEUM_6M.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Imp Pneumatico misure semestrali Swing_PNEUM_6M.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "c93e716a",
+              "titolo": "INFILTRAZIONI ACQUA",
+              "descrizione": "Verifica della siliconatura giunzione testata aerodinamica\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "0167d644",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf \n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "02fbd586",
+              "titolo": "STB - SIGILLANTE CONNETTORE",
+              "descrizione": "Verifica presenza sigillante a protezione del connettore antenna STB\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "ee7aa09c",
+              "titolo": "PIASTRA PNEUMETICA",
+              "descrizione": "Misurazione Resistenza Micro 1 Contatti 1-2 Registrare il valore su file in rete. Segnalare ad Ingegneria valori superiori 0,15 OHM (150 Milliohm)\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "5404ed7c",
+          "nome": "12 MESI ACPF",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "e05bdd04",
+              "nome": "STB_Verifica captazione ANGELSTAR_CC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ANGELSTAR_CC.pdf"
+            },
+            {
+              "id": "73d04144",
+              "nome": "STB_Piastra pneumatia ANGELSTAR verifica ANGELSTAR_PIASTRA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Piastra pneumatia ANGELSTAR verifica ANGELSTAR_PIASTRA.pdf"
+            },
+            {
+              "id": "4f4090d5",
+              "nome": "Porte verifica tensionale cinghie Swing_T_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Porte verifica tensionale cinghie Swing_T_CINGHIE.pdf"
+            },
+            {
+              "id": "23e8609e",
+              "nome": "Impianto feno rapporto integrativo SWING_ACPF_INT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_impianto feno rapporto integrativo SWING_ACPF_INT.pdf"
+            },
+            {
+              "id": "07f30853",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "88289092",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura) - Alternativo ad Angelstar CC",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "7a9c2401",
+              "titolo": "CAVI LHD",
+              "descrizione": "Verifica regolarità e staffaggio dei cavi LHD sul motore\n",
+              "cdl": "S_000028",
+              "mesi_validi": []
+            },
+            {
+              "id": "5b2af7cc",
+              "titolo": "CAVO SABBIERA",
+              "descrizione": "Verifica posizionamento protetto del cavo riscaldamento eiettore sabbiera \n",
+              "cdl": "S_000025",
+              "mesi_validi": []
+            },
+            {
+              "id": "935635cc",
+              "titolo": "AZZERAMENTO SPAZIO PERCORSO ",
+              "descrizione": "Azzerare Contatore Spazio Percorso SCMT\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "873ad9c1",
+              "titolo": "PEDANA VIGILANTE",
+              "descrizione": "Redigere apposita CheckList in rete sullo stato dei micron. Segnalare ad Ingegneria qualsiasi anomalia riscontrata\n\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "568a404a",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "726d68ec",
+          "nome": "12 MESI P.F Manuale",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "5ffa7a06",
+              "nome": "Imp Pneumatico misure annuali Swing_PNEUM_12M_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Imp Pneumatico misure annuali Swing_PNEUM_12M_Rev1.pdf"
+            },
+            {
+              "id": "d05b2bd1",
+              "nome": "STB_Verifica captazione ANGELSTAR_CC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ANGELSTAR_CC.pdf"
+            },
+            {
+              "id": "056ed827",
+              "nome": "STB_Piastra pneumatia ANGELSTAR verifica ANGELSTAR_PIASTRA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Piastra pneumatia ANGELSTAR verifica ANGELSTAR_PIASTRA.pdf"
+            },
+            {
+              "id": "b6857789",
+              "nome": "Porte verifica tensionale cinghie Swing_T_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Porte verifica tensionale cinghie Swing_T_CINGHIE.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "b55605f9",
+              "titolo": "CAVI LHD",
+              "descrizione": "Verifica regolarità e staffaggio dei cavi LHD sul motore\n",
+              "cdl": "S_000028",
+              "mesi_validi": []
+            },
+            {
+              "id": "9e245f79",
+              "titolo": "CAVO SABBIERA",
+              "descrizione": "Verifica posizionamento protetto del cavo riscaldamento eiettore sabbiera \n\n",
+              "cdl": "S_000025",
+              "mesi_validi": []
+            },
+            {
+              "id": "b6556756",
+              "titolo": "AZZERAMENTO SPAZIO PERCORSO ",
+              "descrizione": "Azzerare Contatore Spazio Percorso SCMT\n\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "818fb96f",
+              "titolo": "PEDANA VIGILANTE",
+              "descrizione": "Redigere apposita CheckList in rete sullo stato dei micron. Segnalare ad Ingegneria qualsiasi anomalia riscontrata\n\n\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "e935c050",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n\n\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "fab79eb4",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "8b3eba6e",
+              "titolo": "SOSTITUZIONE REGOLATORE DI PRESSIONE",
+              "descrizione": "Sostituzione Regolatore di Pressione Condotta Generale cod.710998 \n",
+              "cdl": "S_000022",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "c33ff4d2",
+          "nome": "48 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "012be924",
+          "nome": "500 ORE MOT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "2c524f20",
+          "nome": "PI1",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "3c996479",
+          "nome": "PI2",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "fabe9662",
+          "nome": "PI3",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "f63fb39c",
+          "nome": "PI4",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "12f9a2fb",
+              "nome": "Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "9b0d3dab",
+          "nome": "PI5",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "cd766247",
+              "nome": "Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ce5402f2",
+          "nome": "PO1",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "56e85088",
+              "nome": "Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Pompa idrostaica verifica funzionamento Swing_P_IDRO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "0d1ab3af",
+          "nome": "REV CILINDRI F.",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "38c4fae9",
+          "nome": "TORNIO_C.SALA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "0001f9e1",
+              "nome": "STB_Verifica captazione ANGELSTAR_CC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ANGELSTAR_CC.pdf"
+            },
+            {
+              "id": "8dc64599",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "8922d40d",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Cacciapietre ungibordo sabbiere verifica altezze Swing_UNG_SAB_CAC_rev1.pdf"
+            },
+            {
+              "id": "450d9947",
+              "nome": "Tornio verifica quote Swing_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Tornio verifica quote Swing_TORNIO.pdf"
+            },
+            {
+              "id": "c8cbaf36",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura) - Alternativo ad Angelstar CC",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "0d1e18ca",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "465da164",
+          "nome": "PRE_INVERNALE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "0f873fd5",
+              "nome": "Essiccatore misura del punto di rugiada Swing_RUG.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\SWING_Essiccatore misura del punto di rugiada Swing_RUG.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "234f0dad",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d761d0db",
+      "nome": "JAZZ",
+      "scadenze": [
+        {
+          "id": "a241b37e",
+          "nome": "CO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "c38067bf",
+              "nome": "Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf"
+            },
+            {
+              "id": "60adbbec",
+              "nome": "Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ee3e6a61",
+          "nome": "VI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "fd1c85fb",
+              "nome": "Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf"
+            },
+            {
+              "id": "24696653",
+              "nome": "Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8b13d9b0",
+          "nome": "RT",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "ceb99471",
+              "nome": "Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf"
+            },
+            {
+              "id": "a487e94f",
+              "nome": "Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo controllo striscianti Jazz_PANT_STRI_Rev2.pdf"
+            },
+            {
+              "id": "7303b3f3",
+              "nome": "Ruote verifica della geometria del profilo con Calipri Jazz_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Ruote verifica della geometria del profilo con Calipri Jazz_RUOTE_C.pdf"
+            },
+            {
+              "id": "3b06d37c",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Jazz_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Ruote verifica della geometria del profilo con WPMS Jazz_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "eced705f",
+              "nome": "Ruote verifica della geometria del profilo con Calipri Jazz_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Ruote verifica della geometria del profilo con Calipri Jazz_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "339ea55a",
+              "titolo": "FRENO",
+              "descrizione": "\"Verifica funzionalità, segnalazioni ed isolamento, frenatura e freno di stazionamento.\nVerifica efficienza tiranti di sblocco cilindro di stazionamento. \nControllo integrità etichette freno \"\n",
+              "cdl": "S_000022",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "865301ec",
+          "nome": "2RT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "20fb5d15",
+          "nome": "3RT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "3e9a00cd",
+              "nome": "Pantografo tempi Jazz_PANT_CHECK_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo tempi Jazz_PANT_CHECK_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "da3a9519",
+          "nome": "6RT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "e7c6e7cc",
+              "nome": "Corone d'attrito verifica usura Jazz_UCA_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Corone d'attrito verifica usura Jazz_UCA_Rev1.pdf"
+            },
+            {
+              "id": "7b6193dd",
+              "nome": "Pantografo spinta statica Jazz_PANT_SPINTA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo spinta statica Jazz_PANT_SPINTA.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "1a282664",
+          "nome": "12RT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "d160c58e",
+          "nome": "150k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "83bad342",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "726d8e90",
+          "nome": "240k km TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "ea47f781",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "3d663d7b",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "d3cd0375",
+              "nome": "Cacciapietre ungibordo sabbiere  verifica posizione Jazz_UNG_SAB_CAC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_cacciapietre ungibordo sabbiere  verifica posizione Jazz_UNG_SAB_CAC.pdf"
+            },
+            {
+              "id": "a7f9ec71",
+              "nome": "Tornio verifica quote Jazz_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Tornio verifica quote Jazz_TORNIO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "5c535bfd",
+          "nome": "US",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e3d15015",
+          "nome": "3 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "733aa560",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "dfd5d946",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "e64939bd",
+              "nome": "Porte bordo sensibile con cella di carico Jazz_BS_CELL_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Porte bordo sensibile con cella di carico Jazz_BS_CELL_Rev1.pdf"
+            },
+            {
+              "id": "e90523fc",
+              "nome": "Porte e pedane tensione cinghia Jazz_T_CINGHIE_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Porte e pedane tensione cinghia Jazz_T_CINGHIE_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "077f152c",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf \n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "8841c5d1",
+              "titolo": "PIASTRA PNEUMETICA ",
+              "descrizione": "Misurazione Resistenza Micro 1 Contatti 1-2 Registrare il valore su file in rete. Segnalare ad Ingegneria valori superiori 0,15 OHM (150 Milliohm)\n\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "4e70908b",
+          "nome": "12 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "fa35577a",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "6f278f02",
+              "nome": "Cavo LHD controllo funzionalità Jazz_LHD_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Cavo LHD controllo funzionalità Jazz_LHD_Rev1.pdf"
+            },
+            {
+              "id": "fc5cba2d",
+              "nome": "Induttanza filtro rete verifica del valore ohmico e dell'isolamento Jazz_IFR.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Induttanza filtro rete verifica del valore ohmico e dell'isolamento Jazz_IFR.pdf"
+            },
+            {
+              "id": "9fbcf5b8",
+              "nome": "Sezionatore di messa a terra verifica resistenza di contatto Jazz_R_SMT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Sezionatore di messa a terra verifica resistenza di contatto Jazz_R_SMT.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "212bd2af",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "78f4ba0b",
+          "nome": "16 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "a610d5fe",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "2b5a05b6",
+              "nome": "Verifica proximity_Jazz_PROX_16M.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Verifica proximity_Jazz_PROX_16M.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "36ef9d73",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "fcf7435f",
+          "nome": "36 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "a13d2b65",
+              "nome": "Reostato di frenatura verifica del valore ohmico e dell’isolamento Jazz_RF.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Reostato di frenatura verifica del valore ohmico e dell’isolamento Jazz_RF.pdf"
+            },
+            {
+              "id": "6686159f",
+              "nome": "Resistore di precarica RPRE verifica del valore ohmico e dell’isolamento Jazz_RPRE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Resistore di precarica RPRE verifica del valore ohmico e dell’isolamento Jazz_RPRE.pdf"
+            },
+            {
+              "id": "6b558aea",
+              "nome": "Induttore di disaccoppiamento test R di isolamento Jazz_LSF.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Induttore di disaccoppiamento test R di isolamento Jazz_LSF.pdf"
+            },
+            {
+              "id": "07c58b4a",
+              "nome": "Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "f635d513",
+          "nome": "48 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "1242ae9a",
+          "nome": "60 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "2652c00f",
+          "nome": "72 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e1dc005d",
+          "nome": "120 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "6a6defd7",
+              "nome": "Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf"
+            },
+            {
+              "id": "428aeef6",
+              "nome": "Impianto antincendio Tenuta in alta pressione ed asciugatura Jazz_PA_IA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Impianto antincendio Tenuta in alta pressione ed asciugatura Jazz_PA_IA.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "7eac3409",
+          "nome": "REV RIDUTTORI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "435ff9e2",
+          "nome": "REV BOMBOLE AI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "cf08319f",
+          "nome": "PRE_INVERNALE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "c8d199f4",
+              "titolo": "PROVA PIOGGIA",
+              "descrizione": "Verifica dell’integrità della siliconatura tra guscio cabina e cassa delle casse A41 e A46 come da punto 11-12 MR1-01A-TC068\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "955c04cf",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "ec405b30",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "b6856939",
+          "nome": "DDMS",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "48b90ed3",
+          "nome": "RO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "b39f10ae",
+              "nome": "Check in Jazz RO JAZZ_CK_IN.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Check in Jazz RO JAZZ_CK_IN.pdf"
+            },
+            {
+              "id": "556eea0a",
+              "nome": "Pantografo tempi Jazz_PANT_CHECK_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo tempi Jazz_PANT_CHECK_Rev1.pdf"
+            },
+            {
+              "id": "2d5f1f60",
+              "nome": "Pantografo spinta statica Jazz_PANT_SPINTA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Pantografo spinta statica Jazz_PANT_SPINTA.pdf"
+            },
+            {
+              "id": "c8430dd8",
+              "nome": "Porte bordo sensibile con cella di carico Jazz_BS_CELL_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Porte bordo sensibile con cella di carico Jazz_BS_CELL_Rev1.pdf"
+            },
+            {
+              "id": "ff9a17b0",
+              "nome": "Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Rubinetto intercettazione freno valore di coppia Jazz_RUB_FRENO.pdf"
+            },
+            {
+              "id": "015c97a9",
+              "nome": "Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Condensatori misura valore capacitivo e tangendelta Jazz_C_TAN_Rev1.pdf"
+            },
+            {
+              "id": "317329e6",
+              "nome": "Misura treno completo Jazz_MIS_CAS_RO_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Misura treno completo Jazz_MIS_CAS_RO_Rev1.pdf"
+            },
+            {
+              "id": "e8cb63b3",
+              "nome": "Impianto antincendio Tenuta in alta pressione ed asciugatura Jazz_PA_IA.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\JAZZ_Impianto antincendio Tenuta in alta pressione ed asciugatura Jazz_PA_IA.pdf"
+            },
+            {
+              "id": "d0713ebe",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "f5ae10d7",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "ae330068",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    },
+    {
+      "id": "0fd0c068",
+      "nome": "EMU",
+      "scadenze": [
+        {
+          "id": "d3246ef8",
+          "nome": "CO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "b04f3575",
+              "nome": "EMU_FICHE CO_rev_M.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE CO_rev_M.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "96b54552",
+          "nome": "VI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "736e1e77",
+              "nome": "EMU_FICHE VI STRATIFICATA_rev_P.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE VI STRATIFICATA_rev_P.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e1552bbf",
+          "nome": "RT",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "26291c19",
+              "nome": "EMU_FICHE RT STRATIFICATA_rev_O.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE RT STRATIFICATA_rev_O.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "34325a33",
+          "nome": "100k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "47825918",
+              "nome": "EMU_FICHE 100.000km_rev_H.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 100.000km_rev_H.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "b5901df8",
+          "nome": "150k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "44a9281b",
+              "nome": "EMU_FICHE 150.000km_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 150.000km_rev_L.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "6f9516f5",
+          "nome": "150k KM US",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "d06b1bf9",
+              "nome": "EMU_FICHE 150k_US_rev_H.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 150k_US_rev_H.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ca05b4b2",
+          "nome": "200k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "cb2b88c4",
+              "nome": "EMU_FICHE 200.000km_rev_J.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 200.000km_rev_J.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "a3c7cd50",
+          "nome": "300k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "8ed61062",
+              "nome": "EMU_FICHE 300.000km_rev_J.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 300.000km_rev_J.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ac538900",
+          "nome": "400k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "375def16",
+              "nome": "EMU_FICHE 400.000km_rev_H.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 400.000km_rev_H.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e22ddf13",
+          "nome": "600k KM",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "a89ef502",
+              "nome": "EMU_FICHE 600.000km(12RT).rev_I.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 600.000km(12RT).rev_I.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "52ac9612",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "c919e9a4",
+              "nome": "EMU_FICHE 6 mesi_rev_P.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 6 mesi_rev_P.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e0a8842a",
+          "nome": "12 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "204ed707",
+              "nome": "EMU_FICHE 12 mesi_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 12 mesi_rev_L.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "64a4d206",
+          "nome": "12 MESI AI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "bcfa2d80",
+              "nome": "EMU_ Fiche 12 mesi AI Passeggeri_rev_C.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_ Fiche 12 mesi AI Passeggeri_rev_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "21208e73",
+          "nome": "16 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "6287041a",
+              "nome": "EMU_FICHE 16 mesi_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 16 mesi_rev_L.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "65b362ce",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "e4654cc7",
+              "nome": "EMU_FICHE 24 mesi_rev_H.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 24 mesi_rev_H.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "0773511f",
+          "nome": "24 MESI AI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "47f9eebd",
+              "nome": "EMU_FICHE 24 mesi AI Passeggeri_rev_B.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 24 mesi AI Passeggeri_rev_B.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "6b4ec87d",
+          "nome": "60 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "50af9107",
+              "nome": "EMU_FICHE 60 mesi_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE 60 mesi_rev_L.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "879ea4ef",
+          "nome": "10 ANNI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "0cf9221b",
+              "nome": "EMU_Fiche 10 anni_rev_G.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_Fiche 10 anni_rev_G.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "2c535c90",
+          "nome": "10 ANNI AI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "10ec4d99",
+              "nome": "EMU_Fiche 10 anni_rev_G.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_Fiche 10 anni_rev_G.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "004d8ee9",
+          "nome": "PRE_INV",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "6ddc8150",
+              "nome": "EMU_FICHE Pre Invernale_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE Pre Invernale_rev_L.pdf"
+            },
+            {
+              "id": "f40d67d4",
+              "nome": "EMU_IND_CTR_TEM_005_rev00_PRE_INVERNALE_Verifica dell'assorbimento di Corrente.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_IND_CTR_TEM_005_rev00_PRE_INVERNALE_Verifica dell'assorbimento di Corrente.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "3357eb4e",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "c47dc510",
+              "nome": "EMU_FICHE Pre_Estiva_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE Pre_Estiva_rev_L.pdf"
+            },
+            {
+              "id": "0ec51d76",
+              "nome": "EMU_IND_CTR_TEM_007_rev00_PRE_ESTIVA Verifica dell'assorbimento dei Pressostati.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_IND_CTR_TEM_007_rev00_PRE_ESTIVA Verifica dell'assorbimento dei Pressostati.pdf"
+            },
+            {
+              "id": "cfa8a3c7",
+              "nome": "EMU_IND_CTR_TEM_006_rev02_PRE_ESTIVA_Verifica dell'assorbimento di Corrente.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_IND_CTR_TEM_006_rev02_PRE_ESTIVA_Verifica dell'assorbimento di Corrente.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8dbe7272",
+          "nome": "CAMBIO SALA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "e2252241",
+              "nome": "EMU_FICHE_Cambio_Sale_EMU_rev_L.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_FICHE_Cambio_Sale_EMU_rev_L.pdf"
+            },
+            {
+              "id": "8ee43d5e",
+              "nome": "EMU_IND_CTR_WMS_020_Rev02.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_IND_CTR_WMS_020_Rev02.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "fe19ebbd",
+          "nome": "TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "040d8e2d",
+              "nome": "EMU_Tornio verifica quote EMU_TORNIO_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\EMU_Tornio verifica quote EMU_TORNIO_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    },
+    {
+      "id": "76a10d70",
+      "nome": "POP",
+      "scadenze": [
+        {
+          "id": "262cd329",
+          "nome": "30k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "08cc2ff5",
+              "nome": "Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "6e06e7a0",
+          "nome": "60k km",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "f7f11f51",
+              "nome": "Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf"
+            },
+            {
+              "id": "693f25e5",
+              "nome": "Ruote verifica della geometria del profilo con Calipri POP_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Ruote verifica della geometria del profilo con Calipri POP_RUOTE_C.pdf"
+            },
+            {
+              "id": "d8c5e844",
+              "nome": "Ruote verifica della geometria del profilo con WPMS POP_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Ruote verifica della geometria del profilo con WPMS POP_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "d17e9e43",
+              "nome": "Ruote verifica della geometria del profilo POP_RUOTE_M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Ruote verifica della geometria del profilo POP_RUOTE_M_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "a4c29c6e",
+          "nome": "120k km",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "b6f29108",
+              "nome": "Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Pantografo controllo striscianti Pop_PANT_STRI_Rev2.pdf"
+            },
+            {
+              "id": "87b7ef44",
+              "nome": "Ruote verifica della geometria del profilo con Calipri POP_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Ruote verifica della geometria del profilo con Calipri POP_RUOTE_C.pdf"
+            },
+            {
+              "id": "3ba773fa",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "732692f0",
+              "nome": "Ruote verifica della geometria del profilo POP_RUOTE_M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Ruote verifica della geometria del profilo POP_RUOTE_M_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "d5cfdd05",
+          "nome": "150k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "2014f235",
+          "nome": "240k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "e55344f4",
+              "nome": "Pantografo tempi e spinta Pop_PANT_CHECK_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Pantografo tempi e spinta Pop_PANT_CHECK_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "b90eb965",
+          "nome": "240k km US",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "ae8dbebf",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "f77369e7",
+              "nome": "Spazzole in carbone carrello controllo usura Pop_SPAZ.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Spazzole in carbone carrello controllo usura Pop_SPAZ.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ef711085",
+          "nome": "240k km TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "86fcfcef",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "987af713",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "6bedf9db",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Pop_UNG_SAB_CAC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Cacciapietre ungibordo sabbiere verifica altezze Pop_UNG_SAB_CAC.pdf"
+            },
+            {
+              "id": "4b5f566c",
+              "nome": "Tornio verifica quote Pop_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Tornio verifica quote Pop_TORNIO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "dadf27dd",
+          "nome": "480k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "dcbcb0e6",
+              "nome": "Corone di attrito verifica usura Pop_UCA_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Corone di attrito verifica usura Pop_UCA_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e68e1022",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "956c4fd3",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "57056c9e",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "ccf0585e",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf \n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            },
+            {
+              "id": "8dea7f5b",
+              "titolo": "VERIFICA SIGILLATURA RIVETTI",
+              "descrizione": "Verifica sigillatura rivetti cassoni Imperiale e scatole di derivazione BT cassa-cassa\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "d53188bf",
+              "titolo": "PIASTRA PNEUMETICA ",
+              "descrizione": "Misurazione Resistenza Micro 1 Contatti 1-2 Registrare il valore su file in rete. Segnalare ad Ingegneria valori superiori 0,15 OHM (150 Milliomh)\n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "fc83b5e7",
+          "nome": "12 MESI ERTMS ACPF",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "00713f82",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "f81d010a",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "c54d949a",
+              "nome": "Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf"
+            },
+            {
+              "id": "dba84e37",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "7060f6ad",
+              "nome": "Impianto Freno Rapporto Integrativo Pop_ACPF_INT_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Impianto Freno Rapporto Integrativo Pop_ACPF_INT_Rev1.pdf"
+            },
+            {
+              "id": "2ebdfd00",
+              "nome": "STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "032a80dd",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "ab724874",
+          "nome": "12 MESI ERTMS P.F Manuale",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "0af4abc1",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "132776a4",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "d06cc6af",
+              "nome": "Impianto freno prova funzionale completa Pop_FRENO_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Impianto freno prova funzionale completa Pop_FRENO_Rev1.pdf"
+            },
+            {
+              "id": "caf0021e",
+              "nome": "Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf"
+            },
+            {
+              "id": "69a64e5f",
+              "nome": "STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Cavo coax antenna GSM-R misura del ROS ALSTOM_ROS.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "63ded551",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "ee889b47",
+          "nome": "12 MESI ACPF",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "d6141892",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "9089c4ff",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "1907d33e",
+              "nome": "Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf"
+            },
+            {
+              "id": "eb546659",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "088ecc65",
+              "nome": "Impianto Freno Rapporto Integrativo Pop_ACPF_INT_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Impianto Freno Rapporto Integrativo Pop_ACPF_INT_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "46b670f9",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "725b54c8",
+          "nome": "12 MESI P.F Manuale",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "35fae139",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            },
+            {
+              "id": "7b37c2c9",
+              "nome": "STB_Verifica captazione ALSTOM_CC_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione ALSTOM_CC_Rev3.pdf"
+            },
+            {
+              "id": "6a19d43d",
+              "nome": "Impianto freno prova funzionale completa Pop_FRENO_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Impianto freno prova funzionale completa Pop_FRENO_Rev1.pdf"
+            },
+            {
+              "id": "d5921288",
+              "nome": "Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Aerosol misura dell'impedenza Pop_IA_APU_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "535700de",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "89c837a6",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "eb5e1b31",
+          "nome": "36 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "b6f6cc0c",
+              "nome": "Contattore di linea 61KC120 conv traz valore di resistenza bobina Pop_CONT_CTRAZ.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Contattore di linea 61KC120 conv traz valore di resistenza bobina Pop_CONT_CTRAZ.pdf"
+            },
+            {
+              "id": "5d514764",
+              "nome": "Contattore di linea 52KC075 conv aux valore di resistenza bobina Pop_CONT_CAUX.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Contattore di linea 52KC075 conv aux valore di resistenza bobina Pop_CONT_CAUX.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "9fffe1d1",
+          "nome": "48 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "c9c27381",
+          "nome": "60 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "9fede461",
+              "nome": "Reostato POP_RF_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Reostato POP_RF_Rev1.pdf"
+            },
+            {
+              "id": "ba4084e7",
+              "nome": "Tampone d' arresto porte verifica usura POP_TA_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Tampone d' arresto porte verifica usura POP_TA_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "ee3d49c1",
+              "titolo": "SOSTITUZIONE TAPPO SABBIERE",
+              "descrizione": "Sostituzione Sistematica del tappo di entrambe le Sabbiere Cat: 551997 - 4 pezzi per rotabile\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "bac9fd7f",
+          "nome": "72 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "adca7e00",
+              "nome": "Motoventilatore POP_Mis_Vibr_Motovent.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\POP_Motoventilatore POP_Mis_Vibr_Motovent.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "775f227e",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "8e1b4ff1",
+          "nome": "PRE_INVERNALE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "a7e4369f",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3a2fd833",
+      "nome": "ROCK",
+      "scadenze": [
+        {
+          "id": "3a14562b",
+          "nome": "VI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "b0147785",
+              "nome": "Pantografo controllo striscianti Rock_PANT_STRI.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo controllo striscianti Rock_PANT_STRI.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "2a6612e4",
+              "titolo": "CONTROLLO ISOLATORI",
+              "descrizione": "Verifica e controllo visivo dello stato degli isolatori del Pantografo \n",
+              "cdl": "S_000003",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "265c5411",
+          "nome": "RT",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "8031ab32",
+              "nome": "Pantografo controllo striscianti Rock_PANT_STRI.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo controllo striscianti Rock_PANT_STRI.pdf"
+            },
+            {
+              "id": "83d59e60",
+              "nome": "Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf"
+            },
+            {
+              "id": "3caea52b",
+              "nome": "Sabbiera test funzionale Rock_SAB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sabbiera test funzionale Rock_SAB.pdf"
+            },
+            {
+              "id": "8a084914",
+              "nome": "Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf"
+            },
+            {
+              "id": "896572ea",
+              "nome": "Ruote verifica conicità equivalente Rock_CE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica conicità equivalente Rock_CE.pdf"
+            },
+            {
+              "id": "a3be0ab7",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "f5ce823b",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "03b401f2",
+              "nome": "Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "4db39c63",
+              "titolo": "CONTROLLO CE con notifica ad Ingegneria ",
+              "descrizione": "Controllo Conicità Equivalente , avvisare Ingegneria dei Processi del passaggio a portale per la gestione del programma manutentivo \n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            },
+            {
+              "id": "6e7e3907",
+              "titolo": "CONTROLLO ISOLATORI",
+              "descrizione": "Verifica e controllo visivo dello stato degli isolatori del Pantografo \n",
+              "cdl": "S_000003",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "881676ea",
+          "nome": "2RT",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "5ef5d217",
+              "nome": "Pantografo controllo striscianti Rock_PANT_STRI.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo controllo striscianti Rock_PANT_STRI.pdf"
+            },
+            {
+              "id": "ce4229be",
+              "nome": "Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf"
+            },
+            {
+              "id": "8610d3bf",
+              "nome": "Sabbiera test funzionale Rock_SAB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sabbiera test funzionale Rock_SAB.pdf"
+            },
+            {
+              "id": "59d50b89",
+              "nome": "Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf"
+            },
+            {
+              "id": "8d3dd34f",
+              "nome": "Pantografo tempi e spinta Rock_PANT_CHECK_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo tempi e spinta Rock_PANT_CHECK_Rev2.pdf"
+            },
+            {
+              "id": "9ec4b445",
+              "nome": "Essiccatore misura del punto di rugiada Rock_RUG.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Essiccatore misura del punto di rugiada Rock_RUG.pdf"
+            },
+            {
+              "id": "c69e2db6",
+              "nome": "Ruote verifica conicità equivalente Rock_CE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica conicità equivalente Rock_CE.pdf"
+            },
+            {
+              "id": "47fd1155",
+              "nome": "Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf"
+            },
+            {
+              "id": "6075c5da",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "9fae2f40",
+              "nome": "Ruote verifica della geometria del profilo Rock_RUOTE_M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo Rock_RUOTE_M_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "3813d631",
+              "titolo": "CONTROLLO CE con notifica ad Ingegneria ",
+              "descrizione": "Controllo Conicità Equivalente , avvisare Ingegneria dei Processi del passaggio a portale per la gestione del programma manutentivo \n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "6dca1c6f",
+          "nome": "REV2",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "d3bd5f27",
+              "nome": "Pantografo tempi e spinta Rock_PANT_CHECK_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo tempi e spinta Rock_PANT_CHECK_Rev2.pdf"
+            },
+            {
+              "id": "30581c0f",
+              "nome": "Pantografo controllo striscianti Rock_PANT_STRI.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Pantografo controllo striscianti Rock_PANT_STRI.pdf"
+            },
+            {
+              "id": "1a0bb28f",
+              "nome": "Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sale montate verifica scartamento interno e parallelismo Rock_SCART_Rev1.pdf"
+            },
+            {
+              "id": "216879eb",
+              "nome": "Sabbiera test funzionale Rock_SAB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Sabbiera test funzionale Rock_SAB.pdf"
+            },
+            {
+              "id": "ef41fd83",
+              "nome": "Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Porte di salita tensionamento cinghia Rock_P&G_CINGHIE.pdf"
+            },
+            {
+              "id": "1a9d1244",
+              "nome": "Essiccatore misura del punto di rugiada Rock_RUG.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Essiccatore misura del punto di rugiada Rock_RUG.pdf"
+            },
+            {
+              "id": "042bf61c",
+              "nome": "Ruote verifica conicità equivalente Rock_CE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica conicità equivalente Rock_CE.pdf"
+            },
+            {
+              "id": "db2f6343",
+              "nome": "Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con Calipri Rock_RUOTE_C.pdf"
+            },
+            {
+              "id": "7f32fdeb",
+              "nome": "Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo con WPMS Rock_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "7d1a7d3b",
+              "nome": "Ruote verifica della geometria del profilo Rock_RUOTE_M_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica della geometria del profilo Rock_RUOTE_M_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "9d1ce3b3",
+              "titolo": "CONTROLLO CE con notifica ad Ingegneria ",
+              "descrizione": "Controllo Conicità Equivalente , avvisare Ingegneria dei Processi del passaggio a portale per la gestione del programma manutentivo \n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "a8a95edb",
+          "nome": "US",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "ad6bac6b",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "cd048da6",
+          "nome": "6 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "9a6b24e3",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura)",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "16f0f6a5",
+              "nome": "Altezze STB_STB altezze.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Altezze STB_STB altezze.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "55625194",
+              "titolo": "STB - INTEGRAZIONE CONTROLLI MANUTENTIVI",
+              "descrizione": "Integrazione controlli manutentivi SSB SCMT come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024.pdf \n",
+              "cdl": "S_000026",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "9ccde937",
+          "nome": "12 MESI ACPF",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "2071167a",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura)",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "2b769d43",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "74897717",
+              "nome": "Impianto Freno Rapporto Integrativo Rock_ACPF_INT_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Impianto Freno Rapporto Integrativo Rock_ACPF_INT_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "4e66e22e",
+              "titolo": "TELETERMOMETRO",
+              "descrizione": "Sostituzione batterie teletermometro\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        },
+        {
+          "id": "6f5fd00f",
+          "nome": "24 MESI ACPF",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "136964bc",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura)",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "4bd510c8",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "aa22c978",
+              "nome": "Impianto Freno Rapporto Integrativo Rock_ACPF_INT_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Impianto Freno Rapporto Integrativo Rock_ACPF_INT_Rev1.pdf"
+            },
+            {
+              "id": "b2edbac9",
+              "nome": "Impianto climatizzazione verifica assorbimento Rock_HVAC_EN.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Impianto climatizzazione verifica assorbimento Rock_HVAC_EN.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "f22250e3",
+          "nome": "120 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "f6991602",
+          "nome": "4 ANNI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "b86407e3",
+          "nome": "8 ANNI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "ed1e9bc7",
+          "nome": "CONTROLLO C.E",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "5872d726",
+              "nome": "Ruote verifica conicità equivalente Rock_CE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Ruote verifica conicità equivalente Rock_CE.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "affe2de7",
+          "nome": "TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "77fc3a9b",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "6c049031",
+              "nome": "Cacciapietre ungibordo sabbiere verifica altezze Rock_UNG_SAB_CAC.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Cacciapietre ungibordo sabbiere verifica altezze Rock_UNG_SAB_CAC.pdf"
+            },
+            {
+              "id": "8dc4bb01",
+              "nome": "Tornio verifica quote Rock_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Tornio verifica quote Rock_TORNIO.pdf"
+            },
+            {
+              "id": "7f59229f",
+              "nome": "Report STB Ansaldo (Generato da strumento di misura)",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "8ddfa3f9",
+              "nome": "Altezze STB_STB altezze.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\ROCK_Altezze STB_STB altezze.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "714f9b27",
+          "nome": "PRE_EST/INV",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "dcf8c845",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2b0154b0",
+      "nome": "VETTURE",
+      "multioggetto": true,
+      "scadenze": [
+        {
+          "id": "9b6225b1",
+          "nome": "VI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "4386a970",
+              "nome": "Bordo sensibile MD_BS_PORTE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\MD_Bordo sensibile MD_BS_PORTE.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "vet_rt_001",
+          "nome": "RT",
+          "descrizione": "Revisione Tecnica Vettura",
+          "documenti": [
+            {
+              "id": "adfaf84b",
+              "nome": "Bordo sensibile MD_BS_PORTE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Bordo sensibile MD_BS_PORTE.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": [
+            {
+              "id": "15db1c88",
+              "titolo": "BATTERIE - Stagionale",
+              "descrizione": "Verifica ed eventuale ripristino del livello dell’elettrolita di ogni elemento del pacco batterie secondo IT 377142\n",
+              "cdl": "S_000003",
+              "mesi_validi": [
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "id": "905319b2",
+          "nome": "128k km",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "409fd0f0",
+              "nome": "Corone d'attrito verifica usura MD_UCA_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Corone d'attrito verifica usura MD_UCA_Rev1.pdf"
+            },
+            {
+              "id": "7ee1dea1",
+              "nome": "Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C.pdf"
+            },
+            {
+              "id": "e8c4c14a",
+              "nome": "Ruote verifica della geometria del profilo con WPMS MD_RUOTE_WPMS.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con WPMS MD_RUOTE_WPMS.pdf"
+            },
+            {
+              "id": "181c908f",
+              "nome": "Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "7d6e5d9f",
+          "nome": "256k km",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "c247a681",
+              "nome": "Sale Montate misura dello scartamento MD_SCART_256K.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Sale Montate misura dello scartamento MD_SCART_256K.pdf"
+            },
+            {
+              "id": "c1078bcf",
+              "nome": "Tenditore verifica dimensionale MD_TEND_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Tenditore verifica dimensionale MD_TEND_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e83bc3c2",
+          "nome": "3 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "eb6020f6",
+              "nome": "Batteria verifica efficienza EFF_BATT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\All_Batteria verifica efficienza EFF_BATT.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "2c82e7f6",
+          "nome": "6 MESI RIMO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "c187e49f",
+              "nome": "Batteria verifica efficienza EFF_BATT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\All_Batteria verifica efficienza EFF_BATT.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "908d91d3",
+          "nome": "12 MESI RIMO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "64dcb10b",
+          "nome": "16 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "17858945",
+              "nome": "Report Prova Freno ACPF",
+              "obbligatorio": true,
+              "strumento": ""
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e11e1b5d",
+          "nome": "24 MESI",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "3538a6bc",
+          "nome": "REV2",
+          "descrizione": "",
+          "rilevazione_quote": true,
+          "documenti": [
+            {
+              "id": "0c650272",
+              "nome": "Gancio di trazione verifica dimensionale MD_GT_AT_CPB_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Gancio di trazione verifica dimensionale MD_GT_AT_CPB_Rev3.pdf"
+            },
+            {
+              "id": "515dbdc6",
+              "nome": "Respingenti verifica dimensionale MD_VER_RE_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Respingenti verifica dimensionale MD_VER_RE_CPB.pdf"
+            },
+            {
+              "id": "d9cbacf7",
+              "nome": "Sale Montate misura dello scartamento e parallelismo MD_SCART_CPB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Sale Montate misura dello scartamento e parallelismo MD_SCART_CPB_Rev1.pdf"
+            },
+            {
+              "id": "06fb6690",
+              "nome": "US (Generato da strumento di misura) - Esito nella riga dell'OdL",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "039b106f",
+              "nome": "NT Controllo Giunti Saldati Carrello (Esito nella riga dell'odl)",
+              "obbligatorio": true,
+              "strumento": ""
+            },
+            {
+              "id": "ccf466d1",
+              "nome": "Corone d'attrito verifica usura MD_UCA_CPB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Corone d'attrito verifica usura MD_UCA_CPB_Rev1.pdf"
+            },
+            {
+              "id": "586be0e3",
+              "nome": "Tenditore verifica dimensionale MD_TEND_CPB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Tenditore verifica dimensionale MD_TEND_CPB_Rev1.pdf"
+            },
+            {
+              "id": "182757cb",
+              "nome": "BATTERIE VERIFICA EFFICIENZA EFF_BATT_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\All_BATTERIE VERIFICA EFFICIENZA EFF_BATT_CPB.pdf"
+            },
+            {
+              "id": "89a08fdc",
+              "nome": "Bordo sensibile MD_BS_PORTE_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Bordo sensibile MD_BS_PORTE_CPB.pdf"
+            },
+            {
+              "id": "817600a3",
+              "nome": "Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "CALIPRI",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C_CPB.pdf"
+            },
+            {
+              "id": "c2d14d15",
+              "nome": "Ruote verifica della geometria del profilo con WPMS MD_RUOTE_WPMS_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "WPMS",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con WPMS MD_RUOTE_WPMS_CPB.pdf"
+            },
+            {
+              "id": "b359e0cd",
+              "nome": "Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C_CPB.pdf",
+              "obbligatorio": true,
+              "strumento": "MANUALE",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Ruote verifica della geometria del profilo con Calipri MD_RUOTE_C_CPB.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "cfd158ef",
+          "nome": "TORNIO RIMO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "6ac3cc9e",
+              "nome": "Tornio verifica quote MD_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\MD_Tornio verifica quote MD_TORNIO.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "e179ed0a",
+          "nome": "PRE_ESTIVA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "47b5c35e",
+          "nome": "PRE_INVERNALE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": [
+            {
+              "id": "4d48f3c4",
+              "titolo": "AZIONI PRE-INVERNALI",
+              "descrizione": "Operazioni Stagionali come da TRNIT-AD.DBR.MR.LMPLP20240036432_1_Preinvernali_2024 inclusi controlli SSB SCMT.pdf\n",
+              "cdl": "S_000001",
+              "mesi_validi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3b9aed85",
+      "nome": "VIVALTO NCDP",
+      "scadenze": [
+        {
+          "id": "c0a33661",
+          "nome": "VIS RIMO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "75a079bc",
+              "nome": "Batteria verifica efficienza EFF_BATT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\All_Batteria verifica efficienza EFF_BATT.pdf"
+            },
+            {
+              "id": "d0a35bd5",
+              "nome": "Misure cassa-carrello NCDP_MIS_CAS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\NCDP_Misure cassa-carrello NCDP_MIS_CAS.pdf"
+            },
+            {
+              "id": "485711f5",
+              "nome": "Porte tensione cinghia NCDP_T_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\NCDP_Porte tensione cinghia NCDP_T_CINGHIE.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "97e2ecba",
+          "nome": "VIS PILOTA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "a37d451e",
+              "nome": "Batteria verifica efficienza EFF_BATT.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\All_Batteria verifica efficienza EFF_BATT.pdf"
+            },
+            {
+              "id": "639c7c50",
+              "nome": "Misure cassa-carrello NCDP_MIS_CAS.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\NCDP_Misure cassa-carrello NCDP_MIS_CAS.pdf"
+            },
+            {
+              "id": "b7b3d67a",
+              "nome": "Porte tensione cinghia NCDP_T_CINGHIE.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\NCDP_Porte tensione cinghia NCDP_T_CINGHIE.pdf"
+            },
+            {
+              "id": "e0d561f9",
+              "nome": "STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Aggiornamento diametri ruota STB_DIAM_Rev3.pdf"
+            },
+            {
+              "id": "19fa46b7",
+              "nome": "STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Verifica captazione monocabina ALSTOM_CC_MONOCAB_Rev1.pdf"
+            },
+            {
+              "id": "43602e6b",
+              "nome": "STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STB_Pressostato piastra pneumatica verifica taratura ALSTOM_PRESS_Rev2.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    },
+    {
+      "id": "4b2c07b0",
+      "nome": "CARRO SOCCORSO",
+      "scadenze": [
+        {
+          "id": "4446c606",
+          "nome": "USCITA",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "06ffaa80",
+              "nome": "Carro Soccorso Check list post utilizzo CS_CHECK_POST.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\CS_Carro Soccorso Check list post utilizzo CS_CHECK_POST.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "9b9d78c3",
+          "nome": "ESERCITAZIONE",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "b21a7e3b",
+              "nome": "Carro Soccorso Check list post utilizzo CS_CHECK_POST.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\CS_Carro Soccorso Check list post utilizzo CS_CHECK_POST.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    },
+    {
+      "id": "934faa12",
+      "nome": "ROTABILI STORICI",
+      "scadenze": [
+        {
+          "id": "4c498fbe",
+          "nome": "R2",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "6e4f0e08",
+              "nome": "Ruote verifica della geometria del profilo STOR_RUOTE_M_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STOR_Ruote verifica della geometria del profilo STOR_RUOTE_M_Rev1.pdf"
+            },
+            {
+              "id": "cde4759d",
+              "nome": "Sale Montate misura dello scartamento e parallelismo STOR_SCART.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "uploaded_pdfs\\GLOBALE\\STOR_Sale Montate misura dello scartamento e parallelismo STOR_SCART.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        },
+        {
+          "id": "9d424a63",
+          "nome": "TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    },
+    {
+      "id": "3712380e",
+      "nome": "GENERICA",
+      "scadenze": [
+        {
+          "id": "1890c2ec",
+          "nome": "TORNIO",
+          "descrizione": "",
+          "rilevazione_quote": false,
+          "documenti": [
+            {
+              "id": "81e84a4b",
+              "nome": "IC_Tornio verifica quote IC_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\IC_Tornio verifica quote IC_TORNIO.pdf"
+            },
+            {
+              "id": "a86e8549",
+              "nome": "D445_Tornio verifica quote D445_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\D445_Tornio verifica quote D445_TORNIO.pdf"
+            },
+            {
+              "id": "837cfd67",
+              "nome": "E652_Tornio verifica quote E652_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\E652_Tornio verifica quote E652_TORNIO.pdf"
+            },
+            {
+              "id": "54bc51e9",
+              "nome": "TAF_Tornio verifica quote TAF_TORNIO.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\TAF_Tornio verifica quote TAF_TORNIO.pdf"
+            },
+            {
+              "id": "c0d2a6e0",
+              "nome": "DMU_Tornio verifica quote DMU_TORNIO_Rev1.pdf",
+              "obbligatorio": true,
+              "strumento": "",
+              "pdf_path": "GLOBALE\\DMU_Tornio verifica quote DMU_TORNIO_Rev1.pdf"
+            }
+          ],
+          "operazioni_aggiuntive": []
+        }
+      ]
+    }
+  ],
+  "operazioni_globali": [
+    {
+      "id": "2ef459c5",
+      "titolo": "RADIATORI - MISURA ANEMOMETRO - Stagionale",
+      "descrizione": "Misurazione con anemometro della ventilazione, registrazione del valore su file in rete prima e dopo pulizia. Valutazione per lavaggio fuori opera del radiatore",
+      "cdl": "S_000003",
+      "flotta_id": "1",
+      "mesi_validi": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "119d56d5",
+      "titolo": "PANTOGRAFI - Stagionale",
+      "descrizione": "Eliminazione perdite cilindro di sollevamento",
+      "cdl": "S_000001",
+      "flotta_id": "1",
+      "mesi_validi": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "19076144",
+      "titolo": "PANTOGRAFI",
+      "descrizione": "Controllo visivo del pantografo e dell'archetto;\nVerifica rullo spinta; lubrificazione snodi e perni; pulizia isolatori.\nVerifica regolare sollevamento.",
+      "cdl": "S_000003",
+      "flotta_id": "d761d0db",
+      "mesi_validi": []
+    },
+    {
+      "id": "99713360",
+      "titolo": "INFILTRAZIONI ACQUA",
+      "descrizione": "Verifica dell’integrità della siliconatura tra guscio cabina e cassa delle casse A41 e A46",
+      "cdl": "S_000001",
+      "flotta_id": "d761d0db",
+      "mesi_validi": []
+    },
+    {
+      "id": "586397f7",
+      "titolo": "RADIATORI INVERTER - Stagionale",
+      "descrizione": "Verifica e pulizia dei radiatori raffreddamento dell'inverter",
+      "cdl": "S_000001",
+      "flotta_id": "d761d0db",
+      "mesi_validi": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b6a22ead",
+      "titolo": "VERIFICA DISINSERZIONE CARICHI",
+      "descrizione": "Verificare l'effettiva disinserzione dei carichi entro i tempi prestabiliti dai temporizzatori ",
+      "cdl": "S_000003",
+      "flotta_id": "2b0154b0",
+      "mesi_validi": []
+    },
+    {
+      "id": "689b5f76",
+      "titolo": "RADIATORI INVERTER - Stagionale",
+      "descrizione": "Verifica e pulizia dei radiatori raffreddamento dell'inverter",
+      "cdl": "S_000003",
+      "flotta_id": "76a10d70",
+      "mesi_validi": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b60fcdbc",
+      "titolo": "RADIATORI INVERTER - Stagionale",
+      "descrizione": "Verifica e pulizia dei radiatori raffreddamento dell'inverter",
+      "cdl": "S_000003",
+      "flotta_id": "3a2fd833",
+      "mesi_validi": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "124ec387",
+      "titolo": "RIVETTI SOTTOCASSA",
+      "descrizione": "Controllo Stato Rivetti Sottocassa",
+      "cdl": "S_000001",
+      "flotta_id": "d761d0db",
+      "mesi_validi": []
+    }
+  ],
+  "versione": {
+    "numero": "6.10.13",
+    "data": "08/11/2025"
+  },
+  "text_positions": {
+    "sede_x": 70,
+    "sede_y": 648,
+    "ordine_x": 180,
+    "ordine_y": 612,
+    "sede_fieldname": "sede_tecnica",
+    "ordine_fieldname": "numero_ordine",
+    "font_size": 15,
+    "text_mode": "fields"
+  },
+  "custom_fields": [],
+  "responsabili_pdf_exists": true,
+  "portali": {
+    "wpms": {
+      "id": "136042",
+      "scadenza": "05/12/2025"
+    },
+    "tornio": {
+      "id": "135138",
+      "scadenza": "02/12/2025"
+    }
+  }
+}

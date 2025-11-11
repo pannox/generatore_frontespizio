@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stampa Documenti Singoli - Frontespizio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thumbnail.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Generatore</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            {% if is_admin_authenticated %}
+            <a href="/admin/logout" class="nav-link logout-btn">🚪 Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="single-docs-section">
+        <div class="section-header">
+            <div class="section-title">
+                <h2>Stampa Documenti Singoli</h2>
+                <p class="section-subtitle">Visualizza e stampa i documenti PDF indipendentemente dalle scadenze</p>
+            </div>
+            <a href="/" class="btn-back-home">← Torna al Generatore</a>
+        </div>
+
+        <div class="single-docs-container">
+            <div class="single-docs-controls">
+                <div class="form-group">
+                    <label for="flottaSingoli">Seleziona Flotta:</label>
+                    <select id="flottaSingoli" class="form-select">
+                        <option value="">-- Seleziona Flotta --</option>
+                        {% for flotta in flotte %}
+                        <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div id="documentiListContainer" class="documenti-list-container" style="display: none;">
+                    <div class="list-header">
+                        <h3 id="flottaDocumentiTitle">Documenti disponibili</h3>
+                        <div class="list-actions">
+                            <button onclick="selectAllDocumenti()" class="btn-small btn-info">Seleziona Tutti</button>
+                            <button onclick="deselectAllDocumenti()" class="btn-small">Deseleziona Tutti</button>
+                            <button onclick="downloadSelected()" class="btn-small btn-success">📥 Download Selezionati</button>
+                        </div>
+                    </div>
+                    <div id="documentiList" class="documenti-grid">
+                        <!-- Documenti caricati dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const flottaSingoliSelect = document.getElementById('flottaSingoli');
+        const documentiListContainer = document.getElementById('documentiListContainer');
+        const documentiList = document.getElementById('documentiList');
+        const flottaDocumentiTitle = document.getElementById('flottaDocumentiTitle');
+
+        // Azzera la selezione al caricamento della pagina
+        document.addEventListener('DOMContentLoaded', function() {
+            resetSelection();
+        });
+
+        // Azzera la selezione anche quando si torna alla pagina (browser back/forward)
+        window.addEventListener('pageshow', function(event) {
+            resetSelection();
+        });
+
+        // Funzione per azzerare la selezione
+        function resetSelection() {
+            flottaSingoliSelect.value = '';
+            documentiListContainer.style.display = 'none';
+            documentiList.innerHTML = '';
+        }
+
+        // Quando cambia la flotta nei documenti singoli
+        flottaSingoliSelect.addEventListener('change', async function() {
+            const flottaId = this.value;
+
+            if (!flottaId) {
+                documentiListContainer.style.display = 'none';
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/documenti_flotta/${flottaId}`);
+                const data = await response.json();
+
+                if (data.documenti && data.documenti.length > 0) {
+                    flottaDocumentiTitle.textContent = `Documenti ${data.flotta_nome} (${data.documenti.length})`;
+
+                    documentiList.innerHTML = '';
+
+                    data.documenti.forEach(doc => {
+                        const hasPdf = doc.pdf_path && doc.pdf_path !== '';
+
+                        const docCard = document.createElement('div');
+                        docCard.className = 'doc-card' + (hasPdf ? '' : ' no-pdf');
+
+                        // Escape del path per evitare problemi con backslash
+                        const escapedPath = hasPdf ? doc.pdf_path.replace(/\\/g, '\\\\') : '';
+
+                        // Estrai solo il nome del file PDF per il thumbnail
+                        const pdfFilename = hasPdf ? doc.pdf_path.split(/[\\\/]/).pop() : '';
+
+                        docCard.innerHTML = `
+                            <div class="doc-card-header">
+                                ${hasPdf ? `<input type="checkbox" class="doc-checkbox" data-pdf-path="${escapedPath}" data-doc-id="${doc.id}">` : ''}
+                                <div class="doc-info">
+                                    <div class="doc-name ${hasPdf ? 'pdf-thumbnail-trigger' : ''}" ${hasPdf ? `data-filename="${pdfFilename}"` : ''}>
+                                        ${doc.nome}${doc.copie_totali && doc.copie_totali > 1 ? ` (${doc.copie_totali} copie)` : ''}
+                                    </div>
+                                    <span class="doc-scadenza">${doc.copie_totali && doc.copie_totali > 1 ? 'Multiple scadenze' : doc.scadenza_nome}</span>
+                                    ${doc.strumento ? ` <span class="doc-scadenza" style="background: #ff9800;">${doc.strumento}</span>` : ''}
+                                    ${!hasPdf ? '<div class="doc-missing-badge">PDF Non Caricato</div>' : ''}
+                                </div>
+                            </div>
+                            ${hasPdf ? `
+                            <div class="doc-card-actions">
+                                <button class="btn-doc btn-view" onclick="openDocument('${escapedPath}')">Visualizza</button>
+                                <button class="btn-doc btn-print" onclick="printDocument('${escapedPath}')">Stampa</button>
+                            </div>
+                            ` : ''}
+                        `;
+
+                        // Aggiungi listener al checkbox per cambiare lo stile della card
+                        if (hasPdf) {
+                            const checkbox = docCard.querySelector('.doc-checkbox');
+                            checkbox.addEventListener('change', function() {
+                                if (this.checked) {
+                                    docCard.classList.add('selected');
+                                } else {
+                                    docCard.classList.remove('selected');
+                                }
+                            });
+
+                            // Click sulla card seleziona/deseleziona il checkbox
+                            docCard.addEventListener('click', function(e) {
+                                if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'INPUT') {
+                                    checkbox.checked = !checkbox.checked;
+                                    checkbox.dispatchEvent(new Event('change'));
+                                }
+                            });
+                        }
+
+                        documentiList.appendChild(docCard);
+                    });
+
+                    documentiListContainer.style.display = 'block';
+
+                    // Re-inizializza il sistema di thumbnail per i nuovi elementi
+                    if (window.thumbnailHoverInstance) {
+                        window.thumbnailHoverInstance.refresh();
+                    }
+                } else {
+                    documentiList.innerHTML = '<p class="placeholder-text">Nessun documento disponibile per questa flotta</p>';
+                    documentiListContainer.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Errore nel caricamento dei documenti:', error);
+                documentiList.innerHTML = '<p class="error-text">Errore nel caricamento dei documenti</p>';
+                documentiListContainer.style.display = 'block';
+            }
+        });
+
+        // Funzione per selezionare tutti i documenti
+        function selectAllDocumenti() {
+            const checkboxes = document.querySelectorAll('.doc-checkbox');
+            checkboxes.forEach(cb => {
+                cb.checked = true;
+                cb.dispatchEvent(new Event('change'));
+            });
+        }
+
+        // Funzione per deselezionare tutti i documenti
+        function deselectAllDocumenti() {
+            const checkboxes = document.querySelectorAll('.doc-checkbox');
+            checkboxes.forEach(cb => {
+                cb.checked = false;
+                cb.dispatchEvent(new Event('change'));
+            });
+        }
+
+        // Funzione per scaricare i documenti selezionati
+        async function downloadSelected() {
+            const checkboxes = document.querySelectorAll('.doc-checkbox:checked');
+
+            if (checkboxes.length === 0) {
+                alert('Nessun documento selezionato. Seleziona almeno un documento per il download.');
+                return;
+            }
+
+            if (checkboxes.length === 1) {
+                // Se è selezionato solo un documento, scaricalo direttamente
+                const pdfPath = checkboxes[0].getAttribute('data-pdf-path');
+                const urlPath = pdfPath.replace(/\\/g, '/');
+                window.open('/' + urlPath, '_blank');
+                return;
+            }
+
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = '🔄 Unione in corso...';
+            button.disabled = true;
+
+            try {
+                // Raccogli i path dei PDF selezionati
+                const pdfPaths = Array.from(checkboxes).map(cb => 
+                    cb.getAttribute('data-pdf-path').replace(/\\/g, '/')
+                );
+
+                // Chiama l'endpoint per unire i PDF
+                const response = await fetch('/merge-pdf', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        pdf_paths: pdfPaths
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Scarica direttamente il PDF unito senza aprirlo
+                    const link = document.createElement('a');
+                    link.href = '/' + data.merged_pdf_path;
+                    link.download = data.filename;
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    alert('Errore durante l\'unione dei PDF: ' + (data.error || 'Errore sconosciuto'));
+                }
+
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('Errore durante l\'unione dei PDF. Riprova.');
+            } finally {
+                // Ripristina sempre il pulsante
+                button.textContent = originalText;
+                button.disabled = false;
+            }
+        }
+
+        // Funzione per aprire un documento in una nuova finestra
+        function openDocument(pdfPath) {
+            if (pdfPath) {
+                // Converti i backslash in forward slash per URL validi
+                const urlPath = pdfPath.replace(/\\/g, '/');
+                window.open('/' + urlPath, '_blank');
+            }
+        }
+
+        // Funzione per stampare un documento
+        function printDocument(pdfPath) {
+            if (pdfPath) {
+                // Converti i backslash in forward slash per URL validi
+                const urlPath = pdfPath.replace(/\\/g, '/');
+
+                // Crea un iframe nascosto per stampare
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = '/' + urlPath;
+                document.body.appendChild(iframe);
+
+                // Aspetta il caricamento e stampa
+                iframe.onload = function() {
+                    try {
+                        iframe.contentWindow.focus();
+                        iframe.contentWindow.print();
+
+                        // Rimuovi l'iframe dopo la stampa
+                        setTimeout(() => {
+                            document.body.removeChild(iframe);
+                        }, 1000);
+                    } catch (e) {
+                        console.error('Errore durante la stampa:', e);
+                        // Fallback: apri in nuova finestra
+                        window.open('/' + urlPath, '_blank');
+                        document.body.removeChild(iframe);
+                    }
+                };
+            }
+        }
+    </script>
+
+    <!-- Thumbnail hover system -->
+    <script src="{{ url_for('static', filename='js/thumbnail.js') }}"></script>
+    <script>
+        // Inizializza il sistema di thumbnail hover per i nomi dei documenti
+        document.addEventListener('DOMContentLoaded', function() {
+            window.thumbnailHoverInstance = initThumbnailHover({
+                selector: '.pdf-thumbnail-trigger'
+            });
+        });
+    </script>
+</body>
+</html>

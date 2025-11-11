@@ -1,0 +1,4460 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2025-11-08T14:37:36.599338",
+    "date": "08/11/2025 14:37:36",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134",
+      "f71827f6",
+      "d2f03a99"
+    ],
+    "scadenze_nomi": [
+      "RT",
+      "12 MESI",
+      "16 MESI"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "SEDE TECNICA",
+    "numero_ordine": "121213131313",
+    "filename": "completo_1_20251108_143735.pdf",
+    "file_size_kb": 599.04,
+    "scadenze_copie": {
+      "632d4134": 1,
+      "f71827f6": 1,
+      "d2f03a99": 1
+    }
+  },
+  {
+    "id": 2,
+    "timestamp": "2025-11-08T17:14:00.908427",
+    "date": "08/11/2025 17:14:00",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "77ba4805",
+      "632d4134",
+      "d2f03a99",
+      "a6c554af",
+      "97e19fa8",
+      "8acfc57e",
+      "bcce66c9",
+      "cdd031b7",
+      "b0c22227"
+    ],
+    "scadenze_nomi": [
+      "2CO",
+      "RT",
+      "16 MESI",
+      "24 MESI",
+      "TORNIO",
+      "PRE_ESTIVA",
+      "PRE_INVERNALE",
+      "DDMS",
+      "N.A / RIENTRO DA CICLICA"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "SEDE TECNICA",
+    "numero_ordine": "121213131313",
+    "numero_documenti": 11,
+    "numero_operazioni": 20,
+    "filename": "completo_1_20251108_171359.pdf",
+    "file_size_kb": 1683.12,
+    "scadenze_copie": {
+      "77ba4805": 1,
+      "632d4134": 1,
+      "d2f03a99": 1,
+      "a6c554af": 1,
+      "97e19fa8": 1,
+      "8acfc57e": 1,
+      "bcce66c9": 1,
+      "cdd031b7": 1,
+      "b0c22227": 1
+    }
+  },
+  {
+    "id": 3,
+    "timestamp": "2025-11-08T21:20:26.647899",
+    "date": "08/11/2025 21:20:26",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "SEDDD",
+    "numero_ordine": "123456777888",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_212025.pdf",
+    "file_size_kb": 432.31,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 4,
+    "timestamp": "2025-11-08T21:20:40.966726",
+    "date": "08/11/2025 21:20:40",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "d2f03a99"
+    ],
+    "scadenze_nomi": [
+      "16 MESI"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SEDDD",
+    "numero_ordine": "123456777888",
+    "numero_documenti": 1,
+    "numero_operazioni": 10,
+    "filename": "completo_1_20251108_212039.pdf",
+    "file_size_kb": 430.13,
+    "scadenze_copie": {
+      "d2f03a99": 1
+    }
+  },
+  {
+    "id": 5,
+    "timestamp": "2025-11-08T21:21:02.042638",
+    "date": "08/11/2025 21:21:02",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "4a611079"
+    ],
+    "scadenze_nomi": [
+      "160k km"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SEDDD",
+    "numero_ordine": "123456777888",
+    "numero_documenti": 1,
+    "numero_operazioni": 10,
+    "filename": "completo_1_20251108_212100.pdf",
+    "file_size_kb": 430.18,
+    "scadenze_copie": {
+      "4a611079": 1
+    }
+  },
+  {
+    "id": 6,
+    "timestamp": "2025-11-08T21:22:03.881788",
+    "date": "08/11/2025 21:22:03",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E344",
+    "numero_ordine": "123456787666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_212202.pdf",
+    "file_size_kb": 432.31,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 7,
+    "timestamp": "2025-11-08T21:29:22.720550",
+    "date": "08/11/2025 21:29:22",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEEE",
+    "numero_ordine": "123456789099",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_212921.pdf",
+    "file_size_kb": 432.31,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 8,
+    "timestamp": "2025-11-08T21:32:12.630443",
+    "date": "08/11/2025 21:32:12",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEEE",
+    "numero_ordine": "123456789099",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_213211.pdf",
+    "file_size_kb": 1703.38,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 9,
+    "timestamp": "2025-11-08T21:32:45.716469",
+    "date": "08/11/2025 21:32:45",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "4a611079"
+    ],
+    "scadenze_nomi": [
+      "160k km"
+    ],
+    "strumento": "",
+    "sede_tecnica": "EEEE",
+    "numero_ordine": "123456789099",
+    "numero_documenti": 1,
+    "numero_operazioni": 10,
+    "filename": "completo_1_20251108_213244.pdf",
+    "file_size_kb": 594.49,
+    "scadenze_copie": {
+      "4a611079": 1
+    }
+  },
+  {
+    "id": 10,
+    "timestamp": "2025-11-08T21:38:59.563763",
+    "date": "08/11/2025 21:38:59",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134",
+      "4a611079"
+    ],
+    "scadenze_nomi": [
+      "RT",
+      "160k km"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "SEDET",
+    "numero_ordine": "123456789098",
+    "numero_documenti": 7,
+    "numero_operazioni": 14,
+    "filename": "completo_1_20251108_213857.pdf",
+    "file_size_kb": 1868.3,
+    "scadenze_copie": {
+      "632d4134": 1,
+      "4a611079": 1
+    }
+  },
+  {
+    "id": 11,
+    "timestamp": "2025-11-08T21:40:06.693334",
+    "date": "08/11/2025 21:40:06",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "JAZZ99",
+    "numero_ordine": "567678776555",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251108_214004.pdf",
+    "file_size_kb": 2462.62,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 12,
+    "timestamp": "2025-11-08T22:26:43.628016",
+    "date": "08/11/2025 22:26:43",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464EERT",
+    "numero_ordine": "123456545677",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_222642.pdf",
+    "file_size_kb": 1722.6,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 13,
+    "timestamp": "2025-11-08T22:28:06.286939",
+    "date": "08/11/2025 22:28:06",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "77ba4805",
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "2CO",
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "ASDFADF",
+    "numero_ordine": "333433445566",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_222804.pdf",
+    "file_size_kb": 1722.61,
+    "scadenze_copie": {
+      "77ba4805": 1,
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 14,
+    "timestamp": "2025-11-08T22:29:13.446848",
+    "date": "08/11/2025 22:29:13",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SXSDS",
+    "numero_ordine": "234332222222",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251108_222910.pdf",
+    "file_size_kb": 2462.61,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 15,
+    "timestamp": "2025-11-08T23:03:00.760839",
+    "date": "08/11/2025 23:03:00",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WEDFW",
+    "numero_ordine": "255555555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251108_230258.pdf",
+    "file_size_kb": 1722.53,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 16,
+    "timestamp": "2025-11-08T23:03:30.178424",
+    "date": "08/11/2025 23:03:30",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "ETR425",
+    "numero_ordine": "125555555555",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251108_230327.pdf",
+    "file_size_kb": 2462.62,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 17,
+    "timestamp": "2025-11-10T10:09:20.977445",
+    "date": "10/11/2025 10:09:20",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464778",
+    "numero_ordine": "123456777777",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_100920.pdf",
+    "file_size_kb": 1699.55,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 18,
+    "timestamp": "2025-11-10T10:09:52.356455",
+    "date": "10/11/2025 10:09:52",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464778",
+    "numero_ordine": "123456777777",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_100951.pdf",
+    "file_size_kb": 1699.55,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 19,
+    "timestamp": "2025-11-10T10:10:24.409259",
+    "date": "10/11/2025 10:10:24",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "123333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_101023.pdf",
+    "file_size_kb": 1699.53,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 20,
+    "timestamp": "2025-11-10T10:16:31.851712",
+    "date": "10/11/2025 10:16:31",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "123333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_101631.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 21,
+    "timestamp": "2025-11-10T10:18:36.323603",
+    "date": "10/11/2025 10:18:36",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_101835.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 22,
+    "timestamp": "2025-11-10T10:21:53.764903",
+    "date": "10/11/2025 10:21:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_102153.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 23,
+    "timestamp": "2025-11-10T10:26:12.293492",
+    "date": "10/11/2025 10:26:12",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_102611.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 24,
+    "timestamp": "2025-11-10T10:27:05.012107",
+    "date": "10/11/2025 10:27:05",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464667",
+    "numero_ordine": "453554545444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_102704.pdf",
+    "file_size_kb": 1701.84,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 25,
+    "timestamp": "2025-11-10T10:33:33.957192",
+    "date": "10/11/2025 10:33:33",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464667",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_103333.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 26,
+    "timestamp": "2025-11-10T10:35:05.742051",
+    "date": "10/11/2025 10:35:05",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464667",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_103505.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 27,
+    "timestamp": "2025-11-10T10:35:46.708198",
+    "date": "10/11/2025 10:35:46",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "122222222222",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_103546.pdf",
+    "file_size_kb": 1701.81,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 28,
+    "timestamp": "2025-11-10T10:40:15.057169",
+    "date": "10/11/2025 10:40:15",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464778",
+    "numero_ordine": "155555555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_104014.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 29,
+    "timestamp": "2025-11-10T10:44:42.124944",
+    "date": "10/11/2025 10:44:42",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "122222222222",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_104441.pdf",
+    "file_size_kb": 1701.81,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 30,
+    "timestamp": "2025-11-10T10:47:00.780602",
+    "date": "10/11/2025 10:47:00",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "122233333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_104700.pdf",
+    "file_size_kb": 1701.83,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 31,
+    "timestamp": "2025-11-10T10:51:07.006647",
+    "date": "10/11/2025 10:51:07",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "ad219548",
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "CO",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464100",
+    "numero_ordine": "100000000000",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_105106.pdf",
+    "file_size_kb": 1701.83,
+    "scadenze_copie": {
+      "ad219548": 1,
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 32,
+    "timestamp": "2025-11-10T10:57:23.114990",
+    "date": "10/11/2025 10:57:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464776",
+    "numero_ordine": "155555555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_105722.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 33,
+    "timestamp": "2025-11-10T11:02:09.664325",
+    "date": "10/11/2025 11:02:09",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1"
+    ],
+    "scadenze_nomi": [
+      "VI"
+    ],
+    "strumento": "",
+    "sede_tecnica": "FFFFF",
+    "numero_ordine": "454545454544",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251110_110209.pdf",
+    "file_size_kb": 1624.54,
+    "scadenze_copie": {
+      "9b6225b1": 5
+    }
+  },
+  {
+    "id": 34,
+    "timestamp": "2025-11-10T11:31:50.729514",
+    "date": "10/11/2025 11:31:50",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464778",
+    "numero_ordine": "122223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_113150.pdf",
+    "file_size_kb": 1701.83,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 35,
+    "timestamp": "2025-11-10T11:32:23.965167",
+    "date": "10/11/2025 11:32:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E4566",
+    "numero_ordine": "344445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_113223.pdf",
+    "file_size_kb": 1701.81,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 36,
+    "timestamp": "2025-11-10T12:59:25.004100",
+    "date": "10/11/2025 12:59:25",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E465788",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_125924.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 37,
+    "timestamp": "2025-11-10T13:03:41.419602",
+    "date": "10/11/2025 13:03:41",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E465667",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_130340.pdf",
+    "file_size_kb": 1701.85,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 38,
+    "timestamp": "2025-11-10T13:05:00.246046",
+    "date": "10/11/2025 13:05:00",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E465667",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_130459.pdf",
+    "file_size_kb": 1701.85,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 39,
+    "timestamp": "2025-11-10T13:07:24.400110",
+    "date": "10/11/2025 13:07:24",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E465667",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_130723.pdf",
+    "file_size_kb": 1701.85,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 40,
+    "timestamp": "2025-11-10T13:08:01.166177",
+    "date": "10/11/2025 13:08:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E465667",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_130800.pdf",
+    "file_size_kb": 1701.85,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 41,
+    "timestamp": "2025-11-10T13:11:15.984198",
+    "date": "10/11/2025 13:11:15",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E456",
+    "numero_ordine": "121133233333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_131115.pdf",
+    "file_size_kb": 1721.0,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 42,
+    "timestamp": "2025-11-10T13:13:09.766988",
+    "date": "10/11/2025 13:13:09",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E456",
+    "numero_ordine": "121133233333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_131309.pdf",
+    "file_size_kb": 1721.0,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 43,
+    "timestamp": "2025-11-10T13:16:01.487984",
+    "date": "10/11/2025 13:16:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WEEEE",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_131600.pdf",
+    "file_size_kb": 1720.98,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 44,
+    "timestamp": "2025-11-10T13:16:35.509738",
+    "date": "10/11/2025 13:16:35",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WEEEE",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_131634.pdf",
+    "file_size_kb": 1720.98,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 45,
+    "timestamp": "2025-11-10T13:18:37.303841",
+    "date": "10/11/2025 13:18:37",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E456",
+    "numero_ordine": "122222222222",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_131836.pdf",
+    "file_size_kb": 1720.98,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 46,
+    "timestamp": "2025-11-10T13:25:08.474111",
+    "date": "10/11/2025 13:25:08",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464",
+    "numero_ordine": "111111111111",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_132507.pdf",
+    "file_size_kb": 1701.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 47,
+    "timestamp": "2025-11-10T13:27:53.001814",
+    "date": "10/11/2025 13:27:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "ERTTRR",
+    "numero_ordine": "111111111111",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_132751.pdf",
+    "file_size_kb": 1722.99,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 48,
+    "timestamp": "2025-11-10T14:21:43.246999",
+    "date": "10/11/2025 14:21:43",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E4564",
+    "numero_ordine": "121111111111",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_142141.pdf",
+    "file_size_kb": 1703.76,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 49,
+    "timestamp": "2025-11-10T14:24:37.455384",
+    "date": "10/11/2025 14:24:37",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E4642582",
+    "numero_ordine": "123456789099",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_142435.pdf",
+    "file_size_kb": 1703.85,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 50,
+    "timestamp": "2025-11-10T14:26:44.010961",
+    "date": "10/11/2025 14:26:44",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EDDD",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_142642.pdf",
+    "file_size_kb": 1703.76,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 51,
+    "timestamp": "2025-11-10T14:27:57.693839",
+    "date": "10/11/2025 14:27:57",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "DFDFD",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_142756.pdf",
+    "file_size_kb": 1703.77,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 52,
+    "timestamp": "2025-11-10T14:32:33.679841",
+    "date": "10/11/2025 14:32:33",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "DFDFD",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143232.pdf",
+    "file_size_kb": 1703.83,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 53,
+    "timestamp": "2025-11-10T14:33:34.164539",
+    "date": "10/11/2025 14:33:34",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "DFDFD",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143332.pdf",
+    "file_size_kb": 1703.88,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 54,
+    "timestamp": "2025-11-10T14:34:07.178980",
+    "date": "10/11/2025 14:34:07",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143406.pdf",
+    "file_size_kb": 1703.84,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 55,
+    "timestamp": "2025-11-10T14:35:57.878688",
+    "date": "10/11/2025 14:35:57",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143556.pdf",
+    "file_size_kb": 1730.23,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 56,
+    "timestamp": "2025-11-10T14:36:51.919860",
+    "date": "10/11/2025 14:36:51",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "123456666666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143650.pdf",
+    "file_size_kb": 1730.23,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 57,
+    "timestamp": "2025-11-10T14:38:16.638568",
+    "date": "10/11/2025 14:38:16",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_143815.pdf",
+    "file_size_kb": 1722.99,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 58,
+    "timestamp": "2025-11-10T14:42:37.348477",
+    "date": "10/11/2025 14:42:37",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EDDD",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144236.pdf",
+    "file_size_kb": 1722.96,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 59,
+    "timestamp": "2025-11-10T14:43:42.052351",
+    "date": "10/11/2025 14:43:42",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EDDD",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144340.pdf",
+    "file_size_kb": 1722.96,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 60,
+    "timestamp": "2025-11-10T14:44:23.848517",
+    "date": "10/11/2025 14:44:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EDDD",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144422.pdf",
+    "file_size_kb": 1722.96,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 61,
+    "timestamp": "2025-11-10T14:47:01.317591",
+    "date": "10/11/2025 14:47:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EDDD",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144700.pdf",
+    "file_size_kb": 1722.96,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 62,
+    "timestamp": "2025-11-10T14:47:53.973378",
+    "date": "10/11/2025 14:47:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144752.pdf",
+    "file_size_kb": 1722.95,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 63,
+    "timestamp": "2025-11-10T14:48:23.540153",
+    "date": "10/11/2025 14:48:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_144822.pdf",
+    "file_size_kb": 1722.95,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 64,
+    "timestamp": "2025-11-10T14:52:22.792170",
+    "date": "10/11/2025 14:52:22",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_145221.pdf",
+    "file_size_kb": 2292.05,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 65,
+    "timestamp": "2025-11-10T14:53:06.647499",
+    "date": "10/11/2025 14:53:06",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_145305.pdf",
+    "file_size_kb": 2291.82,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 66,
+    "timestamp": "2025-11-10T14:54:24.450849",
+    "date": "10/11/2025 14:54:24",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "564645645666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_145423.pdf",
+    "file_size_kb": 2291.83,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 67,
+    "timestamp": "2025-11-10T14:58:05.729764",
+    "date": "10/11/2025 14:58:05",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "564645645666",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_145804.pdf",
+    "file_size_kb": 1721.67,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 68,
+    "timestamp": "2025-11-10T14:59:01.778549",
+    "date": "10/11/2025 14:59:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_145900.pdf",
+    "file_size_kb": 1721.66,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 69,
+    "timestamp": "2025-11-10T15:01:41.746329",
+    "date": "10/11/2025 15:01:41",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "122222222222",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150140.pdf",
+    "file_size_kb": 1721.64,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 70,
+    "timestamp": "2025-11-10T15:02:31.957038",
+    "date": "10/11/2025 15:02:31",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150230.pdf",
+    "file_size_kb": 1721.65,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 71,
+    "timestamp": "2025-11-10T15:04:58.744679",
+    "date": "10/11/2025 15:04:58",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150457.pdf",
+    "file_size_kb": 1721.13,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 72,
+    "timestamp": "2025-11-10T15:07:13.642593",
+    "date": "10/11/2025 15:07:13",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "123444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150712.pdf",
+    "file_size_kb": 1721.13,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 73,
+    "timestamp": "2025-11-10T15:07:50.754073",
+    "date": "10/11/2025 15:07:50",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150749.pdf",
+    "file_size_kb": 1721.2,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 74,
+    "timestamp": "2025-11-10T15:09:45.924319",
+    "date": "10/11/2025 15:09:45",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_150945.pdf",
+    "file_size_kb": 1721.74,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 75,
+    "timestamp": "2025-11-10T15:11:42.334824",
+    "date": "10/11/2025 15:11:42",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_151141.pdf",
+    "file_size_kb": 1721.74,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 76,
+    "timestamp": "2025-11-10T15:12:18.036464",
+    "date": "10/11/2025 15:12:18",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTTT",
+    "numero_ordine": "345555555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_151217.pdf",
+    "file_size_kb": 1721.66,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 77,
+    "timestamp": "2025-11-10T15:18:30.300624",
+    "date": "10/11/2025 15:18:30",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_151829.pdf",
+    "file_size_kb": 1716.67,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 78,
+    "timestamp": "2025-11-10T15:20:01.382137",
+    "date": "10/11/2025 15:20:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_152000.pdf",
+    "file_size_kb": 1716.67,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 79,
+    "timestamp": "2025-11-10T15:24:33.352928",
+    "date": "10/11/2025 15:24:33",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464TTT",
+    "numero_ordine": "123445555555",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_152432.pdf",
+    "file_size_kb": 1716.67,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 80,
+    "timestamp": "2025-11-10T15:26:25.664072",
+    "date": "10/11/2025 15:26:25",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_152625.pdf",
+    "file_size_kb": 1716.63,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 81,
+    "timestamp": "2025-11-10T15:27:49.573846",
+    "date": "10/11/2025 15:27:49",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "ERRR",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_152748.pdf",
+    "file_size_kb": 1726.45,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 82,
+    "timestamp": "2025-11-10T15:29:43.493160",
+    "date": "10/11/2025 15:29:43",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "111223333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_152942.pdf",
+    "file_size_kb": 1721.49,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 83,
+    "timestamp": "2025-11-10T15:31:45.591016",
+    "date": "10/11/2025 15:31:45",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "ERRR",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_153144.pdf",
+    "file_size_kb": 1728.74,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 84,
+    "timestamp": "2025-11-10T15:32:31.016297",
+    "date": "10/11/2025 15:32:31",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "YYY",
+    "numero_ordine": "455667777788",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_153230.pdf",
+    "file_size_kb": 1721.5,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 85,
+    "timestamp": "2025-11-10T15:34:35.608838",
+    "date": "10/11/2025 15:34:35",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "ERRR",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_153434.pdf",
+    "file_size_kb": 1726.55,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 86,
+    "timestamp": "2025-11-10T15:35:51.985265",
+    "date": "10/11/2025 15:35:51",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "UUU",
+    "numero_ordine": "433434343455",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_153551.pdf",
+    "file_size_kb": 1719.3,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 87,
+    "timestamp": "2025-11-10T15:39:53.273582",
+    "date": "10/11/2025 15:39:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "UUU",
+    "numero_ordine": "433434343455",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_153952.pdf",
+    "file_size_kb": 1719.3,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 88,
+    "timestamp": "2025-11-10T15:44:00.866381",
+    "date": "10/11/2025 15:44:00",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WWW",
+    "numero_ordine": "564545454444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_154400.pdf",
+    "file_size_kb": 1719.3,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 89,
+    "timestamp": "2025-11-10T15:44:23.927553",
+    "date": "10/11/2025 15:44:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WWW",
+    "numero_ordine": "564545454444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_154423.pdf",
+    "file_size_kb": 1719.3,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 90,
+    "timestamp": "2025-11-10T15:47:24.417315",
+    "date": "10/11/2025 15:47:24",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WWW",
+    "numero_ordine": "564545454444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_154723.pdf",
+    "file_size_kb": 1719.3,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 91,
+    "timestamp": "2025-11-10T15:48:21.177922",
+    "date": "10/11/2025 15:48:21",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WWW",
+    "numero_ordine": "564545454444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_154820.pdf",
+    "file_size_kb": 1720.76,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 92,
+    "timestamp": "2025-11-10T15:52:18.811823",
+    "date": "10/11/2025 15:52:18",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_155218.pdf",
+    "file_size_kb": 1718.08,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 93,
+    "timestamp": "2025-11-10T15:55:11.147711",
+    "date": "10/11/2025 15:55:11",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_155510.pdf",
+    "file_size_kb": 1720.65,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 94,
+    "timestamp": "2025-11-10T16:01:48.161422",
+    "date": "10/11/2025 16:01:48",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "OOO",
+    "numero_ordine": "566678899999",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_160147.pdf",
+    "file_size_kb": 1713.55,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 95,
+    "timestamp": "2025-11-10T16:05:05.139628",
+    "date": "10/11/2025 16:05:05",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "OOO",
+    "numero_ordine": "566678899999",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_160504.pdf",
+    "file_size_kb": 1716.91,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 96,
+    "timestamp": "2025-11-10T16:05:19.707143",
+    "date": "10/11/2025 16:05:19",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "OOO",
+    "numero_ordine": "566678899999",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_160518.pdf",
+    "file_size_kb": 1716.91,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 97,
+    "timestamp": "2025-11-10T16:09:23.622614",
+    "date": "10/11/2025 16:09:23",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_160922.pdf",
+    "file_size_kb": 1701.92,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 98,
+    "timestamp": "2025-11-10T16:11:41.505216",
+    "date": "10/11/2025 16:11:41",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_161140.pdf",
+    "file_size_kb": 1701.92,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 99,
+    "timestamp": "2025-11-10T16:13:45.503284",
+    "date": "10/11/2025 16:13:45",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_161344.pdf",
+    "file_size_kb": 1694.43,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 100,
+    "timestamp": "2025-11-10T16:14:04.696289",
+    "date": "10/11/2025 16:14:04",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464",
+    "numero_ordine": "122333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_161403.pdf",
+    "file_size_kb": 1694.43,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 101,
+    "timestamp": "2025-11-10T16:19:52.160363",
+    "date": "10/11/2025 16:19:52",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "344444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_161951.pdf",
+    "file_size_kb": 1724.06,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 102,
+    "timestamp": "2025-11-10T16:20:41.130094",
+    "date": "10/11/2025 16:20:41",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "344444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_162040.pdf",
+    "file_size_kb": 1724.06,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 103,
+    "timestamp": "2025-11-10T16:27:14.284255",
+    "date": "10/11/2025 16:27:14",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "434343535355",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_162713.pdf",
+    "file_size_kb": 2026.69,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 104,
+    "timestamp": "2025-11-10T16:36:56.745219",
+    "date": "10/11/2025 16:36:56",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ETR456",
+    "numero_ordine": "432432432433",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_163656.pdf",
+    "file_size_kb": 2008.21,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 105,
+    "timestamp": "2025-11-10T16:40:46.355404",
+    "date": "10/11/2025 16:40:46",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_164046.pdf",
+    "file_size_kb": 2024.12,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 106,
+    "timestamp": "2025-11-10T16:47:02.166962",
+    "date": "10/11/2025 16:47:02",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTT",
+    "numero_ordine": "234444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_164701.pdf",
+    "file_size_kb": 2043.18,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 107,
+    "timestamp": "2025-11-10T16:51:14.849323",
+    "date": "10/11/2025 16:51:14",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "ad219548"
+    ],
+    "scadenze_nomi": [
+      "CO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "6666",
+    "numero_ordine": "555555555555",
+    "numero_documenti": 0,
+    "numero_operazioni": 9,
+    "filename": "completo_1_20251110_165114.pdf",
+    "file_size_kb": 445.19,
+    "scadenze_copie": {
+      "ad219548": 1
+    }
+  },
+  {
+    "id": 108,
+    "timestamp": "2025-11-10T16:54:40.925983",
+    "date": "10/11/2025 16:54:40",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "334444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_165440.pdf",
+    "file_size_kb": 2024.86,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 109,
+    "timestamp": "2025-11-10T16:56:53.442151",
+    "date": "10/11/2025 16:56:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "RRR",
+    "numero_ordine": "334444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_165653.pdf",
+    "file_size_kb": 2024.9,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 110,
+    "timestamp": "2025-11-10T16:58:17.582482",
+    "date": "10/11/2025 16:58:17",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "100056788777",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_165817.pdf",
+    "file_size_kb": 2024.93,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 111,
+    "timestamp": "2025-11-10T17:00:23.613790",
+    "date": "10/11/2025 17:00:23",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "ETR455TTT",
+    "numero_ordine": "343432432444",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251110_170022.pdf",
+    "file_size_kb": 2942.05,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 112,
+    "timestamp": "2025-11-10T17:07:01.668117",
+    "date": "10/11/2025 17:07:01",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "4444",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251110_170701.pdf",
+    "file_size_kb": 2043.41,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 113,
+    "timestamp": "2025-11-10T17:07:32.614087",
+    "date": "10/11/2025 17:07:32",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "77ba4805"
+    ],
+    "scadenze_nomi": [
+      "2CO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "4444",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 0,
+    "numero_operazioni": 9,
+    "filename": "completo_1_20251110_170732.pdf",
+    "file_size_kb": 445.14,
+    "scadenze_copie": {
+      "77ba4805": 1
+    }
+  },
+  {
+    "id": 114,
+    "timestamp": "2025-11-10T17:07:53.160565",
+    "date": "10/11/2025 17:07:53",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "4a611079"
+    ],
+    "scadenze_nomi": [
+      "160k km"
+    ],
+    "strumento": "",
+    "sede_tecnica": "4444",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 1,
+    "numero_operazioni": 10,
+    "filename": "completo_1_20251110_170753.pdf",
+    "file_size_kb": 657.21,
+    "scadenze_copie": {
+      "4a611079": 1
+    }
+  },
+  {
+    "id": 115,
+    "timestamp": "2025-11-10T17:08:24.384128",
+    "date": "10/11/2025 17:08:24",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "TTTTT",
+    "numero_ordine": "445454544453",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_170824.pdf",
+    "file_size_kb": 3928.17,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 116,
+    "timestamp": "2025-11-10T19:03:13.789962",
+    "date": "10/11/2025 19:03:13",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524",
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "VI2",
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "ATR220TR006",
+    "numero_ordine": "100033444444",
+    "numero_documenti": 4,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_190313.pdf",
+    "file_size_kb": 1166.6,
+    "scadenze_copie": {
+      "5242d524": 1,
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 117,
+    "timestamp": "2025-11-10T19:12:59.397615",
+    "date": "10/11/2025 19:12:59",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524",
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR006",
+    "numero_ordine": "123445544444",
+    "numero_documenti": 4,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_191259.pdf",
+    "file_size_kb": 1158.0,
+    "scadenze_copie": {
+      "5242d524": 1,
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 118,
+    "timestamp": "2025-11-10T19:15:46.898145",
+    "date": "10/11/2025 19:15:46",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524",
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR006",
+    "numero_ordine": "123445544444",
+    "numero_documenti": 4,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_191546.pdf",
+    "file_size_kb": 1158.01,
+    "scadenze_copie": {
+      "5242d524": 1,
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 119,
+    "timestamp": "2025-11-10T19:16:45.411925",
+    "date": "10/11/2025 19:16:45",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524",
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR006",
+    "numero_ordine": "123445544444",
+    "numero_documenti": 4,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_191645.pdf",
+    "file_size_kb": 1158.02,
+    "scadenze_copie": {
+      "5242d524": 1,
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 120,
+    "timestamp": "2025-11-10T19:23:24.380483",
+    "date": "10/11/2025 19:23:24",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524",
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEEW",
+    "numero_ordine": "112344433332",
+    "numero_documenti": 4,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_192324.pdf",
+    "file_size_kb": 996.38,
+    "scadenze_copie": {
+      "5242d524": 1,
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 121,
+    "timestamp": "2025-11-10T19:25:02.592736",
+    "date": "10/11/2025 19:25:02",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "MA08MD800X",
+    "numero_ordine": "212121121222",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_192502.pdf",
+    "file_size_kb": 1501.07,
+    "scadenze_copie": {
+      "9b6225b1": 3,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 122,
+    "timestamp": "2025-11-10T19:33:51.898580",
+    "date": "10/11/2025 19:33:51",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR007",
+    "numero_ordine": "112344433332",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_193351.pdf",
+    "file_size_kb": 1157.24,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 123,
+    "timestamp": "2025-11-10T19:34:43.664238",
+    "date": "10/11/2025 19:34:43",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR007",
+    "numero_ordine": "112344433332",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_193443.pdf",
+    "file_size_kb": 995.63,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 124,
+    "timestamp": "2025-11-10T19:35:07.741321",
+    "date": "10/11/2025 19:35:07",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SFFDS",
+    "numero_ordine": "112344433332",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_193507.pdf",
+    "file_size_kb": 2204.86,
+    "scadenze_copie": {
+      "9b6225b1": 3,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 125,
+    "timestamp": "2025-11-10T19:38:35.389458",
+    "date": "10/11/2025 19:38:35",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "5242d524"
+    ],
+    "scadenze_nomi": [
+      "VI"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 0,
+    "numero_operazioni": 12,
+    "filename": "completo_356a4431_20251110_193835.pdf",
+    "file_size_kb": 445.25,
+    "scadenze_copie": {
+      "5242d524": 1
+    }
+  },
+  {
+    "id": 126,
+    "timestamp": "2025-11-10T19:38:55.406672",
+    "date": "10/11/2025 19:38:55",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3"
+    ],
+    "scadenze_nomi": [
+      "VI2"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_193855.pdf",
+    "file_size_kb": 606.19,
+    "scadenze_copie": {
+      "f9e50fa3": 1
+    }
+  },
+  {
+    "id": 127,
+    "timestamp": "2025-11-10T19:39:59.543146",
+    "date": "10/11/2025 19:39:59",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3"
+    ],
+    "scadenze_nomi": [
+      "VI2"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_193959.pdf",
+    "file_size_kb": 360.81,
+    "scadenze_copie": {
+      "f9e50fa3": 1
+    }
+  },
+  {
+    "id": 128,
+    "timestamp": "2025-11-10T19:41:26.493002",
+    "date": "10/11/2025 19:41:26",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3"
+    ],
+    "scadenze_nomi": [
+      "VI2"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_194126.pdf",
+    "file_size_kb": 360.81,
+    "scadenze_copie": {
+      "f9e50fa3": 1
+    }
+  },
+  {
+    "id": 129,
+    "timestamp": "2025-11-10T19:45:29.876071",
+    "date": "10/11/2025 19:45:29",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3"
+    ],
+    "scadenze_nomi": [
+      "VI2"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_194529.pdf",
+    "file_size_kb": 360.81,
+    "scadenze_copie": {
+      "f9e50fa3": 1
+    }
+  },
+  {
+    "id": 130,
+    "timestamp": "2025-11-10T19:45:47.844040",
+    "date": "10/11/2025 19:45:47",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "SWDW",
+    "numero_ordine": "223333333333",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_194547.pdf",
+    "file_size_kb": 750.16,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 131,
+    "timestamp": "2025-11-10T19:46:10.206126",
+    "date": "10/11/2025 19:46:10",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DSDAD",
+    "numero_ordine": "343432243333",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_194610.pdf",
+    "file_size_kb": 850.36,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 132,
+    "timestamp": "2025-11-10T19:47:16.034573",
+    "date": "10/11/2025 19:47:16",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DSDAD",
+    "numero_ordine": "343432243333",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_194715.pdf",
+    "file_size_kb": 1149.16,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 133,
+    "timestamp": "2025-11-10T19:48:52.916727",
+    "date": "10/11/2025 19:48:52",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1"
+    ],
+    "scadenze_nomi": [
+      "VI"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 1,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251110_194852.pdf",
+    "file_size_kb": 869.44,
+    "scadenze_copie": {
+      "9b6225b1": 1
+    }
+  },
+  {
+    "id": 134,
+    "timestamp": "2025-11-10T19:49:08.876624",
+    "date": "10/11/2025 19:49:08",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_194908.pdf",
+    "file_size_kb": 1719.22,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 135,
+    "timestamp": "2025-11-10T19:51:17.512906",
+    "date": "10/11/2025 19:51:17",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195117.pdf",
+    "file_size_kb": 1719.22,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 136,
+    "timestamp": "2025-11-10T19:52:28.665103",
+    "date": "10/11/2025 19:52:28",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195228.pdf",
+    "file_size_kb": 1719.22,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 137,
+    "timestamp": "2025-11-10T19:54:07.344169",
+    "date": "10/11/2025 19:54:07",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195407.pdf",
+    "file_size_kb": 1719.22,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 138,
+    "timestamp": "2025-11-10T19:55:25.378850",
+    "date": "10/11/2025 19:55:25",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DQWQ",
+    "numero_ordine": "213124214232",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195525.pdf",
+    "file_size_kb": 1719.22,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 139,
+    "timestamp": "2025-11-10T19:56:28.462248",
+    "date": "10/11/2025 19:56:28",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "MA08MD800D",
+    "numero_ordine": "123456777888",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195628.pdf",
+    "file_size_kb": 1294.62,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 140,
+    "timestamp": "2025-11-10T19:57:58.274603",
+    "date": "10/11/2025 19:57:58",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SDD",
+    "numero_ordine": "223344554444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195758.pdf",
+    "file_size_kb": 1294.59,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 141,
+    "timestamp": "2025-11-10T19:58:48.432687",
+    "date": "10/11/2025 19:58:48",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SDD",
+    "numero_ordine": "223344554444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195848.pdf",
+    "file_size_kb": 1294.59,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 142,
+    "timestamp": "2025-11-10T19:59:01.269313",
+    "date": "10/11/2025 19:59:01",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SDD",
+    "numero_ordine": "223344554444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_195901.pdf",
+    "file_size_kb": 1719.21,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 143,
+    "timestamp": "2025-11-10T20:00:29.691833",
+    "date": "10/11/2025 20:00:29",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SDD",
+    "numero_ordine": "223344554444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_200029.pdf",
+    "file_size_kb": 1719.21,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 2
+    }
+  },
+  {
+    "id": 144,
+    "timestamp": "2025-11-10T20:04:33.738859",
+    "date": "10/11/2025 20:04:33",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SSS",
+    "numero_ordine": "334232222222",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_200433.pdf",
+    "file_size_kb": 1294.59,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 145,
+    "timestamp": "2025-11-10T20:06:12.316064",
+    "date": "10/11/2025 20:06:12",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "MA08MD800D",
+    "numero_ordine": "123456777888",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_200612.pdf",
+    "file_size_kb": 1294.62,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 146,
+    "timestamp": "2025-11-10T20:08:10.709321",
+    "date": "10/11/2025 20:08:10",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "SSS",
+    "numero_ordine": "334232222222",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_200810.pdf",
+    "file_size_kb": 1294.59,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 147,
+    "timestamp": "2025-11-10T20:17:14.786384",
+    "date": "10/11/2025 20:17:14",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DDDD",
+    "numero_ordine": "123344444444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_201714.pdf",
+    "file_size_kb": 1294.46,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 148,
+    "timestamp": "2025-11-10T20:17:48.410489",
+    "date": "10/11/2025 20:17:48",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DDDD",
+    "numero_ordine": "123344444444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_201748.pdf",
+    "file_size_kb": 2992.95,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 5
+    }
+  },
+  {
+    "id": 149,
+    "timestamp": "2025-11-10T20:17:58.383007",
+    "date": "10/11/2025 20:17:58",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "DDDD",
+    "numero_ordine": "123344444444",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251110_201758.pdf",
+    "file_size_kb": 2992.95,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 5
+    }
+  },
+  {
+    "id": 150,
+    "timestamp": "2025-11-10T20:18:34.532308",
+    "date": "10/11/2025 20:18:34",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "WW2W2",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_201834.pdf",
+    "file_size_kb": 758.73,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 151,
+    "timestamp": "2025-11-10T20:20:25.681528",
+    "date": "10/11/2025 20:20:25",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "RRRR",
+    "numero_ordine": "134444444444",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_202025.pdf",
+    "file_size_kb": 786.57,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 152,
+    "timestamp": "2025-11-10T20:22:49.732602",
+    "date": "10/11/2025 20:22:49",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ETRRR",
+    "numero_ordine": "424354354355",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_202249.pdf",
+    "file_size_kb": 750.79,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 153,
+    "timestamp": "2025-11-10T20:30:46.674036",
+    "date": "10/11/2025 20:30:46",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "ATR220TR009",
+    "numero_ordine": "435353543544",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_203046.pdf",
+    "file_size_kb": 1553.94,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 154,
+    "timestamp": "2025-11-10T20:32:41.154903",
+    "date": "10/11/2025 20:32:41",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "5W5435345",
+    "numero_ordine": "123213213212",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_203240.pdf",
+    "file_size_kb": 1554.01,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 155,
+    "timestamp": "2025-11-10T20:36:28.367881",
+    "date": "10/11/2025 20:36:28",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "5W5435345",
+    "numero_ordine": "123213213212",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_203628.pdf",
+    "file_size_kb": 1554.01,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 156,
+    "timestamp": "2025-11-10T20:47:50.320158",
+    "date": "10/11/2025 20:47:50",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "5W5435345",
+    "numero_ordine": "123213213212",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_204750.pdf",
+    "file_size_kb": 1554.01,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 157,
+    "timestamp": "2025-11-10T20:49:36.542012",
+    "date": "10/11/2025 20:49:36",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "5W5435345",
+    "numero_ordine": "123213213212",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_204936.pdf",
+    "file_size_kb": 1554.01,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 158,
+    "timestamp": "2025-11-10T20:50:31.339589",
+    "date": "10/11/2025 20:50:31",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "5W5435345",
+    "numero_ordine": "123213213212",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251110_205030.pdf",
+    "file_size_kb": 1554.01,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 159,
+    "timestamp": "2025-11-10T22:10:53.878916",
+    "date": "10/11/2025 22:10:53",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "ETR425006",
+    "numero_ordine": "100056544444",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251110_221053.pdf",
+    "file_size_kb": 3336.65,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 160,
+    "timestamp": "2025-11-10T22:11:42.740542",
+    "date": "10/11/2025 22:11:42",
+    "flotta_id": "d761d0db",
+    "flotta_nome": "JAZZ",
+    "scadenze_ids": [
+      "48b90ed3"
+    ],
+    "scadenze_nomi": [
+      "RO"
+    ],
+    "strumento": "",
+    "sede_tecnica": "ETR425006",
+    "numero_ordine": "100056544444",
+    "numero_documenti": 11,
+    "numero_operazioni": 9,
+    "filename": "completo_d761d0db_20251110_221142.pdf",
+    "file_size_kb": 3336.65,
+    "scadenze_copie": {
+      "48b90ed3": 1
+    }
+  },
+  {
+    "id": 161,
+    "timestamp": "2025-11-11T07:49:12.875810",
+    "date": "11/11/2025 07:49:12",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E4645887",
+    "numero_ordine": "152222222255",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_074912.pdf",
+    "file_size_kb": 2043.44,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 162,
+    "timestamp": "2025-11-11T08:35:43.625109",
+    "date": "11/11/2025 08:35:43",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001",
+      "905319b2",
+      "e83bc3c2",
+      "2c82e7f6",
+      "908d91d3"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT",
+      "128k km",
+      "3 MESI",
+      "6 MESI RIMO",
+      "12 MESI RIMO"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "MA08MD800H",
+    "numero_ordine": "100014505749",
+    "numero_documenti": 6,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251111_083543.pdf",
+    "file_size_kb": 4896.83,
+    "scadenze_copie": {
+      "9b6225b1": 6,
+      "vet_rt_001": 2,
+      "905319b2": 1,
+      "e83bc3c2": 1,
+      "2c82e7f6": 1,
+      "908d91d3": 1
+    }
+  },
+  {
+    "id": 163,
+    "timestamp": "2025-11-11T09:03:26.381839",
+    "date": "11/11/2025 09:03:26",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001",
+      "905319b2",
+      "e83bc3c2",
+      "2c82e7f6",
+      "908d91d3"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT",
+      "128k km",
+      "3 MESI",
+      "6 MESI RIMO",
+      "12 MESI RIMO"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "MA08MD800H",
+    "numero_ordine": "100014505749",
+    "numero_documenti": 6,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251111_090325.pdf",
+    "file_size_kb": 4896.83,
+    "scadenze_copie": {
+      "9b6225b1": 6,
+      "vet_rt_001": 2,
+      "905319b2": 1,
+      "e83bc3c2": 1,
+      "2c82e7f6": 1,
+      "908d91d3": 1
+    }
+  },
+  {
+    "id": 164,
+    "timestamp": "2025-11-11T09:19:40.854936",
+    "date": "11/11/2025 09:19:40",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "MA08MD",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 2,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251111_091940.pdf",
+    "file_size_kb": 818.83,
+    "scadenze_copie": {
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 165,
+    "timestamp": "2025-11-11T09:39:46.903444",
+    "date": "11/11/2025 09:39:46",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "MA08MD",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 2,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251111_093946.pdf",
+    "file_size_kb": 818.67,
+    "scadenze_copie": {
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 166,
+    "timestamp": "2025-11-11T09:43:32.204156",
+    "date": "11/11/2025 09:43:32",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "MA08MD",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 2,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251111_094332.pdf",
+    "file_size_kb": 818.67,
+    "scadenze_copie": {
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 167,
+    "timestamp": "2025-11-11T09:43:59.476342",
+    "date": "11/11/2025 09:43:59",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "RR",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 2,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251111_094359.pdf",
+    "file_size_kb": 818.66,
+    "scadenze_copie": {
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 168,
+    "timestamp": "2025-11-11T09:45:51.826574",
+    "date": "11/11/2025 09:45:51",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "RR",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 2,
+    "numero_operazioni": 9,
+    "filename": "completo_2b0154b0_20251111_094551.pdf",
+    "file_size_kb": 818.66,
+    "scadenze_copie": {
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 169,
+    "timestamp": "2025-11-11T09:46:14.424862",
+    "date": "11/11/2025 09:46:14",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "E465",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_094613.pdf",
+    "file_size_kb": 2087.69,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 170,
+    "timestamp": "2025-11-11T09:46:44.463275",
+    "date": "11/11/2025 09:46:44",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "a6c554af",
+      "97e19fa8",
+      "8acfc57e",
+      "bcce66c9",
+      "cdd031b7"
+    ],
+    "scadenze_nomi": [
+      "24 MESI",
+      "TORNIO",
+      "PRE_ESTIVA",
+      "PRE_INVERNALE",
+      "DDMS"
+    ],
+    "strumento": "",
+    "sede_tecnica": "E465",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 4,
+    "numero_operazioni": 11,
+    "filename": "completo_1_20251111_094644.pdf",
+    "file_size_kb": 1998.53,
+    "scadenze_copie": {
+      "a6c554af": 1,
+      "97e19fa8": 1,
+      "8acfc57e": 1,
+      "bcce66c9": 1,
+      "cdd031b7": 1
+    }
+  },
+  {
+    "id": 171,
+    "timestamp": "2025-11-11T09:49:21.232404",
+    "date": "11/11/2025 09:49:21",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "E465",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_094920.pdf",
+    "file_size_kb": 2088.63,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 172,
+    "timestamp": "2025-11-11T09:49:36.804965",
+    "date": "11/11/2025 09:49:36",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT"
+    ],
+    "strumento": "",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 2,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251111_094936.pdf",
+    "file_size_kb": 1294.45,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1
+    }
+  },
+  {
+    "id": 173,
+    "timestamp": "2025-11-11T09:49:46.775483",
+    "date": "11/11/2025 09:49:46",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001",
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT",
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 4,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251111_094946.pdf",
+    "file_size_kb": 1668.61,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1,
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 174,
+    "timestamp": "2025-11-11T09:51:48.783213",
+    "date": "11/11/2025 09:51:48",
+    "flotta_id": "2b0154b0",
+    "flotta_nome": "VETTURE",
+    "scadenze_ids": [
+      "9b6225b1",
+      "vet_rt_001",
+      "905319b2"
+    ],
+    "scadenze_nomi": [
+      "VI",
+      "RT",
+      "128k km"
+    ],
+    "strumento": "MANUALE",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 4,
+    "numero_operazioni": 10,
+    "filename": "completo_2b0154b0_20251111_095148.pdf",
+    "file_size_kb": 1668.61,
+    "scadenze_copie": {
+      "9b6225b1": 1,
+      "vet_rt_001": 1,
+      "905319b2": 1
+    }
+  },
+  {
+    "id": 175,
+    "timestamp": "2025-11-11T09:52:56.434115",
+    "date": "11/11/2025 09:52:56",
+    "flotta_id": "356a4431",
+    "flotta_nome": "SWING",
+    "scadenze_ids": [
+      "f9e50fa3",
+      "eb362211"
+    ],
+    "scadenze_nomi": [
+      "VI2",
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "ERRRR",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 4,
+    "numero_operazioni": 9,
+    "filename": "completo_356a4431_20251111_095255.pdf",
+    "file_size_kb": 1562.75,
+    "scadenze_copie": {
+      "f9e50fa3": 1,
+      "eb362211": 1
+    }
+  },
+  {
+    "id": 176,
+    "timestamp": "2025-11-11T09:54:35.958464",
+    "date": "11/11/2025 09:54:35",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_095435.pdf",
+    "file_size_kb": 2024.93,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 177,
+    "timestamp": "2025-11-11T09:55:12.823806",
+    "date": "11/11/2025 09:55:12",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "E464556",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_095512.pdf",
+    "file_size_kb": 2024.93,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 178,
+    "timestamp": "2025-11-11T09:57:41.439403",
+    "date": "11/11/2025 09:57:41",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEEE",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_095741.pdf",
+    "file_size_kb": 2024.91,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 179,
+    "timestamp": "2025-11-11T10:02:45.420187",
+    "date": "11/11/2025 10:02:45",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "CALIPRI",
+    "sede_tecnica": "EEEE",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_100245.pdf",
+    "file_size_kb": 2024.91,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 180,
+    "timestamp": "2025-11-11T10:03:07.116271",
+    "date": "11/11/2025 10:03:07",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_100306.pdf",
+    "file_size_kb": 2043.41,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 181,
+    "timestamp": "2025-11-11T10:04:11.520040",
+    "date": "11/11/2025 10:04:11",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_100411.pdf",
+    "file_size_kb": 2043.41,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 182,
+    "timestamp": "2025-11-11T10:08:33.229615",
+    "date": "11/11/2025 10:08:33",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_100832.pdf",
+    "file_size_kb": 2043.41,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 183,
+    "timestamp": "2025-11-11T10:10:29.153126",
+    "date": "11/11/2025 10:10:29",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "E464",
+    "numero_ordine": "333333333333",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_101028.pdf",
+    "file_size_kb": 2043.41,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  },
+  {
+    "id": 184,
+    "timestamp": "2025-11-11T10:11:22.284863",
+    "date": "11/11/2025 10:11:22",
+    "flotta_id": "1",
+    "flotta_nome": "E464",
+    "scadenze_ids": [
+      "632d4134"
+    ],
+    "scadenze_nomi": [
+      "RT"
+    ],
+    "strumento": "WPMS",
+    "sede_tecnica": "EEE",
+    "numero_ordine": "444444444444",
+    "numero_documenti": 6,
+    "numero_operazioni": 13,
+    "filename": "completo_1_20251111_101121.pdf",
+    "file_size_kb": 2043.4,
+    "scadenze_copie": {
+      "632d4134": 1
+    }
+  }
+]

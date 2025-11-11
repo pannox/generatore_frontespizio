@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report e Statistiche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <style>
+        .reports-container {
+            max-width: 1400px;
+            margin: 80px auto 30px auto;
+            padding: 30px;
+        }
+
+        .document-list, .operazioni-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .document-list li, .operazioni-list li {
+            background: white;
+            margin: 4px 0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #28a745;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+
+        .operazioni-list li {
+            border-left-color: #ffc107;
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .report-header h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .btn-export-pdf {
+            background: linear-gradient(135deg, #f44336 0%, #e91e63 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+        }
+
+        .btn-export-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 67, 54, 0.5);
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+            margin-right: 15px;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.5);
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .flotta-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .flotta-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 1px solid #764ba2;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .scadenza-section {
+            padding: 12px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .scadenza-section:last-child {
+            border-bottom: none;
+        }
+
+        .scadenza-title {
+            color: #667eea;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .report-table th {
+            background: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 2px solid #667eea;
+            font-size: 0.9em;
+        }
+
+        .report-table td {
+            padding: 6px 12px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9em;
+        }
+
+        .report-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .badge-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            transition: all 0.2s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.12);
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .strumento-badge {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            margin-left: 5px;
+        }
+
+        .filters-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            align-items: end;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-filter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-filter:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-clear-filter {
+            background: #6c757d;
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-clear-filter:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Stili per compressione sezioni */
+        .flotta-header {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .flotta-header:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+            border-color: #6a4190;
+        }
+
+        .flotta-header::after {
+            content: '▼';
+            font-size: 0.7em;
+            color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.2s ease;
+            position: absolute;
+            right: 20px;
+        }
+
+        .flotta-header.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .flotta-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .flotta-content.collapsed {
+            max-height: 0 !important;
+        }
+
+        .scadenza-title {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        .scadenza-title::after {
+            content: '▼';
+            font-size: 0.6em;
+            color: #666;
+            transition: transform 0.2s ease;
+            position: absolute;
+            right: 20px;
+        }
+
+        .scadenza-title.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .scadenza-content {
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+        }
+
+        .scadenza-content.collapsed {
+            max-height: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        /* Stili per pulsanti espandi/comprimi minimali */
+        .btn-expand-collapse {
+            background: rgba(255, 255, 255, 0.9);
+            color: #495057;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 6px 8px;
+            font-size: 1em;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-weight: 500;
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .btn-expand-collapse:hover {
+            background: white;
+            color: #495057;
+            border-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn-expand-collapse:active {
+            background: #f8f9fa;
+        }
+
+        /* Rimuovi freccia per sezioni non comprimibili */
+        .flotta-header[style*="cursor: default"]::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+        </div>
+    </nav>
+
+    <div class="reports-container">
+        <div class="report-header">
+            <div>
+                <h1>📊 Report e Statistiche</h1>
+                <p style="color: #666; margin-top: 10px;">Riepilogo completo di operazioni e documenti per flotta</p>
+            </div>
+            <div class="header-buttons" style="display: flex; gap: 12px; align-items: center;">
+                <a href="/admin" class="btn-back">
+                    ← Indietro
+                </a>
+                <button onclick="showLogDettagliato()" class="btn-export-pdf" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                    📋 Log e Statistiche
+                </button>
+                <a href="/admin/reports/export-pdf" id="exportPdfBtn" class="btn-export-pdf">
+                    📄 Esporta in PDF
+                </a>
+            </div>
+        </div>
+
+        <!-- Filtri -->
+        <div class="filters-section">
+            <h3 style="margin-bottom: 20px; color: #333;">🔍 Filtri</h3>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="filterFlotta">Filtra per Flotta:</label>
+                    <select id="filterFlotta" class="filter-select">
+                        <option value="">Tutte le flotte</option>
+                        {% for flotta in report_data.flotte %}
+                        <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterScadenza">Filtra per Scadenza:</label>
+                    <select id="filterScadenza" class="filter-select">
+                        <option value="">Tutte le scadenze</option>
+                        <!-- Popolato dinamicamente -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-buttons">
+                        <button onclick="applyFilters()" class="btn-filter">Applica Filtri</button>
+                        <button onclick="clearFilters()" class="btn-clear-filter">Rimuovi Filtri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistiche Generali -->
+        <div class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-label">Totale Flotte</div>
+                <div class="stat-number">{{ report_data.totale_flotte }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Totale Scadenze</div>
+                <div class="stat-number">{{ report_data.totale_scadenze }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Totale Documenti</div>
+                <div class="stat-number">{{ report_data.totale_documenti }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Totale Operazioni</div>
+                <div class="stat-number">{{ report_data.totale_operazioni }}</div>
+            </div>
+        </div>
+
+        <!-- Report per Flotta -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; color: #333; font-size: 1.1em;">📋 Report Dettagliato per Flotta</h3>
+            <div style="display: flex; gap: 6px;">
+                <button onclick="expandAll()" class="btn-expand-collapse" title="Espandi Tutto">
+                    ☰
+                </button>
+                <button onclick="collapseAll()" class="btn-expand-collapse" title="Comprimi Tutto">
+                    ⚊
+                </button>
+            </div>
+        </div>
+        
+        {% for flotta in report_data.flotte %}
+        <div class="flotta-section" data-flotta-id="{{ flotta.id }}">
+            <div class="flotta-header" onclick="toggleFlotta('{{ flotta.id }}')">
+                🚂 {{ flotta.nome }}
+            </div>
+            
+            <div class="flotta-content" id="flotta-content-{{ flotta.id }}">
+                {% for scadenza in flotta.scadenze %}
+                <div class="scadenza-section" data-scadenza-id="{{ scadenza.id }}" data-scadenza-nome="{{ scadenza.nome }}">
+                    <div class="scadenza-title" onclick="toggleScadenza('{{ scadenza.id }}')">
+                        📅 {{ scadenza.nome }}
+                    </div>
+                    
+                    <div class="scadenza-content" id="scadenza-content-{{ scadenza.id }}">
+
+                <!-- Documenti -->
+                <h4 style="color: #333; margin-top: 20px; margin-bottom: 10px;">📄 Documenti ({{ scadenza.documenti|length }})</h4>
+                {% if scadenza.documenti|length > 0 %}
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Nome Documento</th>
+                            <th>Strumento</th>
+                            <th>Stato PDF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for doc in scadenza.documenti %}
+                        <tr>
+                            <td>{{ doc.nome }}</td>
+                            <td>
+                                {% if doc.strumento %}
+                                <span class="strumento-badge">{{ doc.strumento }}</span>
+                                {% else %}
+                                <span style="color: #999;">-</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if doc.pdf_path %}
+                                <span class="badge-status badge-success">✓ Caricato</span>
+                                {% else %}
+                                <span class="badge-status badge-warning">⚠ Non caricato</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="empty-state">Nessun documento configurato</div>
+                {% endif %}
+
+                <!-- Operazioni Aggiuntive -->
+                <h4 style="color: #333; margin-top: 30px; margin-bottom: 10px;">⚙️ Operazioni Aggiuntive ({{ scadenza.operazioni|length }})</h4>
+                {% if scadenza.operazioni|length > 0 %}
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Titolo</th>
+                            <th>Descrizione</th>
+                            <th>CDL</th>
+                            <th>Mesi Validità</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for op in scadenza.operazioni %}
+                        <tr>
+                            <td><strong>{{ op.titolo }}</strong></td>
+                            <td>{{ op.descrizione or '-' }}</td>
+                            <td>{{ op.cdl or '-' }}</td>
+                            <td>
+                                {% if op.mesi_validi and op.mesi_validi|length > 0 %}
+                                <span class="badge-status badge-info">
+                                    {{ op.mesi_validi|length }} mesi
+                                </span>
+                                {% else %}
+                                <span class="badge-status badge-info">Sempre</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="empty-state">Nessuna operazione aggiuntiva configurata</div>
+                {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Operazioni Globali -->
+        {% if report_data.operazioni_globali|length > 0 %}
+        <div class="flotta-section">
+            <div class="flotta-header" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); cursor: default;">
+                🌐 Operazioni Globali ({{ report_data.operazioni_globali|length }})
+            </div>
+            <div class="scadenza-section">
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Titolo</th>
+                            <th>Descrizione</th>
+                            <th>CDL</th>
+                            <th>Flotta Specifica</th>
+                            <th>Mesi Validità</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for op in report_data.operazioni_globali %}
+                        <tr>
+                            <td><strong>{{ op.titolo }}</strong></td>
+                            <td>{{ op.descrizione or '-' }}</td>
+                            <td>{{ op.cdl or '-' }}</td>
+                            <td>
+                                {% if op.flotta_nome %}
+                                <span class="badge-status badge-info">📦 {{ op.flotta_nome }}</span>
+                                {% else %}
+                                <span class="badge-status" style="background: #9E9E9E; color: white;">🌐 Tutte</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if op.mesi_validi and op.mesi_validi|length > 0 %}
+                                <span class="badge-status badge-info">{{ op.mesi_validi|length }} mesi</span>
+                                {% else %}
+                                <span class="badge-status badge-info">Sempre</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Modal Log Dettagliato -->
+    <div id="logModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div style="position: relative; background-color: white; margin: 2% auto; padding: 0; border-radius: 12px; width: 95%; max-width: 1200px; max-height: 90vh; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+            
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 12px 12px 0 0;">
+                <h3 style="margin: 0; display: flex; justify-content: space-between; align-items: center;">
+                    <span>📋 Log Dettagliato Stampe</span>
+                    <span onclick="closeLogModal()" style="cursor: pointer; font-size: 1.5em; opacity: 0.8;">&times;</span>
+                </h3>
+            </div>
+            
+            <!-- Content -->
+            <div style="padding: 20px; max-height: 75vh; overflow-y: auto;">
+                <div id="logContent">
+                    <div style="text-align: center; padding: 40px; color: #666;">
+                        <div style="font-size: 3em; margin-bottom: 15px; opacity: 0.3;">📋</div>
+                        <h4>Caricamento...</h4>
+                        <p>Recupero log delle stampe...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="padding: 15px 20px; border-top: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="azzeraCronologia()" style="padding: 8px 16px; background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">
+                        🗑️ Azzera Cronologia
+                    </button>
+                    <a href="/admin/reports/export" style="padding: 8px 16px; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                        📥 Esporta CSV
+                    </a>
+                </div>
+                <button onclick="closeLogModal()" style="padding: 8px 16px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; cursor: pointer;">
+                    Chiudi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dati delle scadenze per flotta (JSON safe)
+        const scadenzePerFlotta = JSON.parse('{{ report_data.scadenze_per_flotta | tojson | safe }}');
+
+        // Popola le scadenze quando cambia la flotta
+        document.getElementById('filterFlotta').addEventListener('change', function() {
+            const flottaId = this.value;
+            const scadenzaSelect = document.getElementById('filterScadenza');
+
+            // Reset scadenze
+            scadenzaSelect.innerHTML = '<option value="">Tutte le scadenze</option>';
+
+            if (flottaId && scadenzePerFlotta[flottaId]) {
+                scadenzePerFlotta[flottaId].forEach(scadenza => {
+                    const option = document.createElement('option');
+                    option.value = scadenza.id;
+                    option.textContent = scadenza.nome;
+                    scadenzaSelect.appendChild(option);
+                });
+            } else {
+                // Se "Tutte le flotte", mostra tutte le scadenze
+                Object.values(scadenzePerFlotta).forEach(scadenze => {
+                    scadenze.forEach(scadenza => {
+                        // Evita duplicati
+                        if (!scadenzaSelect.querySelector(`option[value="${scadenza.id}"]`)) {
+                            const option = document.createElement('option');
+                            option.value = scadenza.id;
+                            option.textContent = scadenza.nome;
+                            scadenzaSelect.appendChild(option);
+                        }
+                    });
+                });
+            }
+        });
+
+        function applyFilters() {
+            const flottaId = document.getElementById('filterFlotta').value;
+            const scadenzaId = document.getElementById('filterScadenza').value;
+
+            const flotteSections = document.querySelectorAll('.flotta-section');
+
+            flotteSections.forEach(flottaSection => {
+                const flottaSectionId = flottaSection.getAttribute('data-flotta-id');
+
+                // Filtro flotta
+                if (flottaId && flottaSectionId !== flottaId) {
+                    flottaSection.classList.add('hidden');
+                    return;
+                } else {
+                    flottaSection.classList.remove('hidden');
+                }
+
+                // Filtro scadenza
+                const scadenzeSections = flottaSection.querySelectorAll('.scadenza-section');
+                let hasVisibleScadenza = false;
+
+                scadenzeSections.forEach(scadenzaSection => {
+                    const scadenzaSectionId = scadenzaSection.getAttribute('data-scadenza-id');
+
+                    if (scadenzaId && scadenzaSectionId !== scadenzaId) {
+                        scadenzaSection.classList.add('hidden');
+                    } else {
+                        scadenzaSection.classList.remove('hidden');
+                        hasVisibleScadenza = true;
+                    }
+                });
+
+                // Nascondi la flotta se non ha scadenze visibili
+                if (scadenzaId && !hasVisibleScadenza) {
+                    flottaSection.classList.add('hidden');
+                }
+            });
+
+            // Aggiorna il pulsante export PDF con i filtri
+            updateExportButton(flottaId, scadenzaId);
+        }
+
+        function clearFilters() {
+            document.getElementById('filterFlotta').value = '';
+            document.getElementById('filterScadenza').innerHTML = '<option value="">Tutte le scadenze</option>';
+
+            // Mostra tutto
+            document.querySelectorAll('.flotta-section, .scadenza-section').forEach(el => {
+                el.classList.remove('hidden');
+            });
+
+            // Reset export button
+            updateExportButton('', '');
+        }
+
+        function updateExportButton(flottaId, scadenzaId) {
+            const exportBtn = document.getElementById('exportPdfBtn');
+            let url = '/admin/reports/export-pdf?';
+
+            if (flottaId) {
+                url += `flotta_id=${flottaId}&`;
+            }
+            if (scadenzaId) {
+                url += `scadenza_id=${scadenzaId}&`;
+            }
+
+            exportBtn.href = url;
+        }
+
+        // Inizializza export button
+        updateExportButton('', '');
+        
+        // Funzione per azzerare la cronologia
+        async function azzeraCronologia() {
+            if (!confirm('⚠️ ATTENZIONE!\n\nQuesta operazione cancellerà DEFINITIVAMENTE:\n• Tutto lo storico delle stampe\n• Tutti i conteggi per flotta\n• Tutti i dati delle statistiche\n\nL\'operazione NON può essere annullata.\n\nSei sicuro di voler continuare?')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch('/admin/reports/azzera-cronologia', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Ricarica la pagina per aggiornare i dati
+                    location.reload();
+                }
+                
+            } catch (error) {
+                console.error('Errore azzeramento cronologia:', error);
+            }
+        }
+
+        // Chiudi modal se si clicca fuori
+        window.onclick = function(event) {
+            const logModal = document.getElementById('logModal');
+            if (event.target == logModal) {
+                closeLogModal();
+            }
+        }
+        
+        // Funzioni per toggle sezioni comprimibili
+        function toggleFlotta(flottaId) {
+            const content = document.getElementById(`flotta-content-${flottaId}`);
+            const header = event.currentTarget;
+            
+            if (content.classList.contains('collapsed')) {
+                // Espandi
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                header.classList.remove('collapsed');
+            } else {
+                // Comprimi
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+                header.classList.add('collapsed');
+            }
+        }
+        
+        function toggleScadenza(scadenzaId) {
+            const content = document.getElementById(`scadenza-content-${scadenzaId}`);
+            const header = event.currentTarget;
+            
+            if (content.classList.contains('collapsed')) {
+                // Espandi
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                header.classList.remove('collapsed');
+            } else {
+                // Comprimi
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+                header.classList.add('collapsed');
+            }
+        }
+        
+        // Espandi tutte le sezioni
+        function expandAll() {
+            // Espandi tutte le flotte
+            document.querySelectorAll('.flotta-content').forEach(content => {
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            });
+            
+            // Rimuovi classe collapsed da tutti gli header flotta
+            document.querySelectorAll('.flotta-header').forEach(header => {
+                header.classList.remove('collapsed');
+            });
+            
+            // Espandi tutte le scadenze
+            document.querySelectorAll('.scadenza-content').forEach(content => {
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            });
+            
+            // Rimuovi classe collapsed da tutti gli header scadenza
+            document.querySelectorAll('.scadenza-title').forEach(header => {
+                header.classList.remove('collapsed');
+            });
+        }
+        
+        // Comprimi tutte le sezioni
+        function collapseAll() {
+            // Comprimi tutte le flotte
+            document.querySelectorAll('.flotta-content').forEach(content => {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+            });
+            
+            // Aggiungi classe collapsed a tutti gli header flotta
+            document.querySelectorAll('.flotta-header').forEach(header => {
+                header.classList.add('collapsed');
+            });
+            
+            // Comprimi tutte le scadenze
+            document.querySelectorAll('.scadenza-content').forEach(content => {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+            });
+            
+            // Aggiungi classe collapsed a tutti gli header scadenza
+            document.querySelectorAll('.scadenza-title').forEach(header => {
+                header.classList.add('collapsed');
+            });
+        }
+        
+        // Inizializza le sezioni comprimibili - tutte compresse
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tutte le flotte iniziano compresse
+            document.querySelectorAll('.flotta-content').forEach((content) => {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+                // Trova l'header corrispondente
+                const flottaId = content.id.replace('flotta-content-', '');
+                const header = document.querySelector(`[onclick*="toggleFlotta('${flottaId}')"]`);
+                if (header) {
+                    header.classList.add('collapsed');
+                }
+            });
+            
+            // Tutte le scadenze iniziano compresse
+            document.querySelectorAll('.scadenza-content').forEach(content => {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0';
+                // Trova l'header corrispondente
+                const scadenzaId = content.id.replace('scadenza-content-', '');
+                const header = document.querySelector(`[onclick*="toggleScadenza('${scadenzaId}')"]`);
+                if (header) {
+                    header.classList.add('collapsed');
+                }
+            });
+        });
+        
+        // Funzioni per il log dettagliato
+        function showLogDettagliato() {
+            document.getElementById('logModal').style.display = 'block';
+            loadLogDettagliato();
+        }
+        
+        function closeLogModal() {
+            document.getElementById('logModal').style.display = 'none';
+        }
+        
+        async function loadLogDettagliato() {
+            try {
+                // Carica sia il log dettagliato che il conteggio flotte
+                const [logResponse, conteggioResponse] = await Promise.all([
+                    fetch('/admin/reports/log-dettagliato'),
+                    fetch('/admin/reports/conteggio-scadenze')
+                ]);
+                
+                const logData = await logResponse.json();
+                const conteggioData = await conteggioResponse.json();
+                
+                const content = document.getElementById('logContent');
+                
+                if (logData.success && logData.log && logData.log.length > 0) {
+                    let htmlContent = '';
+                    
+                    // Sezione conteggio per flotte
+                    if (conteggioData.success && conteggioData.conteggi && conteggioData.conteggi.length > 0) {
+                        htmlContent += `
+                            <div style="margin-bottom: 25px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #28a745;">
+                                <h4 style="margin: 0 0 15px 0; color: #155724;">📊 Riepilogo Stampe per Flotta</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">`;
+                        
+                        conteggioData.conteggi.forEach(item => {
+                            htmlContent += `
+                                <div style="background: white; padding: 10px 15px; border-radius: 6px; border: 1px solid #d4edda; display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-weight: 500; color: #333;">${item.flotta_nome}</span>
+                                    <span style="background: #28a745; color: white; padding: 4px 10px; border-radius: 12px; font-weight: 600; font-size: 0.9em;">
+                                        ${item.conteggio}
+                                    </span>
+                                </div>`;
+                        });
+                        
+                        htmlContent += `
+                                </div>
+                            </div>`;
+                    }
+                    
+                    // Sezione log dettagliato
+                    htmlContent += `
+                        <div style="margin-bottom: 15px; padding: 12px; background: #e3f2fd; border-radius: 6px; border-left: 4px solid #667eea;">
+                            <strong>📋 Log Dettagliato: ${logData.log.length} stampe effettuate</strong>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 0.85em;">
+                                <thead>
+                                    <tr style="background: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+                                        <th style="padding: 8px; text-align: left; font-weight: 600; color: #495057;">Data/Ora</th>
+                                        <th style="padding: 8px; text-align: left; font-weight: 600; color: #495057;">Flotta</th>
+                                        <th style="padding: 8px; text-align: left; font-weight: 600; color: #495057;">Scadenze</th>
+                                        <th style="padding: 8px; text-align: center; font-weight: 600; color: #495057;">Docs</th>
+                                        <th style="padding: 8px; text-align: center; font-weight: 600; color: #495057;">Ops</th>
+                                        <th style="padding: 8px; text-align: center; font-weight: 600; color: #495057;">Strumento</th>
+                                        <th style="padding: 8px; text-align: left; font-weight: 600; color: #495057;">Ordine</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                    
+                    logData.log.forEach((item, index) => {
+                        const rowBg = index % 2 === 0 ? '#fff' : '#f8f9fa';
+                        const scadenzeText = item.scadenze_nomi.length > 0 ? item.scadenze_nomi.join(', ') : `${item.numero_scadenze} scadenze`;
+                        
+                        htmlContent += `
+                            <tr style="background: ${rowBg}; border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 8px; font-size: 0.8em; color: #666;">${item.data}</td>
+                                <td style="padding: 8px; font-weight: 500;">${item.flotta_nome}</td>
+                                <td style="padding: 8px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${scadenzeText}">${scadenzeText}</td>
+                                <td style="padding: 8px; text-align: center;">
+                                    <span style="background: #e8f5e8; color: #28a745; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">
+                                        ${item.numero_documenti}
+                                    </span>
+                                </td>
+                                <td style="padding: 8px; text-align: center;">
+                                    <span style="background: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">
+                                        ${item.numero_operazioni}
+                                    </span>
+                                </td>
+                                <td style="padding: 8px; text-align: center; font-size: 0.8em;">${item.strumento}</td>
+                                <td style="padding: 8px; font-size: 0.8em; color: #666;">${item.numero_ordine || '-'}</td>
+                            </tr>`;
+                    });
+                    
+                    htmlContent += `
+                                </tbody>
+                            </table>
+                        </div>`;
+                    
+                    content.innerHTML = htmlContent;
+                } else {
+                    content.innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: #666;">
+                            <div style="font-size: 3em; margin-bottom: 15px; opacity: 0.3;">📋</div>
+                            <h4 style="margin-bottom: 10px;">Nessuna stampa effettuata</h4>
+                            <p>Genera alcuni PDF per vedere il log qui.</p>
+                        </div>
+                    `;
+                }
+                
+            } catch (error) {
+                console.error('Errore caricamento log:', error);
+                document.getElementById('logContent').innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #e53e3e;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">❌</div>
+                        <h4>Errore nel caricamento</h4>
+                        <p>Impossibile caricare il log delle stampe.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Aggiorna gestione click fuori modal
+        window.onclick = function(event) {
+            const conteggioModal = document.getElementById('conteggioModal');
+            const logModal = document.getElementById('logModal');
+            
+            if (event.target == conteggioModal) {
+                closeConteggioModal();
+            } else if (event.target == logModal) {
+                closeLogModal();
+            }
+        }
+    </script>
+</body>
+</html>

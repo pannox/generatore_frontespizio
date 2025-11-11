@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Documenti - {{ scadenza.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thumbnail.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            <a href="/admin/flotte" class="nav-link">Flotte</a>
+            <a href="/admin/scadenze/{{ flotta.id }}" class="nav-link">Scadenze</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <div>
+                <h1>Gestione Documenti</h1>
+                <p class="breadcrumb">
+                    <a href="/admin/scadenze/{{ flotta.id }}">← Indietro</a> | <a href="/admin/flotte">Flotte</a> /
+                    <a href="/admin/scadenze/{{ flotta.id }}">{{ flotta.nome }}</a> /
+                    {{ scadenza.nome }}
+                </p>
+                <div class="info-box">
+                    <strong>Nota:</strong> Puoi aggiungere fino a 20 documenti per scadenza
+                </div>
+            </div>
+            <button onclick="showAddDocumentoModal()" class="btn-primary" id="addDocBtn">+ Aggiungi Documento</button>
+        </header>
+
+        <div class="data-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th style="display:none;">ID</th>
+                        <th>Nome Documento</th>
+                        <th>Azioni</th>
+                        {% if scadenza.get('rilevazione_quote', False) %}
+                        <th>Strumento</th>
+                        {% endif %}
+                        <th>File PDF</th>
+                    </tr>
+                </thead>
+                <tbody id="documentiTable">
+                    {% for documento in scadenza.documenti %}
+                    <tr data-id="{{ documento.id }}" draggable="true" class="draggable-row">
+                        <td>{{ loop.index }}</td>
+                        <td style="display:none;">{{ documento.id }}</td>
+                        <td>
+                            <span class="drag-handle">☰</span>
+                            {% if documento.get('pdf_path') %}
+                                {% set pdf_filename = documento.pdf_path.split('\\')[-1].split('/')[-1] %}
+                                <span class="pdf-thumbnail-trigger" data-filename="{{ pdf_filename }}">{{ documento.nome }}</span>
+                            {% else %}
+                                <span>{{ documento.nome }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                <button onclick='editDocumento("{{ documento.id }}", "{{ documento.nome }}")' class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px;" title="Modifica">✏️</button>
+                                <button onclick="deleteDocumento('{{ documento.id }}')" class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px; color: #dc3545;" title="Elimina">🗑️</button>
+                            </div>
+                        </td>
+                        {% if scadenza.get('rilevazione_quote', False) %}
+                        <td>
+                            {% if documento.get('strumento') %}
+                                <span class="badge" style="background: #ffc107; color: #333;">{{ documento.strumento }}</span>
+                            {% else %}
+                                <span class="badge badge-secondary">Standard</span>
+                            {% endif %}
+                        </td>
+                        {% endif %}
+                        <td>
+                            {% if documento.get('pdf_path') %}
+                                <span class="badge badge-success">✓ Caricato</span>
+                                <button onclick="uploadPDF('{{ documento.id }}')" class="btn-small">Sostituisci</button>
+                            {% else %}
+                                <button onclick="uploadPDF('{{ documento.id }}')" class="btn-small btn-edit">Carica PDF</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% if scadenza.documenti|length == 0 %}
+            <div class="empty-state">
+                <p>Nessun documento configurato per questa scadenza</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Modal Aggiungi Documento -->
+    <div id="addDocumentoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addDocumentoModal')">&times;</span>
+            <h2>Aggiungi Nuovo Documento</h2>
+            <div class="modal-context-info">
+                <span class="context-label">Flotta:</span> <strong>{{ flotta.nome }}</strong>
+                <span class="context-separator">•</span>
+                <span class="context-label">Scadenza:</span> <strong>{{ scadenza.nome }}</strong>
+            </div>
+            
+            <!-- Tab selection -->
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="switchAddTab('upload')">Carica Nuovo</button>
+                <button class="tab-btn" onclick="switchAddTab('select')">Seleziona Esistente</button>
+            </div>
+            
+            <!-- Upload Tab -->
+            <div id="addUploadTab" class="tab-content active">
+                <form id="addDocumentoForm" enctype="multipart/form-data">
+                    <div class="form-group" id="pdfFieldGroup">
+                        <label>Seleziona PDF</label>
+                        <input type="file" id="newDocumentoPDF" name="pdf" accept=".pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nome Documento</label>
+                        <input type="text" id="newDocumentoNome" required placeholder="Inserisci nome documento">
+                    </div>
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9em; color: #666;">
+                            <input type="checkbox" id="senzaPdf" onchange="togglePdfField()" style="width: auto;">
+                            <span>Solo voce nell'elenco (senza PDF)</span>
+                        </label>
+                    </div>
+                    {% if scadenza.get('rilevazione_quote', False) %}
+                    <div class="form-group">
+                        <label>Strumento di Rilevazione</label>
+                        <select id="newDocumentoStrumento" class="form-select">
+                            <option value="">Nessuno (documento standard)</option>
+                            <option value="CALIPRI">CALIPRI</option>
+                            <option value="WPMS">WPMS</option>
+                            <option value="MANUALE">MANUALE</option>
+                        </select>
+                    </div>
+                    {% endif %}
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="btn-primary">Salva</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Select Tab -->
+            <div id="addSelectTab" class="tab-content">
+                <form id="addSelectDocumentoForm">
+                    <div class="form-group">
+                        <label>Seleziona PDF esistente</label>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <select id="addExistingPDFSelect" required style="flex: 1;">
+                                <option value="">-- Caricamento PDF disponibili --</option>
+                            </select>
+                            <button type="button" onclick="refreshPDFsForAdd()" class="btn-small" title="Aggiorna lista PDF">
+                                🔄
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nome Documento</label>
+                        <input type="text" id="addSelectDocumentoNome" required placeholder="Inserisci nome documento">
+                    </div>
+                    {% if scadenza.get('rilevazione_quote', False) %}
+                    <div class="form-group">
+                        <label>Strumento di Rilevazione</label>
+                        <select id="addSelectDocumentoStrumento" class="form-select">
+                            <option value="">Nessuno (documento standard)</option>
+                            <option value="CALIPRI">CALIPRI</option>
+                            <option value="WPMS">WPMS</option>
+                            <option value="MANUALE">MANUALE</option>
+                        </select>
+                    </div>
+                    {% endif %}
+                    <div id="addPdfInfo" class="info-box" style="display: none;">
+                        <strong>Info:</strong> <span id="addPdfDetails"></span>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="btn-primary">Salva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modifica Documento -->
+    <div id="editDocumentoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editDocumentoModal')">&times;</span>
+            <h2>Modifica Documento</h2>
+            <form id="editDocumentoForm">
+                <input type="hidden" id="editDocumentoId">
+                <div class="form-group">
+                    <label>Nome Documento</label>
+                    <input type="text" id="editDocumentoNome" required>
+                </div>
+                <button type="submit" class="btn-primary">Salva Modifiche</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Upload PDF -->
+    <div id="uploadPDFModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('uploadPDFModal')">&times;</span>
+            <h2>Gestisci PDF</h2>
+            
+            <!-- Tab selection -->
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="switchTab('upload')">Carica Nuovo</button>
+                <button class="tab-btn" onclick="switchTab('select')">Seleziona Esistente</button>
+            </div>
+            
+            <!-- Upload Tab -->
+            <div id="uploadTab" class="tab-content active">
+                <form id="uploadPDFForm" enctype="multipart/form-data">
+                    <input type="hidden" id="uploadDocumentoId">
+                    <div class="form-group">
+                        <label>Seleziona file PDF</label>
+                        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+                    </div>
+                    <div class="info-box">
+                        <strong>Nota:</strong> Il file PDF deve avere campi form per "sede_tecnica" e "numero_ordine" che verranno compilati automaticamente.
+                    </div>
+                    <button type="submit" class="btn-primary">Carica PDF</button>
+                </form>
+            </div>
+            
+            <!-- Select Tab -->
+            <div id="selectTab" class="tab-content">
+                <form id="selectPDFForm">
+                    <input type="hidden" id="selectDocumentoId">
+                    <div class="form-group">
+                        <label>Seleziona PDF esistente</label>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <select id="existingPDFSelect" required style="flex: 1;">
+                                <option value="">-- Caricamento PDF disponibili --</option>
+                            </select>
+                            <button type="button" onclick="refreshPDFs()" class="btn-small" title="Aggiorna lista PDF">
+                                🔄
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pdfInfo" class="info-box" style="display: none;">
+                        <strong>Info:</strong> <span id="pdfDetails"></span>
+                    </div>
+                    <button type="submit" class="btn-primary">Collega PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const flottaId = '{{ flotta.id }}';
+        const scadenzaId = '{{ scadenza.id }}';
+        const maxDocumenti = 20;
+        const currentDocCount = parseInt('{{ scadenza.documenti|length }}');
+    </script>
+    <script src="{{ url_for('static', filename='js/admin_documenti.js') }}"></script>
+
+    <!-- Thumbnail hover system -->
+    <script src="{{ url_for('static', filename='js/thumbnail.js') }}"></script>
+    <script>
+        // Inizializza il sistema di thumbnail hover
+        document.addEventListener('DOMContentLoaded', function() {
+            window.thumbnailHoverInstance = initThumbnailHover({
+                selector: '.pdf-thumbnail-trigger'
+            });
+        });
+    </script>
+</body>
+</html>

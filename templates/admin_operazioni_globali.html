@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Operazioni Globali</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <div>
+                <h1>Gestione Operazioni Globali</h1>
+                <p class="breadcrumb">
+                    <a href="/admin">← Indietro</a>
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+                    <div class="info-box" style="flex: 1;">
+                        <strong>Nota:</strong> Le operazioni globali vengono mostrate sempre su ogni MCP, indipendentemente dalle scadenze selezionate. Puoi comunque limitarne la visibilità per mese.
+                    </div>
+                    <button onclick="showAddOperazioneModal()" class="btn-primary" style="flex-shrink: 0;">+ Aggiungi Operazione Globale</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filtri -->
+        <div class="filters-container" style="margin-bottom: 20px; background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h3 style="margin-top: 0; margin-bottom: 15px;">Filtri</h3>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end;">
+                <div class="form-group" style="flex: 1; min-width: 200px;">
+                    <label for="filtroFlotta">Flotta</label>
+                    <select id="filtroFlotta" class="form-select" onchange="filtraOperazioni()" style="width: 100%;">
+                        <option value="">Tutte le flotte</option>
+                        {% for flotta in flotte %}
+                        <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 1; min-width: 200px;">
+                    <label for="filtroMese">Mese</label>
+                    <select id="filtroMese" class="form-select" onchange="filtraOperazioni()" style="width: 100%;">
+                        <option value="">Tutti i mesi</option>
+                        <option value="1">Gennaio</option>
+                        <option value="2">Febbraio</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Aprile</option>
+                        <option value="5">Maggio</option>
+                        <option value="6">Giugno</option>
+                        <option value="7">Luglio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Settembre</option>
+                        <option value="10">Ottobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Dicembre</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <button onclick="resettaFiltri()" class="btn-secondary" style="margin-bottom: 15px;">Azzera filtri</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="operations-grid">
+            {% for operazione in operazioni_globali %}
+            <div class="operation-card" data-id="{{ operazione.id }}" data-flotta-id="{{ operazione.get('flotta_id', '') }}" data-mesi-validi="{{ operazione.get('mesi_validi', []) | tojson }}">
+                <div class="operation-header">
+                    <h3>{{ operazione.titolo }}</h3>
+                    <div class="operation-actions">
+                        <button onclick='editOperazione("{{ operazione.id }}", `{{ operazione.titolo }}`, `{{ operazione.descrizione }}`, `{{ operazione.get("cdl", "") }}`, {{ operazione.get("mesi_validi", []) | tojson }}, "{{ operazione.get("flotta_id", "") }}")' class="btn-icon" title="Modifica">✏️</button>
+                        <button onclick="deleteOperazione('{{ operazione.id }}')" class="btn-icon btn-danger" title="Elimina">🗑️</button>
+                    </div>
+                </div>
+                <p class="operation-desc">{{ operazione.descrizione }}</p>
+                {% if operazione.get('cdl') %}
+                <p class="operation-cdl"><strong>CDL:</strong> {{ operazione.cdl }}</p>
+                {% endif %}
+                {% if operazione.get('flotta_id') %}
+                <div class="operation-flotta">
+                    <span class="flotta-badge" style="background: #2196F3; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; display: inline-block; margin-top: 8px;">
+                        📦 {{ operazione.flotta_nome }}
+                    </span>
+                </div>
+                {% else %}
+                <div class="operation-flotta">
+                    <span class="flotta-badge" style="background: #9E9E9E; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; display: inline-block; margin-top: 8px;">
+                        🌐 Tutte le flotte
+                    </span>
+                </div>
+                {% endif %}
+                {% if operazione.get('mesi_validi') and operazione.mesi_validi|length > 0 %}
+                <div class="operation-months">
+                    <strong>Valida nei mesi:</strong>
+                    <div class="month-badges">
+                        {% for mese in operazione.mesi_validi %}
+                        <span class="month-badge">{{ ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'][mese - 1] }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% else %}
+                <div class="operation-months">
+                    <strong>Sempre visibile</strong>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            {% if operazioni_globali|length == 0 %}
+            <div class="empty-state">
+                <p>Nessuna operazione globale configurata</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Modal Aggiungi Operazione -->
+    <div id="addOperazioneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addOperazioneModal')">&times;</span>
+            <h2>Aggiungi Nuova Operazione Globale</h2>
+            <form id="addOperazioneForm">
+                <div class="form-group">
+                    <label>Titolo</label>
+                    <input type="text" id="newTitolo" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="newDescrizione" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>CDL (opzionale)</label>
+                    <input type="text" id="newCdl">
+                </div>
+                <div class="form-group">
+                    <label>Flotta specifica (opzionale)</label>
+                    <select id="newFlotta" class="form-select">
+                        <option value="">Tutte le flotte</option>
+                        {% for flotta in flotte %}
+                        <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newSempreVisibile" checked onchange="toggleMesiValidi(this)">
+                        Sempre visibile
+                    </label>
+                </div>
+                <div class="form-group" id="mesiValidiGroup" style="display: none;">
+                    <label>Mesi di validità</label>
+                    <div class="mesi-grid">
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="1"> Gennaio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="2"> Febbraio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="3"> Marzo</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="4"> Aprile</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="5"> Maggio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="6"> Giugno</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="7"> Luglio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="8"> Agosto</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="9"> Settembre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="10"> Ottobre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="11"> Novembre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox" value="12"> Dicembre</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Salva</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifica Operazione -->
+    <div id="editOperazioneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editOperazioneModal')">&times;</span>
+            <h2>Modifica Operazione Globale</h2>
+            <form id="editOperazioneForm">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>Titolo</label>
+                    <input type="text" id="editTitolo" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="editDescrizione" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>CDL (opzionale)</label>
+                    <input type="text" id="editCdl">
+                </div>
+                <div class="form-group">
+                    <label>Flotta specifica (opzionale)</label>
+                    <select id="editFlotta" class="form-select">
+                        <option value="">Tutte le flotte</option>
+                        {% for flotta in flotte %}
+                        <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="editSempreVisibile" onchange="toggleMesiValidiEdit(this)">
+                        Sempre visibile
+                    </label>
+                </div>
+                <div class="form-group" id="mesiValidiEditGroup">
+                    <label>Mesi di validità</label>
+                    <div class="mesi-grid">
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="1"> Gennaio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="2"> Febbraio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="3"> Marzo</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="4"> Aprile</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="5"> Maggio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="6"> Giugno</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="7"> Luglio</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="8"> Agosto</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="9"> Settembre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="10"> Ottobre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="11"> Novembre</label>
+                        <label class="checkbox-label"><input type="checkbox" class="mese-checkbox-edit" value="12"> Dicembre</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Salva Modifiche</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin_operazioni_globali.js') }}"></script>
+    <script>
+        // Salva i filtri nel localStorage
+        function salvaFiltri() {
+            const filtroFlotta = document.getElementById('filtroFlotta').value;
+            const filtroMese = document.getElementById('filtroMese').value;
+            
+            localStorage.setItem('filtroFlotta', filtroFlotta);
+            localStorage.setItem('filtroMese', filtroMese);
+        }
+        
+        // Carica i filtri salvati
+        function caricaFiltri() {
+            const filtroFlotta = localStorage.getItem('filtroFlotta') || '';
+            const filtroMese = localStorage.getItem('filtroMese') || '';
+            
+            if (filtroFlotta) document.getElementById('filtroFlotta').value = filtroFlotta;
+            if (filtroMese) document.getElementById('filtroMese').value = filtroMese;
+            
+            // Applica i filtri se almeno uno è attivo
+            if (filtroFlotta || filtroMese) {
+                setTimeout(filtraOperazioni, 100); // Piccolo ritardo per assicurarsi che il DOM sia pronto
+            }
+        }
+        
+        // Funzione per filtrare le operazioni in base ai filtri selezionati
+        function filtraOperazioni() {
+            salvaFiltri(); // Salva i filtri ad ogni modifica
+            const flottaId = document.getElementById('filtroFlotta').value;
+            const mese = document.getElementById('filtroMese').value;
+            const cards = document.querySelectorAll('.operation-card');
+            
+            cards.forEach(card => {
+                const cardFlottaId = card.getAttribute('data-flotta-id') || '';
+                const cardMesiValidi = card.getAttribute('data-mesi-validi') || '[]';
+                const mesiValidi = JSON.parse(cardMesiValidi);
+                
+                let mostra = true;
+                
+                // Filtro per flotta
+                if (flottaId && cardFlottaId !== flottaId) {
+                    // Se la card non ha una flotta specificata (è per tutte le flotte), la mostriamo comunque
+                    if (cardFlottaId !== '') {
+                        mostra = false;
+                    }
+                }
+                
+                // Filtro per mese
+                if (mese) {
+                    // Se la card ha mesi validi specificati, controlliamo che il mese selezionato sia tra questi
+                    if (mesiValidi.length > 0 && !mesiValidi.includes(parseInt(mese))) {
+                        // Se la card ha una flotta specifica, la mostriamo solo se corrisponde al filtro flotta
+                        if (cardFlottaId && cardFlottaId !== flottaId) {
+                            mostra = false;
+                        } else if (cardFlottaId === '' && flottaId) {
+                            // Se la card è per tutte le flotte e c'è un filtro flotta attivo, la mostriamo
+                            // solo se non ha restrizioni di mese o se il mese è valido
+                            if (mesiValidi.length > 0 && !mesiValidi.includes(parseInt(mese))) {
+                                mostra = false;
+                            }
+                        } else {
+                            // Altrimenti nascondi
+                            mostra = false;
+                        }
+                    }
+                }
+                
+                card.style.display = mostra ? 'block' : 'none';
+            });
+            
+            // Mostra il messaggio di nessun risultato se necessario
+            const emptyState = document.querySelector('.empty-state');
+            const visibleCards = document.querySelectorAll('.operation-card[style="display: block;"]');
+            
+            if (visibleCards.length === 0 && cards.length > 0) {
+                if (!emptyState) {
+                    const emptyMsg = document.createElement('div');
+                    emptyMsg.className = 'empty-state';
+                    emptyMsg.innerHTML = '<p>Nessuna operazione trovata con i filtri selezionati</p>';
+                    document.querySelector('.operations-grid').appendChild(emptyMsg);
+                } else {
+                    emptyState.style.display = 'block';
+                }
+            } else if (emptyState && emptyState.textContent.includes('Nessuna operazione trovata')) {
+                emptyState.style.display = 'none';
+            }
+        }
+        
+        // Funzione per resettare i filtri
+        function resettaFiltri() {
+            document.getElementById('filtroFlotta').value = '';
+            document.getElementById('filtroMese').value = '';
+            
+            const cards = document.querySelectorAll('.operation-card');
+            cards.forEach(card => {
+                card.style.display = 'block';
+            });
+            
+            const emptyState = document.querySelector('.empty-state');
+            if (emptyState && emptyState.textContent.includes('Nessuna operazione trovata')) {
+                emptyState.style.display = 'none';
+            }
+        }
+        
+        // Aggiungi attributi data alle card per il filtraggio
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carica i filtri salvati
+            caricaFiltri();
+            const cards = document.querySelectorAll('.operation-card');
+            cards.forEach(card => {
+                const flottaBadge = card.querySelector('.flotta-badge');
+                if (flottaBadge && flottaBadge.textContent.includes('📦')) {
+                    // Estrai l'ID della flotta dall'elemento della card, se presente
+                    const flottaId = card.getAttribute('data-flotta-id') || '';
+                    card.setAttribute('data-flotta-id', flottaId);
+                } else {
+                    card.setAttribute('data-flotta-id', ''); // Per operazioni globali
+                }
+                
+                // Aggiungi i mesi validi come attributo data
+                const mesiValidi = [];
+                const mesiElements = card.querySelectorAll('.month-badge');
+                if (mesiElements.length > 0) {
+                    mesiElements.forEach(el => {
+                        const meseTesto = el.textContent.trim();
+                        const mesi = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+                        const meseNumero = mesi.indexOf(meseTesto) + 1;
+                        if (meseNumero > 0) {
+                            mesiValidi.push(meseNumero);
+                        }
+                    });
+                }
+                card.setAttribute('data-mesi-validi', JSON.stringify(mesiValidi));
+            });
+        });
+    </script>
+</body>
+</html>

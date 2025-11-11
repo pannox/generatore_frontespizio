@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Scadenze - {{ flotta.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <style>
+        /* Stili per la tabella delle scadenze */
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th, 
+        .data-table td {
+            text-align: center;
+            padding: 12px 8px;
+            vertical-align: middle;
+        }
+        
+        /* Stile per il nome della scadenza */
+        .data-table td:nth-child(2) {
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        
+        /* Stile per l'icona di trascinamento */
+        .drag-handle {
+            margin-right: 8px;
+            color: #7f8c8d;
+            cursor: move;
+        }
+        
+        /* Stile per le celle con numeri */
+        .data-table td:nth-child(3),
+        .data-table td:nth-child(4) {
+            font-weight: 500;
+            font-size: 1.05em;
+        }
+        
+        /* Nascondi la colonna ID */
+        .data-table table th:first-child,
+        .data-table table td:first-child {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            <a href="/admin/flotte" class="nav-link">Flotte</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <div>
+                <h1>Gestione Scadenze: {{ flotta.nome }}</h1>
+                <p class="breadcrumb">
+                    <a href="/admin/flotte">← Indietro</a> | <a href="/admin/flotte">Flotte</a> / {{ flotta.nome }}
+                </p>
+            </div>
+            <button onclick="showAddScadenzaModal()" class="btn-primary">+ Aggiungi Scadenza</button>
+        </header>
+
+        <div class="data-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Scadenza</th>
+                        <th style="text-align: center;">Documenti</th>
+                        <th style="text-align: center;">Op. Aggiuntive</th>
+                        <th style="text-align: center;">Rilevazione Quote</th>
+                        <th style="text-align: center;">Azioni</th>
+                    </tr>
+                </thead>
+                <tbody id="scadenzeTable">
+                    {% for scadenza in flotta.scadenze %}
+                    <tr data-id="{{ scadenza.id }}" draggable="true" class="draggable-row">
+                        <td>{{ scadenza.id }}</td>
+                        <td>
+                            <span class="drag-handle">☰</span> 
+                            <span style="font-weight: 600; color: #2c3e50; font-size: 1.1em;">{{ scadenza.nome }}</span>
+                        </td>
+                        <td style="text-align: center;">
+                            <span style="font-weight: 600; color: #2c3e50;">{{ scadenza.documenti|length }}</span>
+                        </td>
+                        <td style="text-align: center;">
+                            <span style="font-weight: 600; color: #2c3e50;">{{ scadenza.operazioni_aggiuntive|length }}</span>
+                        </td>
+                        <td style="text-align: center;">
+                            {% if scadenza.get('rilevazione_quote', False) %}
+                                <span style="color: #28a745; font-weight: bold;" title="Rilevazione Quote Attiva">✅ Sì</span>
+                            {% else %}
+                                <span style="color: #6c757d;" title="Rilevazione Quote Non Attiva">No</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                                <div style="display: flex; gap: 4px;">
+                                    <button onclick="editScadenza('{{ scadenza.id }}', `{{ scadenza.nome }}`, `{{ scadenza.descrizione }}`, '{{ scadenza.get('rilevazione_quote', False) | tojson }}')" class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px;" title="Modifica">✏️</button>
+                                    <button onclick="deleteScadenza('{{ scadenza.id }}')" class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px; color: #dc3545;" title="Elimina">🗑️</button>
+                                </div>
+                                <a href="/admin/documenti/{{ flotta.id }}/{{ scadenza.id }}" class="btn-small" style="background: #28a745; color: white;">Documenti</a>
+                                <a href="/admin/operazioni/{{ flotta.id }}/{{ scadenza.id }}" class="btn-small" style="background: #ffc107; color: #333;">Op. Aggiuntive</a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Aggiungi Scadenza -->
+    <div id="addScadenzaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addScadenzaModal')">&times;</span>
+            <h2>Aggiungi Nuova Scadenza</h2>
+            <form id="addScadenzaForm">
+                <div class="form-group">
+                    <label>Nome Scadenza</label>
+                    <input type="text" id="newScadenzaNome" required placeholder="es: CO - Controllo Ordinario">
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="newScadenzaDescrizione" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newRilevazioneQuote">
+                        Rilevazione Quote (CALIPRI/WPMS/MANUALE)
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Salva</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifica Scadenza -->
+    <div id="editScadenzaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editScadenzaModal')">&times;</span>
+            <h2>Modifica Scadenza</h2>
+            <form id="editScadenzaForm">
+                <input type="hidden" id="editScadenzaId">
+                <div class="form-group">
+                    <label>Nome Scadenza</label>
+                    <input type="text" id="editScadenzaNome" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="editScadenzaDescrizione" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="editRilevazioneQuote">
+                        Rilevazione Quote (CALIPRI/WPMS/MANUALE)
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Salva Modifiche</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const flottaId = '{{ flotta.id }}';
+    </script>
+    <script src="{{ url_for('static', filename='js/admin_scadenze.js') }}"></script>
+</body>
+</html>

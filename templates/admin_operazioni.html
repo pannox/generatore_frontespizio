@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Operazioni - {{ scadenza.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            <a href="/admin/flotte" class="nav-link">Flotte</a>
+            <a href="/admin/scadenze/{{ flotta.id }}" class="nav-link">Scadenze</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <div>
+                <h1>Gestione Operazioni Aggiuntive</h1>
+                <p class="breadcrumb">
+                    <a href="/admin/scadenze/{{ flotta.id }}">← Indietro</a> | <a href="/admin/flotte">Flotte</a> /
+                    <a href="/admin/scadenze/{{ flotta.id }}">{{ flotta.nome }}</a> /
+                    {{ scadenza.nome }}
+                </p>
+                <div class="info-box">
+                    <strong>Nota:</strong> Le operazioni aggiuntive sono attività testuali collegate alla scadenza
+                </div>
+            </div>
+            <button onclick="showAddOperazioneModal()" class="btn-primary">+ Aggiungi Operazione</button>
+        </header>
+
+        <div class="operations-grid">
+            {% for operazione in scadenza.operazioni_aggiuntive %}
+            <div class="operation-card" data-id="{{ operazione.id }}">
+                <div class="operation-header">
+                    <h3>{{ operazione.titolo }}</h3>
+                    <div class="operation-actions">
+                        <button onclick='editOperazione("{{ operazione.id }}", `{{ operazione.titolo }}`, `{{ operazione.descrizione }}`, `{{ operazione.get("cdl", "") }}`, {{ operazione.get("mesi_validi", []) | tojson }})' class="btn-icon" title="Modifica">✏️</button>
+                        <button onclick="deleteOperazione('{{ operazione.id }}')" class="btn-icon btn-danger" title="Elimina">🗑️</button>
+                    </div>
+                </div>
+                <p class="operation-desc">{{ operazione.descrizione }}</p>
+                {% if operazione.get('cdl') %}
+                <p class="operation-cdl"><strong>CDL:</strong> {{ operazione.cdl }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if scadenza.operazioni_aggiuntive|length == 0 %}
+        <div class="empty-state">
+            <p>Nessuna operazione aggiuntiva configurata per questa scadenza</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Modal Aggiungi Operazione -->
+    <div id="addOperazioneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addOperazioneModal')">&times;</span>
+            <h2>Aggiungi Nuova Operazione</h2>
+            <form id="addOperazioneForm">
+                <div class="form-group">
+                    <label>Titolo Operazione</label>
+                    <input type="text" id="newOperazioneTitolo" required placeholder="es: Verifica Impianto Frenante">
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="newOperazioneDescrizione" rows="4" placeholder="Descrizione dettagliata dell'operazione"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>CDL</label>
+                    <input type="text" id="newOperazioneCDL" placeholder="es: CDL123">
+                </div>
+                <div class="form-group">
+                    <label>Validità Temporale</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newValiditaSempre" checked>
+                            Sempre visibile
+                        </label>
+                    </div>
+                    <div id="newMesiContainer" style="display: none; margin-top: 10px;">
+                        <label style="margin-bottom: 5px; display: block;">Mesi di validità:</label>
+                        <div class="mesi-grid">
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="1"> Gennaio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="2"> Febbraio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="3"> Marzo</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="4"> Aprile</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="5"> Maggio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="6"> Giugno</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="7"> Luglio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="8"> Agosto</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="9"> Settembre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="10"> Ottobre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="11"> Novembre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="newMesi" value="12"> Dicembre</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Salva</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifica Operazione -->
+    <div id="editOperazioneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editOperazioneModal')">&times;</span>
+            <h2>Modifica Operazione</h2>
+            <form id="editOperazioneForm">
+                <input type="hidden" id="editOperazioneId">
+                <div class="form-group">
+                    <label>Titolo Operazione</label>
+                    <input type="text" id="editOperazioneTitolo" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrizione</label>
+                    <textarea id="editOperazioneDescrizione" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>CDL</label>
+                    <input type="text" id="editOperazioneCDL">
+                </div>
+                <div class="form-group">
+                    <label>Validità Temporale</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="editValiditaSempre">
+                            Sempre visibile
+                        </label>
+                    </div>
+                    <div id="editMesiContainer" style="margin-top: 10px;">
+                        <label style="margin-bottom: 5px; display: block;">Mesi di validità:</label>
+                        <div class="mesi-grid">
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="1"> Gennaio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="2"> Febbraio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="3"> Marzo</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="4"> Aprile</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="5"> Maggio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="6"> Giugno</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="7"> Luglio</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="8"> Agosto</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="9"> Settembre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="10"> Ottobre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="11"> Novembre</label>
+                            <label class="checkbox-label"><input type="checkbox" name="editMesi" value="12"> Dicembre</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Salva Modifiche</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const flottaId = '{{ flotta.id }}';
+        const scadenzaId = '{{ scadenza.id }}';
+    </script>
+    <script src="{{ url_for('static', filename='js/admin_operazioni.js') }}"></script>
+</body>
+</html>

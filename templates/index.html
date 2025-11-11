@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore Frontespizio - Flotte Treni</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thumbnail.css') }}">
+    <style>
+        /* Dark Mode Toggle Styles */
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .slider.round {
+            border-radius: 24px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        
+        .slider-icon {
+            position: absolute;
+            top: 50%;
+            left: 6px;
+            transform: translateY(-50%);
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+        }
+        
+        input:checked + .slider .slider-icon {
+            opacity: 0;
+        }
+        
+        /* Dark mode toggle visibile in dark mode */
+        [data-theme="dark"] .slider {
+            background-color: #666666 !important;
+            border: 1px solid #888888 !important;
+        }
+        
+        [data-theme="dark"] input:checked + .slider {
+            background-color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] .slider:before {
+            background-color: #ffffff !important;
+        }
+        
+        [data-theme="dark"] .slider-icon {
+            color: #ffffff !important;
+        }
+        
+        /* Dark Mode Variables */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-color: #dee2e6;
+            --card-bg: #ffffff;
+            --navbar-bg: #343a40;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: #404040;
+            --card-bg: #2d2d2d;
+            --navbar-bg: #1a1a1a;
+        }
+        
+        /* Rimuovi TUTTO il bianco in dark mode */
+        [data-theme="dark"] body {
+            background-color: #1a1a1a !important;
+        }
+        
+        [data-theme="dark"] .container {
+            background-color: #1a1a1a !important;
+        }
+        
+        [data-theme="dark"] .navbar {
+            background-color: #1a1a1a !important;
+        }
+        
+        [data-theme="dark"] .card {
+            background-color: #2d2d2d !important;
+            border-color: #404040 !important;
+        }
+        
+        [data-theme="dark"] .form-control,
+        [data-theme="dark"] .form-select {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+            border-color: #666666 !important;
+        }
+        
+        [data-theme="dark"] option {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] .form-select option {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] label {
+            color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] h3 {
+            color: #4a9eff !important;
+        }
+        
+        /* Placeholder grigio chiaro in dark mode */
+        [data-theme="dark"] .form-control::placeholder,
+        [data-theme="dark"] input::placeholder,
+        [data-theme="dark"] textarea::placeholder,
+        [data-theme="dark"] .form-select::placeholder {
+            color: #cccccc !important;
+            opacity: 1 !important;
+        }
+        
+        /* Per browser che usano :-ms-input-placeholder */
+        [data-theme="dark"] .form-control:-ms-input-placeholder,
+        [data-theme="dark"] input:-ms-input-placeholder,
+        [data-theme="dark"] .form-select:-ms-input-placeholder {
+            color: #cccccc !important;
+        }
+        
+        /* Per browser che usano ::-webkit-input-placeholder */
+        [data-theme="dark"] .form-control::-webkit-input-placeholder,
+        [data-theme="dark"] input::-webkit-input-placeholder,
+        [data-theme="dark"] .form-select::-webkit-input-placeholder {
+            color: #cccccc !important;
+        }
+        
+        /* Opzioni select in dark mode - solo essenziale */
+        [data-theme="dark"] select {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+            border-color: #666666 !important;
+        }
+        
+        [data-theme="dark"] .preview-section {
+            background-color: #2d2d2d !important;
+            border-color: #404040 !important;
+        }
+        
+        [data-theme="dark"] .scadenza-item {
+            background-color: #2d2d2d !important;
+            border-color: #404040 !important;
+        }
+        
+        [data-theme="dark"] .btn-primary {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+        }
+        
+        [data-theme="dark"] .btn-monitoraggi {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+        }
+        
+        [data-theme="dark"] #generateBtn {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+            color: #ffffff !important;
+        }
+        
+        [data-theme="dark"] .btn-stampa-singoli {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+            color: #ffffff !important;
+        }
+        
+        [data-theme="dark"] * {
+            background-color: transparent !important;
+        }
+        
+        [data-theme="dark"] .form-control,
+        [data-theme="dark"] .form-select,
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .preview-section,
+        [data-theme="dark"] .scadenza-item {
+            background-color: #2d2d2d !important;
+        }
+        
+        /* Dark Mode Styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .container {
+            background-color: var(--bg-primary);
+        }
+        
+        .navbar {
+            background-color: var(--navbar-bg) !important;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+        
+        .form-control, .form-select {
+            background-color: #f8f9fa !important;
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .form-control,
+        [data-theme="dark"] .form-select {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+            border-color: #666666 !important;
+        }
+        
+        [data-theme="dark"] option {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] .form-select option {
+            background-color: #404040 !important;
+            color: #4a9eff !important;
+        }
+        
+        [data-theme="dark"] label {
+            color: #4a9eff !important;
+            font-weight: 500 !important;
+        }
+        
+        [data-theme="dark"] .form-group label {
+            color: #4a9eff !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+        }
+        
+        .btn-primary {
+            background-color: #007bff !important;
+            border-color: #007bff !important;
+        }
+        
+        .preview-section {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+            max-height: 98vh;
+            overflow-y: auto;
+        }
+        
+        .scadenza-item {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 8px 12px !important;
+            }
+            
+            .nav-brand img {
+                height: 25px !important;
+                width: auto !important;
+            }
+            
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 6px !important;
+                justify-content: flex-end !important;
+            }
+            
+            .nav-link {
+                padding: 4px 8px !important;
+                font-size: 0.8em !important;
+                white-space: nowrap !important;
+            }
+            
+            .dark-mode-toggle {
+                margin-left: 8px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 6px 10px !important;
+            }
+            
+            .nav-links {
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                gap: 3px !important;
+            }
+            
+            .nav-link {
+                padding: 3px 6px !important;
+                font-size: 0.75em !important;
+            }
+            
+            .dark-mode-toggle {
+                margin-left: 3px !important;
+                margin-top: 3px !important;
+            }
+        }
+
+        /* Compact navbar for all screen sizes */
+        .navbar {
+            padding: 10px 15px !important;
+        }
+        
+        .nav-brand img {
+            height: 40px !important;
+            width: auto !important;
+        }
+        
+        .nav-links {
+            gap: 12px !important;
+        }
+        
+        .nav-link {
+            padding: 6px 12px !important;
+            font-size: 0.9em !important;
+        }
+        
+        .dark-mode-toggle {
+            margin-left: 12px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link active">Generatore</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            {% if is_admin_authenticated %}
+            <a href="/admin/logout" class="nav-link logout-btn">🚪 Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-icon">
+            <img src="{{ url_for('static', filename='LOGO_ROCK.png') }}" alt="Logo Rock" style="height: 100px; width: auto;">
+        </div>
+                <div class="header-text">
+                    <h1>Generatore Frontespizio Ordini</h1>
+                    <p class="subtitle">Sistema di gestione scadenze e documenti di misura</p>
+                    <p class="version-info">Versione {{ config.versione.numero }} del {{ config.versione.data }}</p>
+                </div>
+                <a href="https://tinyurl.com/MONITORAGGI3010" target="_blank" class="btn-monitoraggi" title="Apri sito monitoraggi 3010">
+                    📊 Monitoraggi
+                </a>
+                <!-- Dark Mode Toggle -->
+                <div class="dark-mode-toggle" style="margin-top: 10px;">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeSwitch">
+                        <span class="slider round">
+                            <span class="slider-icon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-layout">
+                <div class="form-section">
+                    <form id="generatorForm" action="/generate" method="POST">
+                        <div class="form-group">
+                            <label for="flotta">Seleziona Flotta:</label>
+                            <select id="flotta" name="flotta" required autocomplete="off">
+                                <option value="" selected disabled>-- Seleziona una flotta --</option>
+                                {% for flotta in flotte %}
+                                <option value="{{ flotta.id }}">{{ flotta.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scadenze">Seleziona Scadenze (puoi selezionarne più di una):</label>
+                            <div id="scadenzeContainer" class="scadenze-checkboxes">
+                                <p class="placeholder-text">Prima seleziona una flotta</p>
+                            </div>
+                        </div>
+
+                        <div id="strumentoContainer" class="form-group" style="display: none;">
+                            <label for="strumento">Strumento Rilevazione Quote:</label>
+                            <select id="strumento" name="strumento" class="form-select" autocomplete="off">
+                                <option value="">Seleziona strumento</option>
+                                <option value="CALIPRI">CALIPRI</option>
+                                <option value="WPMS">WPMS</option>
+                                <option value="MANUALE">MANUALE</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sede_tecnica">Sede Tecnica / Blocco:</label>
+                            <input type="text" id="sede_tecnica" name="sede_tecnica" placeholder="Inserisci sede tecnica / blocco" required autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Numero Ordine</label>
+                            <div class="input-with-action">
+                                <input type="text" id="numero_ordine" name="numero_ordine" placeholder="Inserisci numero ordine" style="width: 50% !important; margin-right: 20px; box-sizing: border-box;" autocomplete="off">
+                                <button type="button" id="clearBtn" class="btn-clear-compact" title="Cancella tutti i campi" style="margin-left: auto;">🗑️</button>
+                            </div>
+                            <div id="numero_ordine_error" class="error-message" style="display: none; color: #f44336; font-size: 0.85em; margin-top: 5px;">Il numero ordine deve contenere esattamente 12 cifre numeriche</div>
+                        </div>
+
+                        <!-- Campi personalizzati dinamici -->
+                        <div id="customFieldsContainer"></div>
+
+                        <div class="form-actions">
+                            <div class="main-buttons">
+                                <button type="submit" id="generateBtn" disabled class="btn-stampa-singoli">🖨️ STAMPA KIT COMPLETO</button>
+                                <a href="/stampa-documenti" class="btn-stampa-singoli">📄 STAMPA SINGOLI DOCUMENTI</a>
+                            </div>
+                            
+                            <!-- Riepilogo documenti -->
+                            <div id="documentiRiepilogo" class="documenti-riepilogo" style="display: none;">
+                                <div class="riepilogo-content">
+                                    <span class="riepilogo-icon">📊</span>
+                                    <span class="riepilogo-text">
+                                        <strong id="riepilogoNumero">0</strong> documenti
+                                    </span>
+                                    <span class="riepilogo-details" id="riepilogoDettagli"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Generazione PDF in corso...</p>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Documenti da stampare</h3>
+                    <div id="pdfPreviewList" class="pdf-preview-list">
+                        <p class="placeholder-text">Seleziona le scadenze per vedere i documenti</p>
+                    </div>
+
+                    <h3 style="margin-top: 25px;">Operazioni aggiuntive</h3>
+                    <div id="operazioniPreviewList" class="operazioni-preview-list">
+                        <p class="placeholder-text">Seleziona le scadenze per vedere le operazioni</p>
+                    </div>
+
+                    <!-- Link Utilità -->
+                    <div class="utility-links-sidebar">
+                        <a href="#" onclick="openResponsabiliPDF()" class="utility-link-sidebar">📋 Elenco Responsabili Manutenzione</a>
+                        <a href="#" onclick="showInfoPortali()" class="utility-link-sidebar">🌐 Scadenze Tornio e WPMS</a>
+                        <a href="/admin/reports/export-pdf" class="utility-link-sidebar" target="_blank">📄 Lista Documenti</a>
+                        <div style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 6px; font-size: 0.85em; color: #666; text-align: center; border: 1px solid rgba(255,255,255,0.2);">
+                            Documenti di Misura Rev. {{ config.versione.numero.split('.')[1] }}<br>
+                            Operazioni aggiuntive Rev. {{ config.versione.numero.split('.')[2] }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Ingegneria dei Processi Ancona - © 2025</p>
+            <div class="footer-icons">
+                <span class="footer-icon" onclick="showInfo()" title="Informazioni progetto">ℹ️</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Info Portali -->
+    <div id="infoPortaliModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Informazioni Portali</h2>
+                <span class="close" onclick="closeModal('infoPortaliModal')">&times;</span>
+            </div>
+            <div id="portaliContent">
+                <div class="portale-item">
+                    <h3>PORTALE WPMS</h3>
+                    <p><strong>ID:</strong> <span id="wpms-id">136042</span></p>
+                    <p><strong>SCADENZA:</strong> <span id="wpms-scadenza">05/12/2025</span></p>
+                </div>
+                <div class="portale-item">
+                    <h3>TORNIO</h3>
+                    <p><strong>ID:</strong> <span id="tornio-id">135138</span></p>
+                    <p><strong>SCADENZA:</strong> <span id="tornio-scadenza">02/12/2025</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Script caricato - Inizio');
+        
+        const flottaSelect = document.getElementById('flotta');
+        const scadenzeContainer = document.getElementById('scadenzeContainer');
+        const generateBtn = document.getElementById('generateBtn');
+        const form = document.getElementById('generatorForm');
+        const loading = document.getElementById('loading');
+        
+        console.log('Elementi trovati:', {
+            flottaSelect: !!flottaSelect,
+            scadenzeContainer: !!scadenzeContainer,
+            generateBtn: !!generateBtn,
+            form: !!form,
+            loading: !!loading
+        });
+
+        // Variabile globale per salvare i dati delle scadenze
+        let currentScadenzeData = null;
+        let customFields = [];
+
+        // Azzera la selezione al caricamento della pagina
+        document.addEventListener('DOMContentLoaded', function() {
+            resetMainSelection();
+            
+            // Inizializza il sistema di thumbnail hover per i documenti
+            if (typeof initThumbnailHover === 'function') {
+                window.thumbnailHoverInstance = initThumbnailHover({
+                    selector: '.pdf-thumbnail-trigger'
+                });
+            }
+        });
+
+        // Azzera la selezione anche quando si torna alla pagina (browser back/forward)
+        window.addEventListener('pageshow', function(event) {
+            resetMainSelection();
+        });
+
+        // Funzione per azzerare la selezione nella pagina principale
+        function resetMainSelection() {
+            if (flottaSelect) {
+                flottaSelect.value = '';
+                scadenzeContainer.innerHTML = '<p class="placeholder-text">Prima seleziona una flotta</p>';
+                if (generateBtn) generateBtn.disabled = true;
+                
+                // Svuota anche i campi aggiuntivi
+                const sedeTecnica = document.getElementById('sede_tecnica');
+                const numeroOrdine = document.getElementById('numero_ordine');
+                if (sedeTecnica) sedeTecnica.value = '';
+                if (numeroOrdine) numeroOrdine.value = '';
+                
+                // Nascondi il contenitore strumento se esiste
+                const strumentoContainer = document.getElementById('strumentoContainer');
+                if (strumentoContainer) strumentoContainer.style.display = 'none';
+            }
+        }
+
+        // Carica i campi personalizzati all'avvio
+        async function loadCustomFields() {
+            try {
+                const response = await fetch('/api/admin/custom-fields');
+                const data = await response.json();
+                
+                if (data.success && data.fields) {
+                    customFields = data.fields;
+                    renderCustomFields();
+                    // Aggiorna la validità del form dopo aver creato i campi
+                    checkFormValidity();
+                }
+            } catch (error) {
+                console.error('Errore nel caricamento campi personalizzati:', error);
+            }
+        }
+
+        // Renderizza i campi personalizzati nel form
+        function renderCustomFields() {
+            const container = document.getElementById('customFieldsContainer');
+            container.innerHTML = '';
+            
+            customFields.forEach(field => {
+                const fieldDiv = document.createElement('div');
+                fieldDiv.className = 'form-group';
+                fieldDiv.innerHTML = `
+                    <label for="custom_${field.name.replace(/\s+/g, '_')}">${field.name}:</label>
+                    <input type="text" 
+                           id="custom_${field.name.replace(/\s+/g, '_')}" 
+                           name="custom_${field.name.replace(/\s+/g, '_')}" 
+                           placeholder="Inserisci ${field.name.toLowerCase()}" 
+                           required
+                           autocomplete="off">
+                `;
+                container.appendChild(fieldDiv);
+                
+                // Aggiungi listener per validazione form
+                fieldDiv.querySelector('input').addEventListener('input', checkFormValidity);
+            });
+        }
+
+        // Quando cambia la flotta, carica le scadenze
+        if (flottaSelect) {
+            console.log('Aggiungo event listener alla flotta');
+            flottaSelect.addEventListener('change', async function() {
+                const flottaId = this.value;
+                console.log('Flotta selezionata:', flottaId);
+
+            // Svuota i campi base
+            document.getElementById('sede_tecnica').value = '';
+            document.getElementById('numero_ordine').value = '';
+
+            // Svuota i campi personalizzati
+            customFields.forEach(field => {
+                const fieldId = `custom_${field.name.replace(/\s+/g, '_')}`;
+                const element = document.getElementById(fieldId);
+                if (element) element.value = '';
+            });
+
+            // Azzera i dati delle scadenze precedenti (incluse operazioni globali)
+            currentScadenzeData = null;
+
+            // Azzera la preview dei PDF nel menu a destra
+            const pdfPreviewList = document.getElementById('pdfPreviewList');
+            if (pdfPreviewList) {
+                pdfPreviewList.innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere i documenti</p>';
+            }
+
+            // Azzera le operazioni aggiuntive
+            const operazioniPreviewList = document.getElementById('operazioniPreviewList');
+            if (operazioniPreviewList) {
+                operazioniPreviewList.innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere le operazioni</p>';
+            }
+
+            if (!flottaId) {
+                scadenzeContainer.innerHTML = '<p class="placeholder-text">Prima seleziona una flotta</p>';
+                generateBtn.disabled = true;
+                return;
+            }
+
+            // Mostra stato di caricamento
+            scadenzeContainer.innerHTML = '<p class="placeholder-text">⏳ Caricamento scadenze...</p>';
+
+            try {
+                const response = await fetch(`/api/scadenze/${flottaId}`);
+                console.log('Response status:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error('Errore nel caricamento delle scadenze');
+                }
+                
+                const data = await response.json();
+                console.log('Dati ricevuti:', data);
+
+                // Forza il reset del container
+                scadenzeContainer.innerHTML = '';
+
+                if (!data.scadenze || data.scadenze.length === 0) {
+                    scadenzeContainer.innerHTML = '<p class="placeholder-text">Nessuna scadenza disponibile per questa flotta</p>';
+                    generateBtn.disabled = true;
+                    return;
+                }
+
+                // Aggiungi un piccolo ritardo per assicurare il rendering
+                await new Promise(resolve => setTimeout(resolve, 50));
+
+                data.scadenze.forEach(scad => {
+                    const checkboxDiv = document.createElement('div');
+                    checkboxDiv.className = 'checkbox-item';
+
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.name = 'scadenze';
+                    checkbox.value = scad.id;
+                    checkbox.id = 'scad_' + scad.id;
+                    checkbox.addEventListener('change', function() {
+                        checkFormValidity();
+                        updatePdfPreview();
+                    });
+
+                    const label = document.createElement('label');
+                    label.htmlFor = 'scad_' + scad.id;
+                    label.textContent = scad.nome;
+
+                    checkboxDiv.appendChild(checkbox);
+                    checkboxDiv.appendChild(label);
+
+                    // Aggiungi campo numero copie se la flotta è multioggetto
+                    if (data.multioggetto) {
+                        const copieInput = document.createElement('input');
+                        copieInput.type = 'number';
+                        copieInput.min = '1';
+                        copieInput.max = '50';
+                        copieInput.value = '1';
+                        copieInput.className = 'copie-input';
+                        copieInput.id = 'copie_' + scad.id;
+                        copieInput.name = 'copie_' + scad.id;
+                        copieInput.placeholder = 'N° copie';
+                        copieInput.addEventListener('change', updatePdfPreview);
+                        
+                        const copieLabel = document.createElement('label');
+                        copieLabel.htmlFor = 'copie_' + scad.id;
+                        copieLabel.className = 'copie-label';
+                        copieLabel.textContent = 'Copie:';
+                        
+                        checkboxDiv.appendChild(copieLabel);
+                        checkboxDiv.appendChild(copieInput);
+                    }
+
+                    scadenzeContainer.appendChild(checkboxDiv);
+                });
+
+                // Forza un reflow per assicurare che tutto sia renderizzato
+                scadenzeContainer.offsetHeight;
+                
+                checkFormValidity();
+                
+                console.log(`Caricate ${data.scadenze.length} scadenze per la flotta ${flottaId}`);
+                
+            } catch (error) {
+                console.error('Errore nel caricamento delle scadenze:', error);
+                scadenzeContainer.innerHTML = '<p class="error-text">❌ Errore nel caricamento delle scadenze. Riprova.</p>';
+                generateBtn.disabled = true;
+            }
+        });
+        } else {
+            console.error('ERRORE: Elemento flottaSelect non trovato!');
+        }
+
+        // Verifica validità form
+        function checkFormValidity() {
+            const checkedBoxes = document.querySelectorAll('input[name="scadenze"]:checked');
+            const sedeTecnica = document.getElementById('sede_tecnica').value;
+            const numero_ordine = document.getElementById('numero_ordine').value;
+            
+            console.log('DEBUG checkFormValidity:', {
+                checkedBoxes: checkedBoxes.length,
+                sedeTecnica: sedeTecnica,
+                numero_ordine: numero_ordine,
+                customFields: customFields.length
+            });
+            
+            // Validazione numero ordine (esattamente 12 cifre)
+            const numero_ordineValid = /^[0-9]{12}$/.test(numero_ordine);
+            const numero_ordineError = document.getElementById('numero_ordine_error');
+            
+            if (numero_ordine && !numero_ordineValid) {
+                numero_ordineError.style.display = 'block';
+                document.getElementById('numero_ordine').style.borderColor = '#f44336';
+            } else {
+                numero_ordineError.style.display = 'none';
+                document.getElementById('numero_ordine').style.borderColor = numero_ordine ? '#4caf50' : '#e0e0e0';
+            }
+            
+            // Verifica anche i campi personalizzati
+            let customFieldsValid = true;
+            customFields.forEach(field => {
+                const fieldId = `custom_${field.name.replace(/\s+/g, '_')}`;
+                const element = document.getElementById(fieldId);
+                const value = element ? element.value : '';
+                console.log(`DEBUG campo ${fieldId}:`, value);
+                if (element && !value) {
+                    customFieldsValid = false;
+                }
+            });
+            
+            console.log('DEBUG validazioni:', {
+                numero_ordineValid,
+                customFieldsValid
+            });
+
+            const shouldDisable = checkedBoxes.length === 0 || !sedeTecnica || !numero_ordineValid || !customFieldsValid;
+            console.log('DEBUG pulsante disabled:', shouldDisable);
+            
+            generateBtn.disabled = shouldDisable;
+        }
+
+        // Aggiungi listener ai campi testo
+        document.getElementById('sede_tecnica').addEventListener('input', checkFormValidity);
+        document.getElementById('numero_ordine').addEventListener('input', checkFormValidity);
+        
+        // Trasforma automaticamente sede_tecnica in maiuscolo
+        document.getElementById('sede_tecnica').addEventListener('input', function(e) {
+            const cursorPosition = e.target.selectionStart;
+            e.target.value = e.target.value.toUpperCase();
+            e.target.setSelectionRange(cursorPosition, cursorPosition);
+        });
+
+        // Funzione per cancellare tutti i campi
+        function clearAllFields() {
+            // Resetta il menu flotta
+            document.getElementById('flotta').value = '';
+            
+            // Svuota i campi base
+            document.getElementById('sede_tecnica').value = '';
+            document.getElementById('numero_ordine').value = '';
+            
+            // Svuota i campi personalizzati
+            customFields.forEach(field => {
+                const fieldId = `custom_${field.name.replace(/\s+/g, '_')}`;
+                const element = document.getElementById(fieldId);
+                if (element) element.value = '';
+            });
+            
+            // Deseleziona tutte le scadenze
+            const checkboxes = document.querySelectorAll('input[name="scadenze"]');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            
+            // Svuota la sezione scadenze
+            scadenzeContainer.innerHTML = '<p class="placeholder-text">Prima seleziona una flotta</p>';
+            
+            // Nascondi e resetta il contenitore strumento
+            document.getElementById('strumentoContainer').style.display = 'none';
+            document.getElementById('strumento').value = '';
+            document.getElementById('strumento').required = false;
+            
+            // Svuota la sezione documenti da stampare
+            document.getElementById('pdfPreviewList').innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere i documenti</p>';
+            
+            // Svuota la sezione operazioni aggiuntive
+            document.getElementById('operazioniPreviewList').innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere le operazioni</p>';
+            
+            // Resetta la validità del form
+            checkFormValidity();
+            
+            // Disabilita il pulsante genera
+            generateBtn.disabled = true;
+        }
+
+        // Event listener per il pulsante clear
+        document.getElementById('clearBtn').addEventListener('click', clearAllFields);
+
+        // Azzera tutto al caricamento della pagina
+        document.addEventListener('DOMContentLoaded', clearAllFields);
+
+        // Carica i campi personalizzati all'avvio
+        loadCustomFields();
+
+        // Mostra loading durante la generazione e apri in nuova scheda
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Previeni il submit normale
+
+            const checkedBoxes = document.querySelectorAll('input[name="scadenze"]:checked');
+            if (checkedBoxes.length === 0) {
+                alert('Seleziona almeno una scadenza');
+                return;
+            }
+
+            // Mostra loading
+            loading.classList.remove('hidden');
+            generateBtn.disabled = true;
+
+            // Apri il PDF in una nuova scheda
+            const formData = new FormData(form);
+
+            // Crea un form temporaneo e submit in una nuova finestra
+            const tempForm = document.createElement('form');
+            tempForm.method = 'POST';
+            tempForm.action = '/generate';
+            tempForm.target = '_blank';
+            tempForm.style.display = 'none';
+
+            // Copia tutti i dati del form
+            for (let [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                tempForm.appendChild(input);
+            }
+
+            document.body.appendChild(tempForm);
+            tempForm.submit();
+            document.body.removeChild(tempForm);
+
+            // Ripristina dopo un breve delay
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                generateBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Aggiorna l'anteprima dei PDF da stampare
+        async function updatePdfPreview() {
+            const flottaId = flottaSelect.value;
+            const checkedBoxes = document.querySelectorAll('input[name="scadenze"]:checked');
+            const pdfPreviewList = document.getElementById('pdfPreviewList');
+            const operazioniPreviewList = document.getElementById('operazioniPreviewList');
+
+            if (checkedBoxes.length === 0) {
+                pdfPreviewList.innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere i documenti</p>';
+                operazioniPreviewList.innerHTML = '<p class="placeholder-text">Seleziona le scadenze per vedere le operazioni</p>';
+                return;
+            }
+
+            const scadenzeIds = Array.from(checkedBoxes).map(cb => cb.value);
+
+            try {
+                const response = await fetch(`/api/preview_documenti/${flottaId}?scadenze=${scadenzeIds.join(',')}`);
+                const data = await response.json();
+
+                // Salva i dati globalmente
+                currentScadenzeData = data;
+
+                // Controlla se almeno una scadenza ha rilevazione_quote
+                const hasRilevazioneQuote = data.scadenze && data.scadenze.some(s => s.rilevazione_quote);
+                const strumentoContainer = document.getElementById('strumentoContainer');
+                const strumentoSelect = document.getElementById('strumento');
+
+                if (hasRilevazioneQuote) {
+                    strumentoContainer.style.display = 'block';
+                    strumentoSelect.required = true;
+                } else {
+                    strumentoContainer.style.display = 'none';
+                    strumentoSelect.required = false;
+                    strumentoSelect.value = '';
+                }
+
+                // Aggiorna la preview con filtro strumento
+                updatePreviewWithFilter();
+                
+                // Aggiorna la validità del form dopo aver caricato i documenti
+                checkFormValidity();
+            } catch (error) {
+                console.error('Errore nel caricamento dell\'anteprima:', error);
+                pdfPreviewList.innerHTML = '<p class="error-text">Errore nel caricamento dei documenti</p>';
+                operazioniPreviewList.innerHTML = '<p class="error-text">Errore nel caricamento delle operazioni</p>';
+            }
+        }
+
+        // Funzione per aggiornare la preview filtrando per strumento
+        function updatePreviewWithFilter() {
+            const pdfPreviewList = document.getElementById('pdfPreviewList');
+            const operazioniPreviewList = document.getElementById('operazioniPreviewList');
+            const strumentoSelect = document.getElementById('strumento');
+            const strumentoSelezionato = strumentoSelect.value;
+
+            if (!currentScadenzeData || !currentScadenzeData.scadenze) {
+                return;
+            }
+
+            // Aggiorna documenti
+            if (currentScadenzeData.scadenze && currentScadenzeData.scadenze.length > 0) {
+                let htmlDocs = '';
+                let htmlOps = '';
+
+                currentScadenzeData.scadenze.forEach((scad, index) => {
+                    const scadenzaId = `scadenza-docs-${index}`;
+                    htmlDocs += `<div class="scadenza-preview">
+                        <div class="scadenza-header" onclick="toggleScadenza('${scadenzaId}')">
+                            <h4>${scad.nome}</h4>
+                            <span class="expand-icon" id="${scadenzaId}-icon">▼</span>
+                        </div>
+                        <div class="scadenza-content" id="${scadenzaId}" style="display: none;">`;
+
+                    if (scad.documenti && scad.documenti.length > 0) {
+                        // Filtra documenti in base allo strumento selezionato
+                        const documentiFiltrati = scad.documenti.filter(doc => {
+                            const docStrumento = doc.strumento || '';
+                            // Includi documento se:
+                            // - Non ha strumento (documento standard) OPPURE
+                            // - Il suo strumento corrisponde a quello selezionato
+                            return !docStrumento || (strumentoSelezionato && docStrumento === strumentoSelezionato);
+                        });
+
+                        if (documentiFiltrati.length > 0) {
+                            htmlDocs += '<ul class="document-list">';
+                            documentiFiltrati.forEach(doc => {
+                                const uploadIcon = doc.pdf_path ? '<span class="upload-icon">✓</span>' : '<span class="upload-icon missing">✗</span>';
+                                const strumentoLabel = doc.strumento ? ` [${doc.strumento}]` : '';
+                                const copieLabel = doc.copie_totali && doc.copie_totali > 1 ? ` (${doc.copie_totali} copie)` : '';
+                                
+                                if (doc.pdf_path) {
+                                    // Documento con PDF - crea link cliccabile
+                                    const pdfFilename = doc.pdf_path.split(/[\\\/]/).pop();
+                                    htmlDocs += `<li>
+                                        <a href="${doc.pdf_path}" target="_blank" class="document-link pdf-thumbnail-trigger" data-filename="${pdfFilename}">
+                                            ${uploadIcon} ${doc.nome}${copieLabel}${strumentoLabel}
+                                        </a>
+                                    </li>`;
+                                } else {
+                                    // Documento senza PDF - testo normale
+                                    htmlDocs += `<li>${uploadIcon} ${doc.nome}${copieLabel}${strumentoLabel}</li>`;
+                                }
+                            });
+                            htmlDocs += '</ul>';
+                        } else {
+                            htmlDocs += '<p class="no-docs">Nessun documento per lo strumento selezionato</p>';
+                        }
+                    } else {
+                        htmlDocs += '<p class="no-docs">Nessun documento configurato</p>';
+                    }
+
+                    htmlDocs += '</div></div>';
+                });
+
+                pdfPreviewList.innerHTML = htmlDocs;
+
+                // Aggiorna riepilogo documenti
+                updateDocumentiRiepilogo();
+                
+                // Re-inizializza il sistema di thumbnail per i nuovi elementi
+                if (window.thumbnailHoverInstance) {
+                    window.thumbnailHoverInstance.refresh();
+                }
+
+                let operazioneNumber = 1;
+
+                // Mostra operazioni globali prima di tutto
+                if (currentScadenzeData.operazioni_globali && currentScadenzeData.operazioni_globali.length > 0) {
+                    htmlOps += `<div class="scadenza-preview" style="border-left: 3px solid #28a735;">
+                        <h4>🌐 Operazioni Globali</h4>`;
+                    htmlOps += '<ul class="operazioni-list">';
+                    currentScadenzeData.operazioni_globali.forEach((op) => {
+                        htmlOps += `<li>
+                            <div class="op-number" style="background: #28a735;">${operazioneNumber++}</div>
+                            <div class="op-content">
+                                <div class="op-title">${op.titolo}</div>`;
+                        if (op.descrizione) {
+                            htmlOps += `<div class="op-desc">${op.descrizione}</div>`;
+                        }
+                        htmlOps += `</div></li>`;
+                    });
+                    htmlOps += '</ul></div>';
+                }
+
+                // Poi mostra operazioni specifiche delle scadenze
+                currentScadenzeData.scadenze.forEach(scad => {
+                    if (scad.operazioni_aggiuntive && scad.operazioni_aggiuntive.length > 0) {
+                        htmlOps += `<div class="scadenza-preview">
+                            <h4>${scad.nome}</h4>`;
+                        htmlOps += '<ul class="operazioni-list">';
+                        scad.operazioni_aggiuntive.forEach((op) => {
+                            htmlOps += `<li>
+                                <div class="op-number">${operazioneNumber++}</div>
+                                <div class="op-content">
+                                    <div class="op-title">${op.titolo}</div>`;
+                            if (op.descrizione) {
+                                htmlOps += `<div class="op-desc">${op.descrizione}</div>`;
+                            }
+                            htmlOps += `</div></li>`;
+                        });
+                        htmlOps += '</ul></div>';
+                    }
+                });
+
+                if (htmlOps) {
+                    operazioniPreviewList.innerHTML = htmlOps;
+                } else {
+                    operazioniPreviewList.innerHTML = '<p class="no-docs">Nessuna operazione configurata</p>';
+                }
+            } else {
+                pdfPreviewList.innerHTML = '<p class="placeholder-text">Nessun documento trovato</p>';
+                operazioniPreviewList.innerHTML = '<p class="placeholder-text">Nessuna operazione trovata</p>';
+            }
+        }
+        
+        // Funzione per aggiornare il riepilogo documenti
+        function updateDocumentiRiepilogo() {
+            const riepilogoDiv = document.getElementById('documentiRiepilogo');
+            const riepilogoNumero = document.getElementById('riepilogoNumero');
+            const riepilogoDettagli = document.getElementById('riepilogoDettagli');
+            const strumentoSelect = document.getElementById('strumento');
+            const strumentoSelezionato = strumentoSelect.value;
+            
+            if (!currentScadenzeData || !currentScadenzeData.scadenze) {
+                riepilogoDiv.style.display = 'none';
+                return;
+            }
+            
+            let totalDocumenti = 0;
+            let scadenzeConDocumenti = 0;
+            let totalOperazioni = 0;
+            let haFrontespizio = false;
+            
+            // Conta documenti per scadenza
+            currentScadenzeData.scadenze.forEach(scad => {
+                if (scad.documenti && scad.documenti.length > 0) {
+                    // Filtra documenti in base allo strumento selezionato
+                    const documentiFiltrati = scad.documenti.filter(doc => {
+                        const docStrumento = doc.strumento || '';
+                        return !docStrumento || (strumentoSelezionato && docStrumento === strumentoSelezionato);
+                    });
+                    
+                    if (documentiFiltrati.length > 0) {
+                        totalDocumenti += documentiFiltrati.length;
+                        scadenzeConDocumenti++;
+                    }
+                }
+                
+                // Conta operazioni aggiuntive
+                if (scad.operazioni_aggiuntive && scad.operazioni_aggiuntive.length > 0) {
+                    totalOperazioni += scad.operazioni_aggiuntive.length;
+                }
+            });
+            
+            // Conta operazioni globali
+            if (currentScadenzeData.operazioni_globali && currentScadenzeData.operazioni_globali.length > 0) {
+                totalOperazioni += currentScadenzeData.operazioni_globali.length;
+            }
+            
+            // Verifica se ci sarà il frontespizio (se ci sono documenti o operazioni)
+            haFrontespizio = totalDocumenti > 0 || totalOperazioni > 0;
+            
+            if (totalDocumenti > 0 || totalOperazioni > 0) {
+                // Calcola il totale includendo frontespizio
+                let totalePagine = totalDocumenti;
+                if (haFrontespizio) totalePagine += 1;
+                if (totalOperazioni > 0) totalePagine += 1; // Pagina operazioni
+                
+                riepilogoNumero.textContent = totalePagine;
+                
+                let dettagli = [];
+                
+                if (totalDocumenti > 0) {
+                    dettagli.push(`${totalDocumenti} documento/i da ${scadenzeConDocumenti} scadenz${scadenzeConDocumenti === 1 ? 'a' : 'e'}`);
+                }
+                
+                if (haFrontespizio) {
+                    dettagli.push('frontespizio');
+                }
+                
+                if (totalOperazioni > 0) {
+                    dettagli.push(`${totalOperazioni} operazione/i aggiuntiva/e`);
+                }
+                
+                if (strumentoSelezionato) {
+                    dettagli.push(`Strumento: ${strumentoSelezionato}`);
+                }
+                
+                riepilogoDettagli.textContent = dettagli.join(' • ');
+                
+                riepilogoDiv.style.display = 'block';
+            } else {
+                riepilogoDiv.style.display = 'none';
+            }
+        }
+
+        // Funzione per mostrare informazioni progetto
+        function showInfo() {
+            // Crea la finestra di dialogo
+            const dialog = document.createElement('div');
+            dialog.className = 'info-dialog';
+            dialog.innerHTML = `
+                <div class="info-dialog-content">
+                    <div class="info-dialog-header">
+                        <h3>Informazioni</h3>
+                        <button class="info-dialog-close" onclick="closeInfoDialog()">×</button>
+                    </div>
+                    <div class="info-dialog-body">
+                        <p>Progetto Sviluppato da</p>
+                        <p class="info-project-name">Ingegneria dei Processi Marche</p>
+                        <div class="info-developers">
+                            <p>Francesco Pannocchia</p>
+                            <p>Nicola Bastianelli</p>
+                            <p>Langella Michele</p>
+                        </div>
+                        <hr style="margin: 15px 0; border: 1px solid #eee;">
+                        <p style="font-size: 0.9em; color: #666;">
+                            <strong>Per bug o segnalazioni:</strong><br>
+                            <a href="mailto:f.pannocchia@trenitalia.it" style="color: #007bff; text-decoration: none;">f.pannocchia@trenitalia.it</a>
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            // Aggiungi overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'info-dialog-overlay';
+            overlay.onclick = closeInfoDialog;
+            
+            // Aggiungi al body
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            // Animazione di apertura
+            setTimeout(() => {
+                dialog.classList.add('show');
+                overlay.classList.add('show');
+            }, 10);
+        }
+        
+        // Funzione per chiudere il dialogo
+        function closeInfoDialog() {
+            const dialog = document.querySelector('.info-dialog');
+            const overlay = document.querySelector('.info-dialog-overlay');
+            
+            if (dialog && overlay) {
+                dialog.classList.remove('show');
+                overlay.classList.remove('show');
+                
+                setTimeout(() => {
+                    document.body.removeChild(dialog);
+                    document.body.removeChild(overlay);
+                }, 300);
+            }
+        }
+
+        // Funzione per gestire expand/collapse delle scadenze
+        function toggleScadenza(scadenzaId) {
+            const content = document.getElementById(scadenzaId);
+            const icon = document.getElementById(scadenzaId + '-icon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.textContent = '▲';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▼';
+            }
+        }
+
+        // Aggiungi listener per cambio strumento
+        document.getElementById('strumento').addEventListener('change', function() {
+            updatePreviewWithFilter();
+            checkFormValidity();
+        });
+        
+        // Dark Mode Toggle Functionality
+        const darkModeSwitch = document.getElementById('darkModeSwitch');
+        const html = document.documentElement;
+        
+        // Funzione per aprire PDF responsabili (dinamico)
+        async function openResponsabiliPDF() {
+            try {
+                // Verifica se il PDF esiste nel backend
+                const response = await fetch('/api/check_responsabili_pdf');
+                const result = await response.json();
+                
+                if (result.success && result.exists && result.path) {
+                    // Apre il PDF se esiste
+                    window.open(`/serve_pdf/${result.path}`, '_blank');
+                } else {
+                    alert('❌ Nessun PDF responsabili caricato. Carica il PDF dalla gestione versione nell\'amministrazione.');
+                }
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('❌ Errore durante la verifica del PDF responsabili');
+            }
+        }
+
+        // Funzione per mostrare le informazioni sui portali (caricate dal backend)
+        async function showInfoPortali() {
+            try {
+                // Carica i dati dal backend
+                const response = await fetch('/api/portali');
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Aggiorna i valori nel modal
+                    document.getElementById('wpms-id').textContent = result.portali.wpms.id;
+                    document.getElementById('wpms-scadenza').textContent = result.portali.wpms.scadenza;
+                    document.getElementById('tornio-id').textContent = result.portali.tornio.id;
+                    document.getElementById('tornio-scadenza').textContent = result.portali.tornio.scadenza;
+                    
+                    // Mostra il modal
+                    document.getElementById('infoPortaliModal').style.display = 'block';
+                } else {
+                    alert('Errore nel caricamento dei dati portali: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('Errore durante il caricamento dei dati portali');
+            }
+        }
+
+        // Funzione per chiudere modal (generale)
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        // Carica preferenza salvata
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            darkModeSwitch.checked = true;
+        }
+        
+        // Gestisci cambio tema
+        darkModeSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+    <!-- Thumbnail hover system -->
+    <script src="{{ url_for('static', filename='js/thumbnail.js') }}"></script>
+</body>
+</html>

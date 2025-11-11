@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Flotte - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Trenitalia" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Homepage</a>
+            <a href="/admin" class="nav-link">Amministrazione</a>
+            <a href="/admin/flotte" class="nav-link active">Flotte</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <div>
+                <h1>Gestione Flotte</h1>
+                <div class="breadcrumb">
+                    <a href="/admin">← Indietro</a>
+                </div>
+            </div>
+            <button onclick="showAddFlottaModal()" class="btn-primary">+ Aggiungi Flotta</button>
+        </header>
+
+        <div class="data-table" style="overflow-x: auto;">
+            <table style="table-layout: fixed; width: 100%;">
+                <thead>
+                    <tr>
+                        <th style="display:none;">ID</th>
+                        <th>Nome Flotta</th>
+                        <th style="text-align: center; width: 120px;">Multioggetto</th>
+                        <th style="text-align: center; width: 100px;">Scadenze</th>
+                        <th style="text-align: center; width: 120px;">Op. Aggiuntive</th>
+                        <th style="text-align: center; width: 200px;">Azioni</th>
+                    </tr>
+                </thead>
+                <tbody id="flotteTable">
+                    {% for flotta in flotte %}
+                    <tr data-id="{{ flotta.id }}" draggable="true" class="draggable-row">
+                        <td style="display:none;">{{ flotta.id }}</td>
+                        <td style="font-weight: 600; font-size: 1.1em; color: #2c3e50;">
+                            <span class="drag-handle">☰</span> {{ flotta.nome }}
+                        </td>
+                        <td style="text-align: center;">
+                            {% if flotta.get('multioggetto', false) %}
+                                <span class="badge badge-success">✓ Sì</span>
+                            {% else %}
+                                <span class="badge badge-secondary">No</span>
+                            {% endif %}
+                        </td>
+                        <td style="text-align: center;">{{ flotta.scadenze|length }}</td>
+                        <td style="text-align: center;">
+                            {% set total_operazioni = namespace(value=0) %}
+                            {% for scadenza in flotta.scadenze %}
+                                {% if scadenza.operazioni_aggiuntive is defined %}
+                                    {% set total_operazioni.value = total_operazioni.value + scadenza.operazioni_aggiuntive|length %}
+                                {% endif %}
+                            {% endfor %}
+                            {{ total_operazioni.value }}
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: center;">
+                                <div style="display: flex; gap: 4px;">
+                                    <button onclick="editFlotta('{{ flotta.id }}', '{{ flotta.nome }}', '{{ flotta.get('multioggetto', false)|lower }}')" class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px;" title="Modifica">✏️</button>
+                                    <button onclick="deleteFlotta('{{ flotta.id }}')" class="btn-small" style="background: transparent; border: 1px solid #ddd; padding: 4px 8px; color: #dc3545;" title="Elimina">🗑️</button>
+                                </div>
+                                <a href="/admin/scadenze/{{ flotta.id }}" class="btn-small btn-info">Scadenze</a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Aggiungi Flotta -->
+    <div id="addFlottaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addFlottaModal')">&times;</span>
+            <h2>Aggiungi Nuova Flotta</h2>
+            <form id="addFlottaForm">
+                <div class="form-group">
+                    <label>Nome Flotta</label>
+                    <input type="text" id="newFlottaNome" required placeholder="es: E.464">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newFlottaMultioggetto">
+                        Flotta Multioggetto (permette di specificare numero copie per ogni scadenza)
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Salva</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifica Flotta -->
+    <div id="editFlottaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editFlottaModal')">&times;</span>
+            <h2>Modifica Flotta</h2>
+            <form id="editFlottaForm">
+                <input type="hidden" id="editFlottaId">
+                <div class="form-group">
+                    <label>Nome Flotta</label>
+                    <input type="text" id="editFlottaNome" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="editFlottaMultioggetto">
+                        Flotta Multioggetto (permette di specificare numero copie per ogni scadenza)
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Salva Modifiche</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin_flotte.js') }}"></script>
+    <script>
+        // Funzione per rendere le colonne ridimensionabili
+        function makeResizableColumns() {
+            const table = document.querySelector('.data-table table');
+            const thead = table.querySelector('thead');
+            const ths = thead.querySelectorAll('th');
+            
+            // Aggiungi stili per il ridimensionamento
+            const style = document.createElement('style');
+            style.textContent = `
+                .resizable {
+                    position: relative;
+                    overflow: hidden;
+                }
+                .resizer {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 5px;
+                    height: 100%;
+                    background: transparent;
+                    cursor: col-resize;
+                    user-select: none;
+                    z-index: 1;
+                }
+                .resizer:hover, .resizing {
+                    background-color: #2196F3;
+                }
+                th {
+                    position: relative;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Aggiungi i resizer a ogni intestazione
+            ths.forEach((th, index) => {
+                // Salta la colonna ID nascosta
+                if (th.style.display === 'none') return;
+                
+                const resizer = document.createElement('div');
+                resizer.className = 'resizer';
+                th.appendChild(resizer);
+                th.classList.add('resizable');
+                
+                // Imposta la larghezza salvata se presente
+                const savedWidth = localStorage.getItem(`colWidth_${index}`);
+                if (savedWidth) {
+                    th.style.width = savedWidth + 'px';
+                }
+                
+                // Gestione eventi per il ridimensionamento
+                resizer.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const startX = e.clientX;
+                    const startWidth = th.offsetWidth;
+                    const tableRect = table.getBoundingClientRect();
+                    
+                    resizer.classList.add('resizing');
+                    
+                    function onMouseMove(e) {
+                        const newWidth = startWidth + e.clientX - startX;
+                        if (newWidth > 50) {  // Larghezza minima di 50px
+                            th.style.width = newWidth + 'px';
+                            // Salva la larghezza
+                            localStorage.setItem(`colWidth_${index}`, newWidth);
+                        }
+                    }
+                    
+                    function onMouseUp() {
+                        resizer.classList.remove('resizing');
+                        window.removeEventListener('mousemove', onMouseMove);
+                        window.removeEventListener('mouseup', onMouseUp);
+                    }
+                    
+                    window.addEventListener('mousemove', onMouseMove);
+                    window.addEventListener('mouseup', onMouseUp);
+                });
+            });
+        }
+        
+        // Esegui la funzione quando il DOM è caricato
+        document.addEventListener('DOMContentLoaded', makeResizableColumns);
+    </script>
+</body>
+</html>
