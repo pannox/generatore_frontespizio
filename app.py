@@ -2244,6 +2244,41 @@ def api_delete_operazione_globale(operazione_id):
 
     return jsonify({'success': True})
 
+@app.route('/debug/files')
+def debug_files():
+    """Route di debug per verificare file system"""
+    import glob
+
+    debug_info = {
+        'cwd': os.getcwd(),
+        'base_dir': BASE_DIR,
+        'directories': {},
+        'globale_pdfs': [],
+        'environment': {
+            'PORT': os.environ.get('PORT'),
+            'FLASK_ENV': os.environ.get('FLASK_ENV')
+        }
+    }
+
+    # Controlla directory
+    dirs_to_check = ['uploaded_pdfs', 'uploaded_pdfs/GLOBALE', 'templates', 'static', 'thumbnails', 'data']
+    for d in dirs_to_check:
+        full_path = get_path(d)
+        debug_info['directories'][d] = {
+            'exists': os.path.exists(full_path),
+            'path': full_path,
+            'items': len(os.listdir(full_path)) if os.path.exists(full_path) else 0
+        }
+
+    # Lista PDF in GLOBALE
+    globale_dir = get_path('uploaded_pdfs', 'GLOBALE')
+    if os.path.exists(globale_dir):
+        pdf_files = [f for f in os.listdir(globale_dir) if f.endswith('.pdf')]
+        debug_info['globale_pdfs'] = pdf_files[:20]  # Prime 20
+        debug_info['total_globale_pdfs'] = len(pdf_files)
+
+    return jsonify(debug_info)
+
 if __name__ == '__main__':
     # Crea cartelle necessarie
     os.makedirs('temp_pdfs', exist_ok=True)
