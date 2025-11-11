@@ -1054,12 +1054,13 @@ def process_and_merge_pdfs(flotta_id, scadenze_data, config, sede_tecnica, numer
             # - Lo strumento corrisponde a quello selezionato
             if not doc_strumento or doc_strumento == strumento:
                 doc_path = doc.get('pdf_path')
-                # Normalizza il percorso per Windows
+                # Normalizza il percorso
                 if doc_path:
-                    if not os.path.isabs(doc_path) and not doc_path.startswith('uploaded_pdfs'):
-                        doc_path = os.path.join('uploaded_pdfs', doc_path)
+                    # Se il percorso non è assoluto, costruiscilo usando get_path
+                    if not os.path.isabs(doc_path):
+                        doc_path = get_path('uploaded_pdfs', doc_path)
                     doc_path = os.path.normpath(doc_path)
-                
+
                 if doc_path and os.path.exists(doc_path):
                     print(f"Trovato documento: {doc.get('nome', 'N/D')}")
                     # Gestisci la deduplicazione
