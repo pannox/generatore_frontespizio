@@ -39,7 +39,10 @@ instance/
 Thumbs.db
 
 # File locali (non caricare su Git)
-uploaded_pdfs/
+# Includi uploaded_pdfs/GLOBALE ma escludi altre cartelle
+uploaded_pdfs/*
+!uploaded_pdfs/GLOBALE/
+!uploaded_pdfs/GLOBALE/*.pdf
 thumbnails/
 data/scadenze_passwords.json
 data/historical_data.json
