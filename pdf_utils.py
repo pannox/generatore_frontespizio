@@ -1064,12 +1064,29 @@ def process_and_merge_pdfs(flotta_id, scadenze_data, config, sede_tecnica, numer
 
                 # Normalizza il percorso
                 if doc_path:
-                    # Se il percorso non è assoluto, costruiscilo usando get_path
+                    # Converti backslash Windows in forward slash
+                    doc_path = doc_path.replace('\\', '/')
+
+                    # Rimuovi il prefisso 'uploaded_pdfs/' se già presente
+                    if doc_path.startswith('uploaded_pdfs/'):
+                        doc_path = doc_path[len('uploaded_pdfs/'):]
+
+                    # Ora costruisci il percorso completo
                     if not os.path.isabs(doc_path):
                         doc_path = get_path('uploaded_pdfs', doc_path)
+
                     doc_path = os.path.normpath(doc_path)
                     print(f"DEBUG: Percorso finale calcolato: '{doc_path}'")
                     print(f"DEBUG: File esiste? {os.path.exists(doc_path)}")
+
+                    # Se il file non esiste, prova a cercarlo nella cartella GLOBALE
+                    if not os.path.exists(doc_path):
+                        filename = os.path.basename(doc_path)
+                        globale_path = get_path('uploaded_pdfs', 'GLOBALE', filename)
+                        print(f"DEBUG: File non trovato, provo in GLOBALE: '{globale_path}'")
+                        if os.path.exists(globale_path):
+                            doc_path = globale_path
+                            print(f"DEBUG: ✓ Trovato in GLOBALE!")
                 else:
                     print(f"DEBUG: pdf_path è vuoto/None per documento '{doc.get('nome', 'N/D')}'")
 
